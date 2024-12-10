@@ -147,6 +147,8 @@ Les tables de routage des routeurs font très souvent apparaître deux colonnes,
 
 <figure markdown>
 
+Néanmoins, on peut résumer les informations de la tables de routage du routeur A comme indiqué ci-dessous :
+
 | **Réseau**       | **Moyen de l'atteindre**  | **Métrique** |
 |------------------|---------------------------|--------------|
 | 172.168.0.0/16   | eth0                      | 0            |
@@ -301,6 +303,4 @@ Recopier et compléter le tableau suivant :
 |    |    |    |    |    |    |    |    |    |    |    |       |
 |    |    |    |    |    |    |    |    |    |    |    |       |
 |    |    |    |    |    |    |    |    |    |    |    |       |
-|    |    |    |    |    |    |    |    |    |    |    |       |
-|    |    |    |    |    |    |    |    |    |    |    |       |
-</end figure>
+|    |    |    |    |    |    |

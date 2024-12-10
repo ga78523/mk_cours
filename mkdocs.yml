@@ -83,9 +83,9 @@ nav:
       #  - OS : Premiere/ArchitectureMaterielle/OS.md
       - IHM:
         - web : Premiere/IHM/html_css.md
-      #  - Frameworks : Premiere/IHM/bootstrap.md
-      #  - evenements_js : Premiere/IHM/events_js.md
-      #  - Formulaire : Premiere/IHM/formulaire.md
+        - Frameworks : Premiere/IHM/frameworks.md
+        - Javascript : Premiere/IHM/js.md
+        - Formulaire : Premiere/IHM/formulaires.md
       #- Algorithmique:
       #  - Outils : Premiere/Algorithmique/outil_algo.md
       #  - Algo de tri : Premiere/Algorithmique/tris_correction.md
