@@ -1056,10 +1056,18 @@ Blaise Pascal (1623 – 1662), mathématicien et philosophe, construit à 19 ans
 <li>Joseph Marie Jacquard (1752 – 1834), avec son métier à tisser basé sur les cartes perforées, inspire les premiers programmes de calcul.</li>
 <li>Charles Babbage (1791 – 1871), professeur à Cambridge, conçoit la machine analytique, ancêtre des ordinateurs modernes.</li>
 <li>Ada Lovelace (1815 – 1852), réalise le premier véritable programme informatique pour la machine analytique de Babbage. Elle est considérée comme la première programmeuse.</li>
+</ul>
+<figure>
+<p><img alt="tete1" src="../img_calculabilite_decidabilite/pascal_lovelace.png" /></p>
+</figure>
+<ul>
 <li>David Hilbert (1862 – 1943), mathématicien, propose des problèmes dont certains restent irrésolus. En 1920, il énonce l’"Entscheidungsproblem", questionnant la décidabilité en mathématiques.</li>
 <li>Kurt Gödel (1906 – 1978), démontre en 1931 que tout système formel suffisamment puissant est soit incomplet soit incohérent.</li>
 <li>Alan Turing (1912 – 1954) et Alonzo Church (1903 – 1995), montrent en 1936 que l'"Entscheidungsproblem" est indécidable, proposant la machine de Turing et le lambda-calcul.</li>
 </ul>
+<figure>
+<p><img alt="tete2" src="../img_calculabilite_decidabilite/hilbert_godel_turing.png" /></p>
+</figure>
 <p>Pour en savoir plus sur la vie de Turing, consulter la vidéo :</p>
 <figure>
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7dpFeXV_hqs?si=TcB179GQSH7Wlpid" title="YouTube video player" width="560"></iframe>
@@ -1146,66 +1154,20 @@ Blaise Pascal (1623 – 1662), mathématicien et philosophe, construit à 19 ans
 <p><img alt="etape6" src="../img_calculabilite_decidabilite/etape6.png" /></p>
 </figure>
 <p>Remarque 2 : Voici un émulateur de cette machine de <a href="https://interstices.info/comment-fonctionne-une-machine-de-turing/">Turing</a></p>
-<div class="admonition exemple">
+<div class="admonition example">
 <p class="admonition-title">Exercice 1:</p>
 <p>Considérons une machine de Turing se promenant sur un ruban constitué d’une suite de cases pouvant être vierges ("V") ou contenir une information binaire ("0" ou "1").  </p>
 <p>Elle possède la faculté de se déplacer d’une case vers la gauche ou vers la droite, de lire le caractère inscrit sur le ruban et d’écrire un caractère sur le ruban (remplaçant le précédent).  </p>
 <p>De plus, elle possède un certain nombre d’états qui vont déterminer son comportement. Ces états sont précisés dans la table des transitions ci-dessous :</p>
-<table>
-<thead>
-<tr>
-<th><strong>État</strong></th>
-<th><strong>Caractère lu</strong></th>
-<th><strong>Écrire</strong></th>
-<th><strong>Déplacement</strong></th>
-<th><strong>Nouvel état</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>E₀</td>
-<td>V</td>
-<td>V</td>
-<td>droite</td>
-<td>E₀</td>
-</tr>
-<tr>
-<td>E₀</td>
-<td>1</td>
-<td>0</td>
-<td>droite</td>
-<td>E₁</td>
-</tr>
-<tr>
-<td>E₀</td>
-<td>0</td>
-<td>1</td>
-<td>droite</td>
-<td>E₁</td>
-</tr>
-<tr>
-<td>E₀</td>
-<td>V</td>
-<td>V</td>
-<td>-</td>
-<td>Arrêt</td>
-</tr>
-<tr>
-<td>E₁</td>
-<td>0</td>
-<td>0</td>
-<td>droite</td>
-<td>E₁</td>
-</tr>
-<tr>
-<td>E₁</td>
-<td>1</td>
-<td>1</td>
-<td>droite</td>
-<td>E₁</td>
-</tr>
-</tbody>
-</table>
+<div class="language-text highlight"><pre><span></span><code>| **État** | **Caractère lu** | **Écrire** | **Déplacement** | **Nouvel état** |
+|----------|------------------|------------|-----------------|-----------------|
+| E₀       | V                | V          | droite          | E₀             |
+| E₀       | 1                | 0          | droite          | E₁             |
+| E₀       | 0                | 1          | droite          | E₁             |
+| E₀       | V                | V          | -               | Arrêt          |
+| E₁       | 0                | 0          | droite          | E₁             |
+| E₁       | 1                | 1          | droite          | E₁             |
+</code></pre></div>
 <p>Au commencement, la tête de lecture/écriture est positionnée dans l’état <strong>E₀</strong> sur une case vierge située à gauche du nombre binaire.</p>
 <ol>
 <li>Faire fonctionner cette machine de Turing sur le ruban suivant :
@@ -1255,12 +1217,14 @@ Blaise Pascal (1623 – 1662), mathématicien et philosophe, construit à 19 ans
 </ul>
 <p><strong>Exemple 1 :</strong></p>
 <p>Liste des caractères possiblement présents sur le ruban <span class="arithmatex">\(\{'0';'1;'b'\}\)</span></p>
-<div class="language-text highlight"><pre><span></span><code>* A l&#39;état $e1$, si la tête lit un 0 alors elle écrit 1, se déplace à droite et reste à l&#39;état e1.
-* A l&#39;état e1, si la tête lit un 1 alors elle écrit 0, se déplace à droite et reste à l&#39;état e1.
-* A l&#39;état e1, si la tête lit un blanc alors elle n&#39;écrit rien et passe à l&#39;état $ef$ (elle s&#39;arrête).
-
-Ce qui nous donne la table de transition suivante :
-</code></pre></div>
+<ul>
+<li>A l'état <span class="arithmatex">\(e1\)</span>, si la tête lit un 0 alors elle écrit 1, se déplace à droite et reste à l'état e1.</li>
+<li>A l'état e1, si la tête lit un 1 alors elle écrit 0, se déplace à droite et reste à l'état e1.</li>
+<li>
+<p>A l'état e1, si la tête lit un blanc alors elle n'écrit rien et passe à l'état <span class="arithmatex">\(ef\)</span> (elle s'arrête).</p>
+<p>Ce qui nous donne la table de transition suivante :</p>
+</li>
+</ul>
 <figure>
 <table>
 <thead>
@@ -1298,18 +1262,20 @@ Ce qui nous donne la table de transition suivante :
 </table>
 </figure>
 <figure>
-<p><img alt="exemple1" src="../img_calculabilite_decidabilite/graphe_exemple1.png" /></p>
+<p><img alt="exemple1" src="../img_calculabilite_decidabilite/graphe_exemple1.png" width="350px" /></p>
 </figure>
 <p><strong>Exemple 2 :</strong></p>
 <p>Liste des caractères possiblement présents sur le ruban <span class="arithmatex">\(\{'0';'1;'b'\}\)</span></p>
-<div class="language-text highlight"><pre><span></span><code>*  si la tête lit un blanc alors elle n&#39;écrit rien et se déplace à droite en restant à l&#39;état e0.
-* A l&#39;état e0, si la tête lit un 0 alors elle n&#39;écrit rien, ne se déplace pas et passe à l&#39;état e1. 
-* A l&#39;état e0, si la tête lit un 1 alors elle n&#39;écrit rien, ne se déplace pas et passe à l&#39;état e1.
-* A l&#39;état e1, si la tête lit un 0 alors elle écrit 1, se déplace à droite et reste à l&#39;état e1.
-* A l&#39;état e1, si la tête lit un 1 alors elle écrit 0, se déplace à droite et reste à l&#39;état e1.
-
-Ce qui nous donne la table de transition suivante :
-</code></pre></div>
+<ul>
+<li>si la tête lit un blanc alors elle n'écrit rien et se déplace à droite en restant à l'état e0.</li>
+<li>A l'état e0, si la tête lit un 0 alors elle n'écrit rien, ne se déplace pas et passe à l'état e1.</li>
+<li>A l'état e0, si la tête lit un 1 alors elle n'écrit rien, ne se déplace pas et passe à l'état e1.</li>
+<li>A l'état e1, si la tête lit un 0 alors elle écrit 1, se déplace à droite et reste à l'état e1.</li>
+<li>
+<p>A l'état e1, si la tête lit un 1 alors elle écrit 0, se déplace à droite et reste à l'état e1.</p>
+<p>Ce qui nous donne la table de transition suivante :</p>
+</li>
+</ul>
 <figure>
 <table>
 <thead>
