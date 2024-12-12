@@ -1083,7 +1083,7 @@ Blaise Pascal (1623 – 1662), mathématicien et philosophe, construit à 19 ans
 </ul>
 <p>Cette machine fonctionne comme une machine à calculer en binaire. Turing envisage le cas particulier où les symboles utilisés sont 0 et 1.</p>
 <p>L'entrée du programme est un liste de symboles binaires. Une fois effectué, c'est sur ce même ruban que sera écrit la sortie du programme.</p>
-<p><strong>Remarque 1 :</strong> En 2012, pour célébrer le centenaire de la naissance d'Alan Turing, huit étudiant en master de l'École Normale Supérieure (ENS) de Lyon ont fabriqué en LEGO la première machine réelle (purement mécanique) du modèle de Turing. Voici le site du projet : <a href="http://rubens.ens-lyon.fr/fr/">http://rubens.ens-lyon.fr/fr/</a>.</p>
+<p><strong>Remarque 1 :</strong> En 2012, pour célébrer le centenaire de la naissance d'Alan Turing, huit étudiant en master de l'École Normale Supérieure (ENS) de Lyon ont fabriqué en LEGO la première machine réelle (purement mécanique) du modèle de Turing. Voici le site du projet : <a href="http://rubens.ens-lyon.fr/fr/">lien</a>.</p>
 <p><strong>Exemple :</strong> La machine peut être dans deux états e1 et e2. Si la machine est dans l'état e1 et contient un blanc, elle écrit un blanc. Le rubanc se déplace vers la gauche et la machine est dans l'état e2. Si la machine est dans l'état e2 et qu'elle lit un 0, elle écrit un 1 et si elle lit un 1 elle écrit un 0. Dans les deux cas, le ruban se déplace vers la gauche et la machine reste dans l'état e2. Enfin, si elle lit un blanc, elle écrit un blanc et la machine s'arrête.</p>
 <p>Ce qui nous donne table de transition suivante :</p>
 <figure>
@@ -1164,11 +1164,11 @@ Blaise Pascal (1623 – 1662), mathématicien et philosophe, construit à 19 ans
 | E₀       | V                | V          | droite          | E₀             |
 | E₀       | 1                | 0          | droite          | E₁             |
 | E₀       | 0                | 1          | droite          | E₁             |
-| E₀       | V                | V          | -               | Arrêt          |
-| E₁       | 0                | 0          | droite          | E₁             |
-| E₁       | 1                | 1          | droite          | E₁             |
+| E₁       | V                |    Arrêt   | Arrêt           | Arrêt          |
+| E₁       | 1                | 0          | droite          | E₁             |
+| E₁       | 0                | 1          | droite          | E₁             |
 </code></pre></div>
-<p>Au commencement, la tête de lecture/écriture est positionnée dans l’état <strong>E₀</strong> sur une case vierge située à gauche du nombre binaire.</p>
+<p>Au commencement, la tête de lecture/écriture est positionnée dans l’état <strong>E₀</strong> sur une des cases vierges située à gauche du nombre binaire.</p>
 <ol>
 <li>Faire fonctionner cette machine de Turing sur le ruban suivant :
 ... | V | V | 0 | 1 | 0 | 0 | 1 | 1 | V | V | ...</li>
@@ -1179,30 +1179,33 @@ Blaise Pascal (1623 – 1662), mathématicien et philosophe, construit à 19 ans
 <p class="admonition-title">Exercice 2</p>
 <p>Prenons maintenant une nouvelle machine de Turing avec 9 états et dont la table de transition est la suivante :</p>
 <div class="language-text highlight"><pre><span></span><code>| État   | Caractère lu | Écrire      | Déplacement | Nouvel état |
-|--------|--------------|-------------|-------------|-------------|
-| `E₀`   | `V`          | -           | arrêt       | -           |
-| `E₀`   | `0`          | `V`         | droite      | `E₁`        |
-| `E₀`   | `1`          | `V`         | droite      | `E₅`        |
-| `E₁`   | `V`          | inchangé    | droite      | `E₂`        |
-| `E₂`   | `0-1`        | `0`         | gauche      | `E₃`        |
-| `E₂`   | `V`          | inchangé    | droite      | `E₃`        |
-| `E₃`   | `V`          | -           | gauche      | `E₄`        |
-| `E₄`   | `0-1`        | `V`         | gauche      | `E₃`        |
-| `E₄`   | `V`          | `0`         | droite      | `E₀`        |
-| `E₅`   | `0-1`        | inchangé    | gauche      | `E₄`        |
-| `E₅`   | `V`          | `V`         | droite      | `E₆`        |
-| `E₆`   | `0-1`        | inchangé    | droite      | `E₇`        |
-| `E₆`   | `V`          | `1`         | gauche      | `E₈`        |
-| `E₇`   | `V`          | `V`         | gauche      | `E₆`        |
-| `E₇`   | `0-1`        | inchangé    | gauche      | `E₈`        |
-| `E₈`   | `V`          | `1`         | droite      | `E₀`        |
-| `E₈`   | `0-1`        | inchangé    | gauche      | `E₈`        |
+|:------:|:------------:|:-----------:|:-----------:|:-----------:|
+| E₀     | V            |         arrêt                           |
+| E₀     | 0            | V           | droite      | E₁          |
+| E₀     | 1            | V           | droite      | E₅          |
+| E₁     | V            | V           | droite      | E₂          |
+| E₁     | 0-1          | inchangé    | droite      | E₁          |
+| E₂     | V            | 0           | gauche      | E₃          |
+| E₂     | 0-1          | inchangé    | droite      | E₂          |
+| E₃     | V            | V           | gauche      | E₄          |
+| E₃     | 0-1          | inchangé    | gauche      | E₃          |
+| E₄     | V            | 0           | droite      | E₀          |
+| E₄     | 0-1          | inchangé    | gauche      | E₄          |
+| E₅     | V            | V           | droite      | E₆          |
+| E₅     | 0-1          | inchangé    | droite      | E₅          |
+| E₆     | V            | 1           | gauche      | E₇          |
+| E₆     | 0-1          | inchangé    | droite      | E₆          |
+| E₇     | V            | V           | gauche      | E₈          |
+| E₇     | 0-1          | inchangé    | gauche      | E₇          |
+| E₈     | V            | 1           | droite      | E₀          |
+| E₈     | 0-1          | inchangé    | gauche      | E₈          |
 </code></pre></div>
-<p>Au départ, la tête de lecture/écriture est positionnée dans l’état <code>E₀</code> sur le symbole binaire de gauche du nombre inscrit sur le ruban qui, comme dans l’exercice précédent, contient une suite continue de symboles binaires, les autres cases étant vierges.</p>
+<p>Au départ, la tête de lecture/écriture est positionnée dans l’état <strong>E₀</strong> sur le symbole binaire de gauche du nombre inscrit sur le ruban qui, comme dans l’exercice précédent contient une suite continue de symboles binaires, les autres cases étant vierges.</p>
 <ol>
 <li>Faire fonctionner cette machine de Turing sur le ruban suivant :<br />
     ... V V 0 1 1 0 V V ...</li>
 <li>Quelle est l’opération effectuée par cette machine de Turing ?</li>
+<li>Que faudrait-il changer dans l'algorithme pour que le nombre inscrit sur le ruban soit recopié avec une inversion des symboles binaires (c'est-à-dire que le ruban V01101VVV ... devienne V01101V10010VV..)?</li>
 </ol>
 </div>
 <h3 id="diagramme">Diagramme<a class="headerlink" href="#diagramme" title="Permanent link">&num;</a></h3>
@@ -1415,7 +1418,7 @@ Blaise Pascal (1623 – 1662), mathématicien et philosophe, construit à 19 ans
 </td></tr></table>
 <ol>
 <li>Que dire des lignes 3 et 4 (on rappelle que l'instruction pass ne fait rien)</li>
-<li>Si P s'arrête avec les données X, que fait ce programme ?</li>
+<li>Si <code>P</code> s'arrête avec les données <code>X</code>, que fait ce programme ?</li>
 <li>Si P ne s'arrête pas avec les données X, que fait ce programme ?
 Le programme Q prend en entrée un programme P et des données X, il peut donc se prendre lui-même en entrée avec lui-même comme donnée ! On cherche à déterminer le résultat de l'appel : Q(Q,Q). Pour cela, recopier et compléter le schéma suivant :</li>
 </ol>
@@ -1425,7 +1428,7 @@ Le programme Q prend en entrée un programme P et des données X, il peut donc s
 <ol>
 <li>D'après ce schéma, que se passe-t-il si Q s'arrête avec lui même comme donnée ? Et dans le cas contraire ? Que peut-on en conclure sur l'existence du programme teste_arret ?</li>
 </ol>
-<p>Nous avons prouvé que le programme teste_arret ne peut pas exister, on dit que le problème de l'arrêt est indécidable c'est à dire qu'il n'existe pas d'algorithme permettant de résoudre ce problème.</p>
+<p>Nous avons prouvé que le programme <code>teste_arret</code> ne peut pas exister, on dit que le problème de l'arrêt est indécidable c'est à dire qu'il n'existe pas d'algorithme permettant de résoudre ce problème.</p>
 
               
             </article>
