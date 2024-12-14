@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/Terminale/ArchitectureMaterielle/reseau_routage/">
+        <link rel="canonical" href="https://example.com/Terminale/ArchitectureMaterielle/commande_linux/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
     
     
       
-        <title>Routage - Site de cours</title>
+        <title>Linux - Site de cours</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#protocoles-de-routage" class="md-skip">
+        <a href="#commandes-linux" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Routage
+              Linux
             
           </span>
         </div>
@@ -686,6 +686,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../reseau_routage/" class="md-nav__link">
+        Routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -698,12 +712,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Routage
+          Linux
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Routage
+        Linux
       </a>
       
         
@@ -722,22 +736,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-au-routage" class="md-nav__link">
-    Introduction au routage
+  <a href="#arborescence-linux" class="md-nav__link">
+    Arborescence Linux
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rappels" class="md-nav__link">
-    Rappels
+  <a href="#les-differentes-commandes-linux-utiles-pour-le-bac" class="md-nav__link">
+    Les différentes commandes linux utiles pour le bac
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#problematique-du-routage" class="md-nav__link">
-    Problématique du routage
+  <a href="#chemin-absolu-et-relatif" class="md-nav__link">
+    Chemin absolu et relatif
   </a>
   
 </li>
@@ -746,20 +760,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../commande_linux/" class="md-nav__link">
-        Linux
-      </a>
     </li>
   
 
@@ -867,22 +867,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-au-routage" class="md-nav__link">
-    Introduction au routage
+  <a href="#arborescence-linux" class="md-nav__link">
+    Arborescence Linux
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rappels" class="md-nav__link">
-    Rappels
+  <a href="#les-differentes-commandes-linux-utiles-pour-le-bac" class="md-nav__link">
+    Les différentes commandes linux utiles pour le bac
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#problematique-du-routage" class="md-nav__link">
-    Problématique du routage
+  <a href="#chemin-absolu-et-relatif" class="md-nav__link">
+    Chemin absolu et relatif
   </a>
   
 </li>
@@ -901,52 +901,10 @@
                 
 
 
-<h1 id="protocoles-de-routage">Protocoles de routage<a class="headerlink" href="#protocoles-de-routage" title="Permanent link">&num;</a></h1>
-<h2 id="introduction-au-routage">Introduction au routage<a class="headerlink" href="#introduction-au-routage" title="Permanent link">&num;</a></h2>
-<p>Dans un réseau informatique, les informations échangées entre les machines doivent suivre un chemin bien défini pour atteindre leur destination. Cette tâche complexe est assurée par un mécanisme essentiel : le routage.</p>
-<p>Imaginez un réseau comme une immense carte routière où chaque ville représente un appareil (ordinateur, imprimante, smartphone) et chaque route, une liaison physique ou logique. Lorsqu’un message est envoyé, il doit emprunter le meilleur chemin pour arriver à bon port, même si plusieurs itinéraires sont possibles ou si certaines routes sont bloquées.</p>
-<p>Le routage est donc le processus permettant à ces messages – appelés paquets – de trouver leur chemin dans ce réseau de plus en plus complexe, qu'il s'agisse d'un réseau local (LAN) ou de l'immensité d'Internet.</p>
-<h2 id="rappels">Rappels<a class="headerlink" href="#rappels" title="Permanent link">&num;</a></h2>
-<div class="admonition success">
-<p class="admonition-title">Définition d'un réseau informatique :</p>
-<p>Un réseau informatique un ensemble d'équipements informatiques reliés entre-eux afin d'échanger des données.</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Définition d'une adresse IP :</p>
-<p>L’adressage consiste à affecter une adresse unique (numéro d’identification) permanente ou provisoire à chaque appareil
-connecté à un réseau informatique. C’est-à-dire qu’il n’existe pas sur internet deux ordinateurs ayant la même adresse IP
-sur le même réseau.</p>
-<p>Il existe des adresses IP de version 4 (sur 32 bits, soit 4 octets) et de version 6 (sur 128 bits, soit 16 octets).
-Une adresse IPV4 est une adresse notée sous forme de 4 nombres sous la forme (A.B.C.D) entiers séparés par des
-points (codé sur 32 bits).
-Exemple : 192.168.0.13</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Définition d'un masque de sous-réseau :</p>
-<p>Un masque de sous-réseau (désigné par subnet mask, netmask ou address mask en anglais) est un masque distinguant les bits d'une adresse IPv4 utilisés pour identifier le sous-réseau de ceux utilisés pour identifier l'hôte.</p>
-<p>Une forme plus courte est connue sous le nom de « notation CIDR » (Classless Inter-Domain Routing). Elle donne le numéro du réseau suivi par une barre oblique (ou slash, « / ») et le nombre de bits à 1 dans la notation binaire du masque de sous-réseau. Le masque 255.255.224.0, équivalent en binaire à 11111111.11111111.11100000.00000000, sera donc représenté par /19 (19 bits à la valeur 1, suivis de 13 bits 0).</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Adresse de sous-réseau :</p>
-<p>L'adresse du sous-réseau est obtenue en appliquant l'opérateur ET binaire entre l'adresse IP et le masque de sous-réseau. L'adresse de l'hôte à l'intérieur du sous-réseau est quant à elle obtenue en appliquant l'opérateur ET entre l'adresse IP et le complément à un du masque.</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Définition d'une adresse MAC :</p>
-<p>Une adresse MAC est également appelée adresse matérielle ou adresse Ethernet. C'est un identifiant unique et propre à la carte réseau de l'ordinateur. Une adresse MAC présente généralement le format XX-XX-XX-XX-XX-XX, chaque X représentant un chiffre ou une lettre de A à F</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Définition d'un switch :</p>
-<p>Le switch ou commutateur réseau est un boitier multiport servant à réceptionner et à redistribuer les informations sur le réseau. Ce boitier peut être constitué de 4 à plusieurs centaines de ports. Outre le fait de pouvoir connecter du matériel informatique sur le même réseau Ethernet (postes de travail, imprimante...), il contribue également à la sécurité du réseau et à protéger les données qui y transitent.</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Définition d'un routeur :</p>
-<p>Un routeur est composé d’un nombre plus ou moins important d’interfaces réseau (cartes réseau). Les routeurs les plus simples que l’on puisse rencontrer permettent de relier ensemble deux réseaux (ils possèdent alors 2 interfaces réseau), mais il existe des routeurs capables de relier ensemble une dizaine de réseaux. N'importe quel ordinateur peut jouer le rôle de routeur (à partir du moment où il possède au moins 2 interfaces réseau), mais on rencontre souvent des "machines" dédiées (par exemple de marque CISCO)</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Définition d'internet :</p>
-<p>Internet résulte de l’interconnexion de réseaux par des routeurs.</p>
-</div>
-<h2 id="problematique-du-routage">Problématique du routage<a class="headerlink" href="#problematique-du-routage" title="Permanent link">&num;</a></h2>
+<h1 id="commandes-linux">Commandes Linux<a class="headerlink" href="#commandes-linux" title="Permanent link">&num;</a></h1>
+<h2 id="arborescence-linux">Arborescence Linux<a class="headerlink" href="#arborescence-linux" title="Permanent link">&num;</a></h2>
+<h2 id="les-differentes-commandes-linux-utiles-pour-le-bac">Les différentes commandes linux utiles pour le bac<a class="headerlink" href="#les-differentes-commandes-linux-utiles-pour-le-bac" title="Permanent link">&num;</a></h2>
+<h2 id="chemin-absolu-et-relatif">Chemin absolu et relatif<a class="headerlink" href="#chemin-absolu-et-relatif" title="Permanent link">&num;</a></h2>
 
               
             </article>
@@ -960,7 +918,7 @@ Exemple : 192.168.0.13</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../BDD/sql_python/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SQL et Python" rel="prev">
+        <a href="../reseau_routage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Routage" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -969,20 +927,20 @@ Exemple : 192.168.0.13</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              SQL et Python
+              Routage
             </div>
           </div>
         </a>
       
       
         
-        <a href="../commande_linux/" class="md-footer__link md-footer__link--next" aria-label="Next: Linux" rel="next">
+        <a href="../processus/" class="md-footer__link md-footer__link--next" aria-label="Next: processus" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Linux
+              processus
             </div>
           </div>
           <div class="md-footer__button md-icon">
