@@ -1,6 +1,5 @@
 # Calculabilité décidabilité
 
-
 ## Quelques repères historiques
 
 * Wilhelm Schickard (1592 – 1635), professeur à l’Université de Tübingen (Allemagne), aurait dessiné les plans de la première machine à calculer (mécanique), mais elle n'a pas été construite.
@@ -11,7 +10,7 @@ Blaise Pascal (1623 – 1662), mathématicien et philosophe, construit à 19 ans
 * Ada Lovelace (1815 – 1852), réalise le premier véritable programme informatique pour la machine analytique de Babbage. Elle est considérée comme la première programmeuse.
 
 <figure markdown>
-![tete1](img_calculabilite_decidabilite/pascal_lovelace.png)
+![tete1](img_calculabilite_decidabilite/pascal_lovelace.png){width=300px}
 </figure>
 
 * David Hilbert (1862 – 1943), mathématicien, propose des problèmes dont certains restent irrésolus. En 1920, il énonce l’"Entscheidungsproblem", questionnant la décidabilité en mathématiques.
@@ -19,10 +18,10 @@ Blaise Pascal (1623 – 1662), mathématicien et philosophe, construit à 19 ans
 * Alan Turing (1912 – 1954) et Alonzo Church (1903 – 1995), montrent en 1936 que l'"Entscheidungsproblem" est indécidable, proposant la machine de Turing et le lambda-calcul.
 
 <figure markdown>
-![tete2](img_calculabilite_decidabilite/hilbert_godel_turing.png)
+![tete2](img_calculabilite_decidabilite/hilbert_godel_turing.png){width=400px}
 </figure>
   
-Pour en savoir plus sur la vie de Turing, consulter la vidéo :
+Pour en savoir plus sur la vie de Turing :
 
 <figure markdown>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7dpFeXV_hqs?si=TcB179GQSH7Wlpid" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -46,13 +45,15 @@ L'entrée du programme est un liste de symboles binaires. Une fois effectué, c'
 
 **Remarque 1 :** En 2012, pour célébrer le centenaire de la naissance d'Alan Turing, huit étudiant en master de l'École Normale Supérieure (ENS) de Lyon ont fabriqué en LEGO la première machine réelle (purement mécanique) du modèle de Turing. Voici le site du projet : [lien](http://rubens.ens-lyon.fr/fr/).
 
-**Exemple :** La machine peut être dans deux états e1 et e2. Si la machine est dans l'état e1 et contient un blanc, elle écrit un blanc. Le rubanc se déplace vers la gauche et la machine est dans l'état e2. Si la machine est dans l'état e2 et qu'elle lit un 0, elle écrit un 1 et si elle lit un 1 elle écrit un 0. Dans les deux cas, le ruban se déplace vers la gauche et la machine reste dans l'état e2. Enfin, si elle lit un blanc, elle écrit un blanc et la machine s'arrête.
+### Exemple
+
+ La machine peut être dans deux états e1 et e2. Si la machine est dans l'état e1 et contient un blanc, elle écrit un blanc. Le rubanc se déplace vers la gauche et la machine est dans l'état e2. Si la machine est dans l'état e2 et qu'elle lit un 0, elle écrit un 1 et si elle lit un 1 elle écrit un 0. Dans les deux cas, le ruban se déplace vers la gauche et la machine reste dans l'état e2. Enfin, si elle lit un blanc, elle écrit un blanc et la machine s'arrête.
 
 Ce qui nous donne table de transition suivante :
 
 <figure markdown>
 | **État** | **Lecture** | **Écriture** | **Déplacement** | **État suivant** |
-|----------|-------------|--------------|-----------------|------------------|
+| -------- | ----------- | ------------ | --------------- | ---------------- |
 | e1       | blanc       | blanc        | gauche          | e2               |
 | e2       | 0           | 1            | gauche          | e2               |
 | e2       | 1           | 0            | gauche          | e2               |
@@ -95,7 +96,7 @@ La machine lit un blanc, écrit un blanc, le ruban se déplace encore vers la ga
 ![etape6](img_calculabilite_decidabilite/etape6.png)
 </figure>
 
-Remarque 2 : Voici un émulateur de cette machine de [Turing](https://interstices.info/comment-fonctionne-une-machine-de-turing/)
+**Remarque 2 :** Voici un émulateur de cette machine de [Turing](https://interstices.info/comment-fonctionne-une-machine-de-turing/)
 
 !!! example "Exercice 1:"
     Considérons une machine de Turing se promenant sur un ruban constitué d’une suite de cases pouvant être vierges ("V") ou contenir une information binaire ("0" ou "1").  
@@ -104,45 +105,45 @@ Remarque 2 : Voici un émulateur de cette machine de [Turing](https://interstice
     
     De plus, elle possède un certain nombre d’états qui vont déterminer son comportement. Ces états sont précisés dans la table des transitions ci-dessous :
 
-        | **État** | **Caractère lu** | **Écrire** | **Déplacement** | **Nouvel état** |
-        |----------|------------------|------------|-----------------|-----------------|
-        | E₀       | V                | V          | droite          | E₀             |
-        | E₀       | 1                | 0          | droite          | E₁             |
-        | E₀       | 0                | 1          | droite          | E₁             |
-        | E₁       | V                |    Arrêt   | Arrêt           | Arrêt          |
-        | E₁       | 1                | 0          | droite          | E₁             |
-        | E₁       | 0                | 1          | droite          | E₁             |
+    | **État** | **Caractère lu** | **Écrire** | **Déplacement** | **Nouvel état** |
+    | -------- | ---------------- | ---------- | --------------- | --------------- |
+    | E₀       | V                | V          | droite          | E₀              |
+    | E₀       | 1                | 0          | droite          | E₁              |
+    | E₀       | 0                | 1          | droite          | E₁              |
+    | E₁       | V                | Arrêt      | Arrêt           | Arrêt           |
+    | E₁       | 1                | 0          | droite          | E₁              |
+    | E₁       | 0                | 1          | droite          | E₁              |
 
     Au commencement, la tête de lecture/écriture est positionnée dans l’état **E₀** sur une des cases vierges située à gauche du nombre binaire.
 
     1. Faire fonctionner cette machine de Turing sur le ruban suivant :
     ... | V | V | 0 | 1 | 0 | 0 | 1 | 1 | V | V | ...
     2. Quelle est l’opération effectuée par cette machine de Turing ?
-   
+
 !!! example "Exercice 2"
     Prenons maintenant une nouvelle machine de Turing avec 9 états et dont la table de transition est la suivante :
 
-        | État   | Caractère lu | Écrire      | Déplacement | Nouvel état |
-        |:------:|:------------:|:-----------:|:-----------:|:-----------:|
-        | E₀     | V            |         arrêt                           |
-        | E₀     | 0            | V           | droite      | E₁          |
-        | E₀     | 1            | V           | droite      | E₅          |
-        | E₁     | V            | V           | droite      | E₂          |
-        | E₁     | 0-1          | inchangé    | droite      | E₁          |
-        | E₂     | V            | 0           | gauche      | E₃          |
-        | E₂     | 0-1          | inchangé    | droite      | E₂          |
-        | E₃     | V            | V           | gauche      | E₄          |
-        | E₃     | 0-1          | inchangé    | gauche      | E₃          |
-        | E₄     | V            | 0           | droite      | E₀          |
-        | E₄     | 0-1          | inchangé    | gauche      | E₄          |
-        | E₅     | V            | V           | droite      | E₆          |
-        | E₅     | 0-1          | inchangé    | droite      | E₅          |
-        | E₆     | V            | 1           | gauche      | E₇          |
-        | E₆     | 0-1          | inchangé    | droite      | E₆          |
-        | E₇     | V            | V           | gauche      | E₈          |
-        | E₇     | 0-1          | inchangé    | gauche      | E₇          |
-        | E₈     | V            | 1           | droite      | E₀          |
-        | E₈     | 0-1          | inchangé    | gauche      | E₈          |
+    | **État**  | **Caractère lu** |  **Écrire**  | **Déplacement** |** Nouvel état** |
+    | :---: | :----------: | :------: | :---------: | :---------: |
+    |  E₀   |      V       |  arrêt   |
+    |  E₀   |      0       |    V     |   droite    |     E₁      |
+    |  E₀   |      1       |    V     |   droite    |     E₅      |
+    |  E₁   |      V       |    V     |   droite    |     E₂      |
+    |  E₁   |     0-1      | inchangé |   droite    |     E₁      |
+    |  E₂   |      V       |    0     |   gauche    |     E₃      |
+    |  E₂   |     0-1      | inchangé |   droite    |     E₂      |
+    |  E₃   |      V       |    V     |   gauche    |     E₄      |
+    |  E₃   |     0-1      | inchangé |   gauche    |     E₃      |
+    |  E₄   |      V       |    0     |   droite    |     E₀      |
+    |  E₄   |     0-1      | inchangé |   gauche    |     E₄      |
+    |  E₅   |      V       |    V     |   droite    |     E₆      |
+    |  E₅   |     0-1      | inchangé |   droite    |     E₅      |
+    |  E₆   |      V       |    1     |   gauche    |     E₇      |
+    |  E₆   |     0-1      | inchangé |   droite    |     E₆      |
+    |  E₇   |      V       |    V     |   gauche    |     E₈      |
+    |  E₇   |     0-1      | inchangé |   gauche    |     E₇      |
+    |  E₈   |      V       |    1     |   droite    |     E₀      |
+    |  E₈   |     0-1      | inchangé |   gauche    |     E₈      |
 
 
 
@@ -172,16 +173,17 @@ Liste des caractères possiblement présents sur le ruban $\{'0';'1;'b'\}$
 * A l'état $e1$, si la tête lit un 0 alors elle écrit 1, se déplace à droite et reste à l'état e1.
 * A l'état e1, si la tête lit un 1 alors elle écrit 0, se déplace à droite et reste à l'état e1.
 * A l'état e1, si la tête lit un blanc alors elle n'écrit rien et passe à l'état $ef$ (elle s'arrête).
- 
-    Ce qui nous donne la table de transition suivante :
+
+Ce qui nous donne la table de transition suivante :
 
 <figure markdown>
 
 | **État** | **Lecture** | **Écriture** | **Déplacement** | **État suivant** |
-|----------|-------------|--------------|-----------------|------------------|
+| -------- | ----------- | ------------ | --------------- | ---------------- |
 | e1       | 0           | 1            | droite          | e1               |
 | e1       | 1           | 0            | droite          | e1               |
 | e1       | blanc       | rien         | droite          | ef               |
+
 </figure>
 
 <figure markdown>
@@ -192,22 +194,24 @@ Liste des caractères possiblement présents sur le ruban $\{'0';'1;'b'\}$
 
 Liste des caractères possiblement présents sur le ruban $\{'0';'1;'b'\}$
 
-*  si la tête lit un blanc alors elle n'écrit rien et se déplace à droite en restant à l'état e0.
+* si la tête lit un blanc alors elle n'écrit rien et se déplace à droite en restant à l'état e0.
 * A l'état e0, si la tête lit un 0 alors elle n'écrit rien, ne se déplace pas et passe à l'état e1.
 * A l'état e0, si la tête lit un 1 alors elle n'écrit rien, ne se déplace pas et passe à l'état e1.
 * A l'état e1, si la tête lit un 0 alors elle écrit 1, se déplace à droite et reste à l'état e1.
 * A l'état e1, si la tête lit un 1 alors elle écrit 0, se déplace à droite et reste à l'état e1.
 
-    Ce qui nous donne la table de transition suivante :
+Ce qui nous donne la table de transition suivante :
 
 <figure markdown>
-| État   | Lecture | Écriture   | Déplacement | État suivant   |
-|:------:|:-------:|:----------:|:-----------:|:--------------:|
-|   e0   |    b    |    rien    |    droite   |       e0       |
-|   e0   |    0    |    rien    | pas de dplt |       e1       |
-|   e0   |    1    |    rien    | pas de dplt |       e1       |
-|   e1   |    0    |      1     |    droite   |       e1       |
-|   e1   |    1    |      0     |    droite   |       e1       |
+
+| État  | Lecture | Écriture | Déplacement | État suivant |
+| :---: | :-----: | :------: | :---------: | :----------: |
+|  e0   |    b    |   rien   |   droite    |      e0      |
+|  e0   |    0    |   rien   | pas de dplt |      e1      |
+|  e0   |    1    |   rien   | pas de dplt |      e1      |
+|  e1   |    0    |    1     |   droite    |      e1      |
+|  e1   |    1    |    0     |   droite    |      e1      |
+
 </figure>
 
 <figure markdown>
@@ -233,9 +237,9 @@ Par exemples : un nombre donné est-il pair ? un graphe contient-il un cycle ? U
 
 Par exemple, le problème de savoir si un nombre donné est pair n’est pas indécidable. On peut écrire un algorithme qui répond oui ou non à ce problème. On appelle problème de l’arrêt le problème de décision qui consiste à savoir si oui ou non un programme s’arrête.
 
-### Le problème de l'arrêt
+## Le problème de l'arrêt
 
-#### Un programme comme paramètre d'un programme
+### Un programme comme paramètre d'un programme
 
 Les codes que nous manipulons ressemblent souvent à cela :
 
@@ -278,8 +282,6 @@ Mais nous pouvons aller encore plus loin : l'instruction `python3 test.py` peut 
 
 Il n'y a donc aucun obstacle à considérer un programme comme une simple donnée, pouvant être reçue en paramètre par un autre programme. (voire par lui-même !)
 
-## Le problème de l'arrêt
-
 ### Un exemple
 
 Considérons le programme suivant :
@@ -300,6 +302,25 @@ Comme la variable `n` ne sera jamais égale à 0, le programme va rentrer dans u
 
 ### Est-ce qu'un programme d'analyse de programmes aurait pu faire cela à ma place ?
 
+Supponsons qu'il existe une fonction Python `arret(prog, x)` qui termine toujours son exécution et qui retourne `True`si la fonction Python `prog` s'arrête lorsqu'on lui passe en argument `x`. Nous pouvons donc construire une nouvelle fonction `diag(x)` de la manière suivante :
+
+```py linenums="1"
+def diag(entree):
+    if arret(entree,entree):
+        while True:
+            pass
+    else:
+        return True
+```
+
+Quel est le résultat de l'appel `diag(diag)`?
+
+Cet appel s'arrête si et seulement si `arret(diag, diag)`retourne `False` c'est-à-dire si et seulement si `diag(diag)` ne s'arrête pas. Nous sommes donc face à une contradiction !
+
+Notre hypothèse est qu'un tel programme existe est donc erronée : **le problème de l'arrêt est donc indécidable**.
+
+
+<!-- 
 Une machine pour prédire l'arrêt ou non d'un programme
 
 On suppose qu'on dispose d'un programme appelé `teste_arre`t qui prend en entrée un programme `P` et des données `X ` et renvoie `True` ou `False` selon que `P` s'arrête ou non avec les données `X` comme cela est schématisé ci-dessous :
@@ -332,4 +353,4 @@ Le programme Q prend en entrée un programme P et des données X, il peut donc s
 
 4. D'après ce schéma, que se passe-t-il si Q s'arrête avec lui même comme donnée ? Et dans le cas contraire ? Que peut-on en conclure sur l'existence du programme teste_arret ?
 
-Nous avons prouvé que le programme `teste_arret` ne peut pas exister, on dit que le problème de l'arrêt est indécidable c'est à dire qu'il n'existe pas d'algorithme permettant de résoudre ce problème.
+Nous avons prouvé que le programme `teste_arret` ne peut pas exister, on dit que le problème de l'arrêt est indécidable c'est à dire qu'il n'existe pas d'algorithme permettant de résoudre ce problème. -->

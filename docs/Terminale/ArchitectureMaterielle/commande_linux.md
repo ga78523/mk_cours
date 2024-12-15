@@ -14,7 +14,7 @@ Il existe deux types de chemin : absolu et relatif.
 
 ### Chemin absolu
 
-Un chemin absolu se base sur la racine de l'arborescence et commence par /, par ex. : `/home/utilisateur/<dossier>/<fichier>`. Il reste valable quel que soit le contexte (à condition quand même d'être sur le même système d'une même machine).
+Un chemin absolu se base sur la racine de l'arborescence et commence par `/`, par ex. : `/home/utilisateur/<dossier>/<fichier>`. Il reste valable quel que soit le contexte (à condition quand même d'être sur le même système d'une même machine).
 
 `/` au tout début d'un chemin est donc à peu près l'équivalent du `C:\ `sous Windows.
 
@@ -62,13 +62,13 @@ home  lost+found  opt    srv    usr
 
 ## Les différentes commandes linux utiles pour le bac
 
-* La commande `cd` permet de changer le répertoire courant. Il suffit d'indiquer le chemin (relatif ou absolu) qui permet d'atteindre le nouveau répertoire. La commande `cd ..`permet de remonter d'un étage dans l'arborescence ;
+* La commande `cd` permet de changer le répertoire courant. Il suffit d'indiquer le chemin (relatif ou absolu) qui permet d'atteindre le nouveau répertoire. La commande `cd ..` permet de remonter d'un étage dans l'arborescence ;
 * La commande `ls`permet de lister tous les fichiers et les dossiers présents dans un répertoire ;
 * La commande `mkdir` permet de créer un répertoire dans le répertoire courant. La commande est de la forme `mkdir nom_du_répertoire` ;
 * La commande `touch` permet de créer un fichier vide. La commande est de la forme `touch nom_du_fichier_à_créer`;
 * la commande `cat` permet d'afficher dans la console le contenu d'un fichier. La commande est de la forme 'cat nom_du_fichier`;
 * La commande `cp` permet de copier un fichier. La commande est de la forme `cp /répertoire_source/nom_fichier_à_copier /répertoire_destination/nom_fichier`
-* la commande `mv' permet de déplacer un fichier dans un dossier. Par exemple un `mv toto.txt titi` déplacera le fichier `toto.txt` dans le répertoire `titi` ;
+* la commande `mv` permet de déplacer un fichier dans un dossier. Par exemple un `mv toto.txt titi` déplacera le fichier `toto.txt` dans le répertoire `titi` ;
 * la commande `man` permet de connaitre toutes les options d'une commande.
 
 ## Les permissions
@@ -104,14 +104,12 @@ traduction :
 
 ### Changer les droits
 
-On change les permissions avec `chmod` soit en ajoutant ou retirant un flag : `$ chmod +x inside.log` rendra ce fichier exécutable soit en décrivant la permission par 3 nombres : 
+On change les permissions avec `chmod` soit en ajoutant ou retirant un flag : `$ chmod +x inside.log` rendra ce fichier exécutable soit en décrivant la permission par 3 chiffres :
 
 * 1 : possibilité d'exécution ;
 * 2 : possibilité d'écriture ;
 * 4 : possibilité de lecture.
 
-Il est également possible d'en faire la somme : Ex 7 = 1 + 2 + 4 = tous les droits.
+Il est également possible d'en faire la somme : Ex 7 = 1 + 2 + 4 = tous les droits. Et en fonction de la place de ce chiffre, la permission s'applique à l'utilisateur courant, au groupe, ou à tout le monde.
 
-En fonction de la p
-
-Exemple : `$ chmod 764 inside.log`. Avec le premièr 7 je sais que je peux tout faire, le deuxième 6, je sais que mon groupe ne peut pas exécuter. Et enfin le dernier 4, je sais que tout le monde peut lire.
+**Exemple :** `$ chmod 764 inside.log`. Avec le premier 7 je sais que je peux tout faire (lire, écrire et exécuter), le deuxième 6, je sais que mon groupe ne peut pas exécuter mais il peut lire et écrire dessus. Et enfin le dernier 4, je sais que tout le monde peut lire mais pas lire ni l'exécuter.
