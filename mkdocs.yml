@@ -58,69 +58,33 @@ extra_css:
 nav:
     - Home: index.md
     - About: about.md
-    #- 'Physique':
-      #- 'Seconde':
-      #  - TP_verrerie : Physique/Seconde/TP_verrerie.md
-      #  - TP_célérité : Physique/Seconde/TP_mesure_c_son.md
-      #  - TP_distance : Physique/Seconde/TP_mesure_distance.md
-      #  - TP_vecteur_vitesse : Physique/Seconde/TP_vecteur_vitesse_point.md
-      #  - TP_loi_Descartes : Physique/Seconde/TP_loi_Descartes.md
-    #- 'SNT':
-      #- traitement de l'image : SNT/image.md
-      #- cours_web : SNT/html.md
-      #- correction DS4 : SNT/correction_DS4.md
     - 'Première':
-      #- Types de données :
-      #  - codage des entiers relatifs : Premiere/Donnees/codage_entier_rel.md
       - Langage Python:
         - Les bases : Premiere/Langage/Bases_Python.md
         - Contrôle du flux d'exécution : Premiere/Langage/ControleFlux_Python.md
         - Les fonctions en Python : Premiere/Langage/fonction_python.md
         - Tuples et listes en Python : Premiere/Langage/tuples_listes.md
         - Dictionnaires : Premiere/Langage/dico.md
-      #- Architecture Matérielle :
-      #  - Neumann : Premiere/ArchitectureMaterielle/neumann.md
-      #  - OS : Premiere/ArchitectureMaterielle/OS.md
       - IHM:
         - web : Premiere/IHM/html_css.md
         - Frameworks : Premiere/IHM/frameworks.md
         - Javascript : Premiere/IHM/js.md
         - Formulaire : Premiere/IHM/formulaires.md
-      #- Algorithmique:
-      #  - Outils : Premiere/Algorithmique/outil_algo.md
-      #  - Algo de tri : Premiere/Algorithmique/tris_correction.md
-      #  - tris : Premiere/Algorithmique/tris.md
-      #  - kppv : Premiere/Algorithmique/kppv.md
-      #  - Algorithmes gloutons : Premiere/Algorithmique/gloutons.md
-      #- Rappels : Premiere/cours_juin_1NSI.md
     - 'Terminale':
-      #- Programmation :
-      #  - Python_outils: Terminale/Programmation/Python_regles.md
-      #  - Récursivité : Terminale/Programmation/Recursivite/recursivite.md
-      #  - POO : Terminale/Programmation/objet2.md
-      #  - Calculabilité, décidabilité : Terminale/Programmation/decidabilite_calculabilite.md
-      #  - Prog Dynamique : Terminale/Programmation/prog_dyn.md
+      - Programmation :
+        - Calculabilité, décidabilité : Terminale/Programmation/decidabilite.md
       - Structures de Données: 
-      #  - listes : Terminale/Struct_donnees/listes.md
-      #  - piles et files : Terminale/Struct_donnees/piles_files.md
-      #  - Dictionnaires : Terminale/Struct_donnees/dictionnaires.md
         - Graphes : Terminale/Struct_donnees/graphe.md
-      #  - Graphes_parcours : Terminale/Struct_donnees/graphe_parcours.md
       - BDD :
         - Introduction BDD :  Terminale/BDD/bdd.md
         - SQL avec SQLITE :  Terminale/BDD/sql_sqlite.md
         - SQL et Python : Terminale/BDD/sql_python.md
       - Architecture Matérielle :
         - Routage : Terminale/ArchitectureMaterielle/reseau_routage.md
-      #  - SOC : Terminale/ArchitectureMaterielle/SOC.md
-      #  - Linux : Terminale/ArchitectureMaterielle/commande_linux.md
-      #  - processus : Terminale/ArchitectureMaterielle/processus.md
-      #- Bonus :
-      #  - exercices : Terminale/exercices.md    
-      #  - Imprimante : Terminale/imprimantes.md
+        - Linux : Terminale/ArchitectureMaterielle/commande_linux.md
+        - processus : Terminale/ArchitectureMaterielle/processus.md
     - 'Logiciels':
       - git : Logiciels/git_github.md
-      #- vscode : Logiciels/vscode.md
-      #- installation Filius : Logiciels/installation_filius.md
+
     
 

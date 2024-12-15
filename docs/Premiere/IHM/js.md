@@ -113,4 +113,4 @@ Dans votre éditeur web, taper le code suivant :
 !!! example "Exercice 1"
     1. Identifier le script et modifier le texte à afficher
     2. Comment le script indentifie-t-il l’élément html à modifier ?
-    3. Modifier le script pour changer le t
+    3. Modifier le script pour changer le titre.

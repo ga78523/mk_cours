@@ -357,7 +357,7 @@ résultats sous la forme d’un graphe orienté.
 
 Le sens de l’arc A $\to$ B indique que le joueur A a battu B
 
-<figure markdown>
+<figure markdown> 
 ![graphe1](data/exo_graphe.png){width=150px}
 </figure>
 

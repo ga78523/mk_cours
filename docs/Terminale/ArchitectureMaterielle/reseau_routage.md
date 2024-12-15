@@ -45,7 +45,9 @@ Le routage est donc le processus permettant à ces messages – appelés paquets
 
 ## Problématique du routage
 
+<figure markdown>
 ![Exemple réseau 1](img_routage/img1.png)
+</figure>
 
 *Figure 1 : Exemple réseau 1*
 
@@ -160,9 +162,6 @@ Néanmoins, on peut résumer les informations de la tables de routage du routeur
 Table de routage simplifiée du routeur A
 </caption>
 </figure>
-
-
-
 
 !!! example "Exercice 3 :"
     Déterminez la table de routage du routeur G (sans tenir compte de la colonne métrique pour le moment).
@@ -303,4 +302,6 @@ Recopier et compléter le tableau suivant :
 |    |    |    |    |    |    |    |    |    |    |    |       |
 |    |    |    |    |    |    |    |    |    |    |    |       |
 |    |    |    |    |    |    |    |    |    |    |    |       |
-|    |    |    |    |    |    |
+|    |    |    |    |    |    |    |    |    |    |    |       |
+|    |    |    |    |    |    |    |    |    |    |    |       |
+</figure>

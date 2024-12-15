@@ -109,9 +109,9 @@ colonnes pour les écrans moyens et enfin en une seule colonne pour les petits. 
 * Créer un dossier intitulé `exemple_Framworks` ;
 * Créer un sous-dossier intitulé `img`;
 * Enregistrer dans le sous-dossier `img`, les trois photos de motos suivantes :
-    * moto2.jpg ([lien pour la télécharger]);
-    * moto5.jpg ;
-    * moto3.jpg.
+    * moto1.png  ([lien pour la télécharger](img_bootstrap/moto1.png));
+    * moto2.png([lien pour la télécharger](img_bootstrap/moto2.jpg));
+    * moto3.png ([lien pour la télécharger](img_bootstrap/moto3.jpg)).
 * Ouvrir Visual Studio Code et créer un fichier que vous nommerez `bootstrap.html` et copier/coller le code ci-dessous.
 * Enregistrer et quitter
 * puis ouvrir `bootstrap.html` avec votre navigateur et faire varier la largeur de la fenêtre.
@@ -153,13 +153,13 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
                 
             <div class="row">
                 <div class=" col-lg-4 col-md-4 col-xs-12">
-                    <img src="img/moto5.jpg" class="img-fluid" alt="moto1">
+                    <img src="img/moto1.png" class="img-fluid" alt="moto1">
                 </div>
                 <div class=" col-lg-4 col-md-4 col-xs-12">
-                    <img src="img/moto2.jpg" class="img-fluid" alt="moto1">
+                    <img src="img/moto2.png" class="img-fluid" alt="moto1">
                 </div>
                 <div class=" col-lg-4 col-md-4 col-xs-12">
-                    <img src="img/moto3.jpg" class="img-fluid" alt="moto1">
+                    <img src="img/moto3.png" class="img-fluid" alt="moto1">
             </div>
         </div>
 <!-- Optional JavaScript -->
