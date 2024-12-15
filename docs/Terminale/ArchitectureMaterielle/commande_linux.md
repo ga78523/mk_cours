@@ -73,22 +73,45 @@ home  lost+found  opt    srv    usr
 
 ## Les permissions
 
+### Voir les droits
+
 La sécurité sous unix est gérée par la notion de permission.
 
 Un utilisateur ne peut pas faire ce qu’il veut. 
 
 Le super utilisteur root peut tout faire. Devenir root avec `$ su`, exécuter une commande comme root avec `$ sudo commande`.
 
-L’affichage détaillé d’un fichier (ls -lah) montre les permissions de l’utilisateur courant de son groupe et de tout le monde
+L’affichage détaillé d’un fichier (`ls -lah`) montre :
+
+* les permissions de l’utilisateur courant
+* de son groupe ;
+* de tout le monde.
 
 **Exemple :**
-``` 
--rwxr-xr-x 1 quentin quentin  324  2 déc.  21:45 deploy.sh
--rw-r--r-- 1 quentin quentin 3,6M  5 déc.  08:32 inside.log
-traduction
 
-- : pas activé
-d : directory
-r : droit de lecture
-w : droit d'écritude
-x : droit d'exécution
+``` shell
+-rwxr-xr-x 1 eric eric  324  2 déc.  21:45 deploy.sh
+-rw-r--r-- 1 eric eric 3,6M  5 déc.  08:32 inside.log
+```
+
+traduction :
+
+* - : pas activé
+* d : directory
+* r : droit de lecture
+* w : droit d'écritude
+* x : droit d'exécution
+
+### Changer les droits
+
+On change les permissions avec `chmod` soit en ajoutant ou retirant un flag : `$ chmod +x inside.log` rendra ce fichier exécutable soit en décrivant la permission par 3 nombres : 
+
+* 1 : possibilité d'exécution ;
+* 2 : possibilité d'écriture ;
+* 4 : possibilité de lecture.
+
+Il est également possible d'en faire la somme : Ex 7 = 1 + 2 + 4 = tous les droits.
+
+En fonction de la p
+
+Exemple : `$ chmod 764 inside.log`. Avec le premièr 7 je sais que je peux tout faire, le deuxième 6, je sais que mon groupe ne peut pas exécuter. Et enfin le dernier 4, je sais que tout le monde peut lire.
