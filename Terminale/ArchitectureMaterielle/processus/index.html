@@ -793,6 +793,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-top" class="md-nav__link">
+    La commande top
+  </a>
+  
+    <nav class="md-nav" aria-label="La commande top">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#la-commande-pstree" class="md-nav__link">
     La commande pstree
@@ -1011,6 +1024,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-top" class="md-nav__link">
+    La commande top
+  </a>
+  
+    <nav class="md-nav" aria-label="La commande top">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#la-commande-pstree" class="md-nav__link">
     La commande pstree
@@ -1112,9 +1138,9 @@
 <li>la prise en charge de la mémoire.</li>
 </ul>
 <p>L'exécution des programmes est prise en charge par les processus et les périphériques identifiés comme des ressources dont la disponibilité est gérée par le système.</p>
-<p>Ce chapitre a pour but de présenter ce qu'est un processus et de présenter le mécanisme d'ordonnancement du système d'exploitation pour partager l'utilisation du ou des processeurs entre l'ensemble des processus. </p>
+<p>Ce chapitre a pour but de présenter ce qu'est un processus et de présenter le mécanisme d'ordonnancement du système d'exploitation pour partager l'utilisation du ou des processeurs entre l'ensemble des processus.</p>
 <h2 id="programme-et-processus">Programme et processus<a class="headerlink" href="#programme-et-processus" title="Permanent link">&num;</a></h2>
-<p><strong>Programme :</strong> Un programme est compsé d'une suite d'instructions. Ces instructions sont généralement stockées dans un fichier. L'exécution de ce programme consiste en l'exécution, les unes après les autres des instructions composant ce programme.</p>
+<p>Un <strong>programme</strong> est composé d'une suite d'instructions. Ces instructions sont généralement stockées dans un fichier. L'exécution de ce programme consiste en l'exécution, les unes après les autres des instructions composant ce programme.</p>
 <p>Cette exécution est prise en charge par un processus crée par le système d'exploitation. Celui-ci va :</p>
 <ul>
 <li>charger les instructions du programme en mémoire ;</li>
@@ -1183,9 +1209,13 @@
 <li>PPID est le parent processus identifier qui donne l’identifiant du parent qui a engendré le processus</li>
 <li>CMD est le nom de la commande</li>
 </ul>
+<h3 id="la-commande-top">La commande <code>top</code><a class="headerlink" href="#la-commande-top" title="Permanent link">&num;</a></h3>
+<figure>
+<p><img alt="processus" src="../img_processus/top.png" /></p>
+</figure>
 <h4 id="la-commande-pstree">La commande <code>pstree</code><a class="headerlink" href="#la-commande-pstree" title="Permanent link">&num;</a></h4>
 <p>À noter que la commande <code>pstree</code> permet d'afficher les processus sous forme d'arborescence :</p>
-<h4 id="la-commande-kill">La commande kill<a class="headerlink" href="#la-commande-kill" title="Permanent link">&num;</a></h4>
+<h4 id="la-commande-kill">La commande <code>kill</code><a class="headerlink" href="#la-commande-kill" title="Permanent link">&num;</a></h4>
 <p>Il n’est parfois pas possible de fermer un processus graphique en cliquant par exemple sur la croix prévue pourtant à cet effet.On peut utiliser la commande kill si on connait le PID du processus à "tuer".</p>
 <h2 id="lordonnencement-des-processus">L'ordonnencement des processus<a class="headerlink" href="#lordonnencement-des-processus" title="Permanent link">&num;</a></h2>
 <h3 id="differents-types-dordonnancement">Différents types d'ordonnancement<a class="headerlink" href="#differents-types-dordonnancement" title="Permanent link">&num;</a></h3>
@@ -1210,9 +1240,9 @@
 <ul>
 <li><strong>Prêt</strong> : il attend qu'arrive le moment de son exécution.</li>
 <li><strong>Élu ou actif</strong> : il est en cours d'exécution par le processeur.</li>
-<li><strong>Bloqué</strong> : pendant son exécution (état Élu), le processus réclame une ressource qui n'est pas immédiatement disponible. Son exécution s'interrompt. </li>
+<li><strong>Bloqué</strong> : pendant son exécution (état Élu), le processus réclame une ressource qui n'est pas immédiatement disponible. Son exécution s'interrompt.Lorsque la ressource sera disponible, le processus repassera par l'état Prêt et attendra à nouveau son tour.</li>
 </ul>
-<p>Lorsque la ressource sera disponible, le processus repassera par l'état Prêt et attendra à nouveau son tour.</p>
+<p>Il existe aussi un état <strong>zombie</strong>. Il s'agit d'un processus qui s'est terminé, mais qui n'est pas entièrement retiré immédiatement de la mémoire.</p>
 <figure>
 <p><img alt="différents_ordonnancements" src="../img_processus/cycle_etat_processus.png" /></p>
 </figure>

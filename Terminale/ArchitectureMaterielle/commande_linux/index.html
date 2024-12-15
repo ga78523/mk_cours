@@ -1017,7 +1017,7 @@
 <p>La référence à une ressource (fichier ou répertoire) s'appelle un chemin d'accès (en anglais : path). Dans ce chemin, sous Linux, les noms des répertoires et éventuel fichier sont séparés par un slash / (alors qu'on utilise un antislash \ sous Windows).</p>
 <p>Il existe deux types de chemin : absolu et relatif.</p>
 <h3 id="chemin-absolu">Chemin absolu<a class="headerlink" href="#chemin-absolu" title="Permanent link">&num;</a></h3>
-<p>Un chemin absolu se base sur la racine de l'arborescence et commence par /, par ex. : <code>/home/utilisateur/&lt;dossier&gt;/&lt;fichier&gt;</code>. Il reste valable quel que soit le contexte (à condition quand même d'être sur le même système d'une même machine).</p>
+<p>Un chemin absolu se base sur la racine de l'arborescence et commence par <code>/</code>, par ex. : <code>/home/utilisateur/&lt;dossier&gt;/&lt;fichier&gt;</code>. Il reste valable quel que soit le contexte (à condition quand même d'être sur le même système d'une même machine).</p>
 <p><code>/</code> au tout début d'un chemin est donc à peu près l'équivalent du <code>C:\</code>sous Windows.</p>
 <h3 id="chemin-relatif">Chemin relatif<a class="headerlink" href="#chemin-relatif" title="Permanent link">&num;</a></h3>
 <p>Un chemin relatif est a priori relatif au répertoire courant où se trouve l'utilisateur. Un chemin qui commence par autre chose que <code>/</code> ou <code>~</code> est un chemin relatif. Cette notion de positionnement dépend du contexte, mais sous Linux on se trouve généralement par défaut dans son répertoire personnel qui est <code>/home/&lt;nom d'utilisateur&gt;</code>. Dans un terminal on peut naviguer d'un répertoire à l'autre avec la commande <code>cd</code> .</p>
@@ -1051,13 +1051,13 @@ utilisent le shell pour leurs interactions, ne peuvent être exécutées en deho
 </ul>
 <h2 id="les-differentes-commandes-linux-utiles-pour-le-bac">Les différentes commandes linux utiles pour le bac<a class="headerlink" href="#les-differentes-commandes-linux-utiles-pour-le-bac" title="Permanent link">&num;</a></h2>
 <ul>
-<li>La commande <code>cd</code> permet de changer le répertoire courant. Il suffit d'indiquer le chemin (relatif ou absolu) qui permet d'atteindre le nouveau répertoire. La commande <code>cd ..</code>permet de remonter d'un étage dans l'arborescence ;</li>
+<li>La commande <code>cd</code> permet de changer le répertoire courant. Il suffit d'indiquer le chemin (relatif ou absolu) qui permet d'atteindre le nouveau répertoire. La commande <code>cd ..</code> permet de remonter d'un étage dans l'arborescence ;</li>
 <li>La commande <code>ls</code>permet de lister tous les fichiers et les dossiers présents dans un répertoire ;</li>
 <li>La commande <code>mkdir</code> permet de créer un répertoire dans le répertoire courant. La commande est de la forme <code>mkdir nom_du_répertoire</code> ;</li>
 <li>La commande <code>touch</code> permet de créer un fichier vide. La commande est de la forme <code>touch nom_du_fichier_à_créer</code>;</li>
 <li>la commande <code>cat</code> permet d'afficher dans la console le contenu d'un fichier. La commande est de la forme 'cat nom_du_fichier`;</li>
 <li>La commande <code>cp</code> permet de copier un fichier. La commande est de la forme <code>cp /répertoire_source/nom_fichier_à_copier /répertoire_destination/nom_fichier</code></li>
-<li>la commande <code>mv' permet de déplacer un fichier dans un dossier. Par exemple un</code>mv toto.txt titi<code>déplacera le fichier</code>toto.txt<code>dans le répertoire</code>titi` ;</li>
+<li>la commande <code>mv</code> permet de déplacer un fichier dans un dossier. Par exemple un <code>mv toto.txt titi</code> déplacera le fichier <code>toto.txt</code> dans le répertoire <code>titi</code> ;</li>
 <li>la commande <code>man</code> permet de connaitre toutes les options d'une commande.</li>
 </ul>
 <h2 id="les-permissions">Les permissions<a class="headerlink" href="#les-permissions" title="Permanent link">&num;</a></h2>
