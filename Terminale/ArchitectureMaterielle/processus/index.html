@@ -832,15 +832,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#les-etats-dun-processus" class="md-nav__link">
+    Les états d'un processus
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-etats-dun-processus" class="md-nav__link">
-    Les états d'un processus
+  <a href="#interblocage" class="md-nav__link">
+    Interblocage
   </a>
+  
+    <nav class="md-nav" aria-label="Interblocage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-et-exemple" class="md-nav__link">
+    Définition et exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representation-schematique" class="md-nav__link">
+    Représentation schématique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1023,15 +1050,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#les-etats-dun-processus" class="md-nav__link">
+    Les états d'un processus
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-etats-dun-processus" class="md-nav__link">
-    Les états d'un processus
+  <a href="#interblocage" class="md-nav__link">
+    Interblocage
   </a>
+  
+    <nav class="md-nav" aria-label="Interblocage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-et-exemple" class="md-nav__link">
+    Définition et exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representation-schematique" class="md-nav__link">
+    Représentation schématique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1063,7 +1117,7 @@
 <p><strong>Programme :</strong> Un programme est compsé d'une suite d'instructions. Ces instructions sont généralement stockées dans un fichier. L'exécution de ce programme consiste en l'exécution, les unes après les autres des instructions composant ce programme.</p>
 <p>Cette exécution est prise en charge par un processus crée par le système d'exploitation. Celui-ci va :</p>
 <ul>
-<li>charger les instruction du programme en mémoire ;</li>
+<li>charger les instructions du programme en mémoire ;</li>
 <li>écrire l'adresse mémoire de la première instruction dans le compteur de programme (CP).</li>
 </ul>
 <p>Le cycle d'exécution du processeur permet l'exécution une à une des instructions du programme par le microprocesseur.</p>
@@ -1144,19 +1198,67 @@
 <li>de faire à tour de rôle chaque tâche pendant un temps fixe jusqu'à ce qu'elles soient toutes terminées;</li>
 <li>...</li>
 </ul>
-<p>Un processeur est confronté aux mêmes choix : comment déterminer quel processus doit être traité à quel moment ?</p>
+<p>Plusieurs stratégies peuvent être appliquée :</p>
 <p>Le schéma ci-dessous (issu de ce <a href="https://medium.com/@sheenam.mca17.du/process-scheduling-b86975413079">site</a>) présente quelques politiques d'ordonnancement :</p>
 <figure>
-<p><img alt="différents_ordonnencements" src="../img_processus/1_5PiB5W4fvWEAGp56F5e8ag.webp" /></p>
+<p><img alt="différents_ordonnancements" src="../img_processus/1_5PiB5W4fvWEAGp56F5e8ag.webp" /></p>
 </figure>
-<h2 id="les-etats-dun-processus">Les états d'un processus<a class="headerlink" href="#les-etats-dun-processus" title="Permanent link">&num;</a></h2>
+<p>C'est la partie du système d'exploitation appelée <strong>ordonnanceur</strong> qui est en charge de ce choix.</p>
+<p>Généralement, l'ordonnanceur applique une politique de <strong>temps partagé</strong>. Le principe de fonctionnement est le suivant. Un algorithme d'ordonnancement choisit un processus parmi l'ensemble des processus en attente d'exécution. Ce choix est guidé par différents critères qui dépendent du système d'exploitation. Ce processus élu s'exécute alors pendant une certaine tranche de temps appelée <strong>quantum d'ordonnancement</strong>. A l'issue de ce quantum, l'ordonnanceur interromp l'exécution de ce processus et sollicite l'algorithme d'ordonancement pour procéder à un nouveau choix.</p>
+<h3 id="les-etats-dun-processus">Les états d'un processus<a class="headerlink" href="#les-etats-dun-processus" title="Permanent link">&num;</a></h3>
 <p>Selon que l'ordonnanceur aura décidé de le confier ou non au processeur pour son exécution, un processus peut donc se trouver dans 3 états :</p>
 <ul>
 <li><strong>Prêt</strong> : il attend qu'arrive le moment de son exécution.</li>
-<li><strong>Élu</strong> : il est en cours d'exécution par le processeur.</li>
+<li><strong>Élu ou actif</strong> : il est en cours d'exécution par le processeur.</li>
 <li><strong>Bloqué</strong> : pendant son exécution (état Élu), le processus réclame une ressource qui n'est pas immédiatement disponible. Son exécution s'interrompt. </li>
 </ul>
 <p>Lorsque la ressource sera disponible, le processus repassera par l'état Prêt et attendra à nouveau son tour.</p>
+<figure>
+<p><img alt="différents_ordonnancements" src="../img_processus/cycle_etat_processus.png" /></p>
+</figure>
+<h2 id="interblocage">Interblocage<a class="headerlink" href="#interblocage" title="Permanent link">&num;</a></h2>
+<h3 id="definition-et-exemple">Définition et exemple<a class="headerlink" href="#definition-et-exemple" title="Permanent link">&num;</a></h3>
+<p>Comme nous venons de le voir, un processus peut être dans l'état bloqué dans l'attente de la libération d'une ressource.</p>
+<p>Ces ressources (l'accès en écriture à un fichier, à un registre de la mémoire...) ne peuvent être données à deux processus à la fois. Des processus souhaitant accéder à cette ressource sont donc en concurrence sur cette ressource. Un processus peut donc devoir attendre qu'une ressource se libère avant de pouvoir y accéder (et ainsi passer de l'état Bloqué à l'état Prêt).</p>
+<p><strong>Problème :</strong> Et si deux processus se bloquent mutuellement la ressource dont ils ont besoin ?</p>
+<p><strong>Exemple :</strong> Considérons 2 processus A et B, et deux ressources R et S. L'action des processus A et B est décrite ci-dessous :</p>
+<figure>
+<p><img alt="interbloquage" src="../img_processus/tab_proc.png" /></p>
+</figure>
+<p>Déroulement des processus A et B :</p>
+<ul>
+<li>A et B sont créés et passent à l'état Prêt.</li>
+<li>L'ordonnanceur déclare Élu le processus A (ou bien B, cela ne change rien).</li>
+<li>L'étape A1 de A est réalisée : la ressource R est donc affectée à A.</li>
+<li>L'ordonnanceur déclare maintenant Élu le processus B. A est donc passé à Prêt en attendant que son tour revienne.</li>
+<li>L'étape B1 de B est réalisée : la ressource S est donc affectée à B.</li>
+<li>L'ordonnanceur déclare à nouveau Élu le processus A. B est donc passé à Prêt en attendant que son tour revienne.</li>
+<li>L'étape A2 de A est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource S, qui n'est pas disponible. L'ordonnanceur va donc passer A à Bloqué et va revenir au processus B qui redevient Élu.</li>
+<li>L'étape B2 de B est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource R, qui n'est pas disponible. L'ordonnanceur va donc passer B à Bloqué.</li>
+</ul>
+<p>Les deux processus A et B sont donc dans l'état Bloqué, chacun en attente de la libération d'une ressource bloquée par l'autre : ils se bloquent mutuellement.</p>
+<p>Cette situation (critique) est appelée <strong>interblocage ou deadlock</strong>.</p>
+<h3 id="representation-schematique">Représentation schématique<a class="headerlink" href="#representation-schematique" title="Permanent link">&num;</a></h3>
+<ul>
+<li>Les processus seront représentés par des cercles, les ressources par des carrés.</li>
+<li>Si à l'étape A1 le processus A a demandé et reçu la ressource R, la représentation sera :</li>
+</ul>
+<figure>
+<p><img alt="representation1" src="../img_processus/A1.png" width="150px" /></p>
+</figure>
+<ul>
+<li>Si à l'étape A2 le processus A est en attente de la ressource S, la représentation sera :</li>
+</ul>
+<figure>
+<p><img alt="representation2" src="../img_processus/A2.png" width="150px" /></p>
+</figure>
+<ul>
+<li>Avec ces conventions, la situation précédente peut donc se schématiser par :</li>
+</ul>
+<figure>
+<p><img alt="representation3" src="../img_processus/schema.png" width="150px" /></p>
+</figure>
+<p>Ce type de schéma fait apparaître un cycle d'interdépendance, qui caractérise ici la situation de deadlock.</p>
 
               
             </article>
