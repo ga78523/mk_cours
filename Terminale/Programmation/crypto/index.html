@@ -636,22 +636,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#https-exemple-dutilisation-conjointe-des-deux-systemes-de-chiffrements" class="md-nav__link">
-    HTTPS : exemple d'utilisation conjointe des deux systèmes de chiffrements
+  <a href="#https" class="md-nav__link">
+    HTTPS
   </a>
-  
-    <nav class="md-nav" aria-label="HTTPS : exemple d'utilisation conjointe des deux systèmes de chiffrements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principe-generale" class="md-nav__link">
-    Principe générale
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1018,22 +1005,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#https-exemple-dutilisation-conjointe-des-deux-systemes-de-chiffrements" class="md-nav__link">
-    HTTPS : exemple d'utilisation conjointe des deux systèmes de chiffrements
+  <a href="#https" class="md-nav__link">
+    HTTPS
   </a>
-  
-    <nav class="md-nav" aria-label="HTTPS : exemple d'utilisation conjointe des deux systèmes de chiffrements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principe-generale" class="md-nav__link">
-    Principe générale
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1072,15 +1046,11 @@ avec la clé privée.</li>
 </ul>
 <p>Un chiffrement est dit symétrique lorsque la connaissance de la clé ayant servi au chiffrement permet de déchiffrer le message. Par exemple, Alice chiffre son message en décalant les lettres de 3 rangs vers la droite dans l'alphabet, Bob saura qu'il doit les décaler de 3 rangs vers la gauche pour retrouver le message initial.</p>
 <h3 id="exemple-1-le-codage-de-cesar">Exemple 1 : le codage de César<a class="headerlink" href="#exemple-1-le-codage-de-cesar" title="Permanent link">&num;</a></h3>
-<p>Le codage de César avec une clé de 13. En ne considérant que les lettres en majuscule et non accentuées, notre alphabet
-se réduit à 26 lettres (ABCDEFGHIJKLMNOPQRSTUVWXYZ). Avec un décalage de 13 : (A<span class="arithmatex">\(\to\)</span>N) et (N<span class="arithmatex">\(\to\)</span>A). On utilise
-bien la même clé, il s’agit donc d’un chiffrement symétrique.</p>
+<p>Le codage de César avec une clé de 13. En ne considérant que les lettres en majuscule et non accentuées, notre alphabet se réduit à 26 lettres (ABCDEFGHIJKLMNOPQRSTUVWXYZ). Avec un décalage de 13 : (A<span class="arithmatex">\(\to\)</span>N) et (N<span class="arithmatex">\(\to\)</span>A). On utilise bien la même clé, il s’agit donc d’un chiffrement symétrique.</p>
 <p>Par exemple le message "BONJOUR, COMMENT ALLEZ-VOUS" se code par : "OBAWBHE, PBZZRAG NYYRMIBHF" (seules les lettres ont été codées...) et le déchiffrement nous redonne bien le message d’origine.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 1:</p>
-<p>Écrire un programme qui réalise ce chiffrement de César avec une clé de 13. On pourra utiliser ce dictionnaire et la méthode <span class="arithmatex">\(get\)</span> associée :
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">65</span><span class="p">):</span><span class="nb">chr</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="mi">13</span><span class="p">)</span> <span class="o">%</span><span class="mi">26</span><span class="o">+</span><span class="mi">65</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">)}</span>
-</span></code></pre></div></p>
+<p>Écrire un programme qui réalise ce chiffrement de César avec une clé passée en paramètre. Ce programme utilisera les dictionnaires. ce programme pourra réaliser le codage et le décodage.</p>
 </div>
 <h3 id="exemple-2-le-codage-xor">exemple 2 : le codage XOR<a class="headerlink" href="#exemple-2-le-codage-xor" title="Permanent link">&num;</a></h3>
 <p>Le cryptage XOR est un système de cryptage basique mais pas trop limité. Ainsi, il a beaucoup été utilisé dans les débuts de l'informatique et continue à l'être encore aujourd'hui car il est facile à implémenter, dans toutes sortes de programmes.</p>
@@ -1114,11 +1084,11 @@ bien la même clé, il s’agit donc d’un chiffrement symétrique.</p>
 <p></CENTER></p>
 <p>Une particularité de cette opération est : si b1 xor b2 = b3 alors b1 xor b3 = b2 et b2 xor b3=b1. Ce qui permet un chiffrement symétrique.</p>
 <p>Prenons le mot ’bonjour’dont le code Unicode est donné par ce programme :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">m</span> <span class="o">=</span> <span class="s2">&quot;bonjour&quot;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="err">’</span> <span class="err">’</span><span class="p">)</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">m</span> <span class="o">=</span> <span class="s2">&quot;bonjour&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="err">’</span> <span class="err">’</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
 <p><strong>Rappels :</strong></p>
@@ -1174,39 +1144,39 @@ bien la même clé, il s’agit donc d’un chiffrement symétrique.</p>
 <p>En pratiquant un XOR lettre par lettre entre les nombres obtenus (après une écriture en binaire...), on obtient les codes Unicode suivant : 12 28 7 4 28 28 28 (que l’on pourrait transformer en caractères mais ce n’est pas très utile...)</p>
 <p>Pour décoder le message, il suffit alors de recommencer l’opération avec les codes Unicode du message chiffré en utilisant la même clé : (12 xor 110→98 donc ’b’), etc...</p>
 <p>En Python l’opérateur <span class="arithmatex">\(∧\)</span> permet d’effectuer un xor directement sur deux entiers. Le programme suivant chiffre un message en utilisant cette méthode :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Bonjour, comment allez-vous ?&quot;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">cle</span> <span class="o">=</span> <span class="s2">&quot;mystère&quot;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">def</span> <span class="nf">chiffre</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">cle</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">list</span><span class="p">:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="sd">&quot;&quot;&quot; fonction qui chiffre le message avec le clé suivant la méthode xor&quot;&quot;&quot;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="n">msg_chiffre</span> <span class="o">=</span> <span class="p">[]</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="n">taille_msg</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="n">taille_cle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">taille_msg</span><span class="p">):</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>        <span class="n">msg_chiffre</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>        <span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">taille_cle</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>    <span class="k">return</span> <span class="n">msg_chiffre</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">chiffre</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="n">cle</span><span class="p">))</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Bonjour, comment allez-vous ?&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">cle</span> <span class="o">=</span> <span class="s2">&quot;mystère&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">def</span> <span class="nf">chiffre</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">cle</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">list</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="sd">&quot;&quot;&quot; fonction qui chiffre le message avec le clé suivant la méthode xor&quot;&quot;&quot;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="n">msg_chiffre</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="n">taille_msg</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="n">taille_cle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">taille_msg</span><span class="p">):</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>        <span class="n">msg_chiffre</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>        <span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">taille_cle</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>    <span class="k">return</span> <span class="n">msg_chiffre</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">chiffre</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="n">cle</span><span class="p">))</span>
 </span></code></pre></div>
 </td></tr></table>
 <p>Ce qui donne en console : </p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">[</span><span class="mi">47</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span><span class="mi">132</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">157</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">82</span><span class="p">]</span>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">[</span><span class="mi">47</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span><span class="mi">132</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">157</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">82</span><span class="p">]</span>
 </span></code></pre></div>
 <p>Chaque nombre peut être converti en caractère (le contenu complet du message est chiffré, y compris les caractères de ponctuation et d’espace).</p>
 <div class="admonition example">
@@ -1255,8 +1225,7 @@ par le schéma suivant :</p>
 <p>Si vous prenez un nombre premier A (par exemple A = 16813007) et un nombre premier B (par exemple B = 258027589), il facile de déterminer C le produit de A par B (ici on a A <span class="arithmatex">\(\times\)</span> B = C avec C = 4338219660050123). En revanche si je vous donne C (ici 4338219660050123) il est très difficile de retrouver A et B. En tous les cas, à ce jour, aucun algorithme n’est capable de retrouver A et B connaissant C dans un temps "raisonnable". Nous avons donc bien ici un problème relativement facile dans un sens (trouver C à partir de A et B) est extrêmement difficile dans l’autre sens (trouver A et B à partir de C). Les détails du fonctionnement de RSA sont relativement complexes (mathématiquement parlant) et ne seront pas abordés ici. Vous devez juste savoir qu’il existe un lien entre une clé publique et la clé privée correspondante, mais qu’il est quasiment impossible de trouver la clé privée de quelqu’un à partir de sa clé publique.</p>
 <p><strong>Remarque :</strong> Un nombre premier est un entier naturel qui admet exactement deux diviseurs distincts entiers et positifs.</p>
 <p>Ces deux diviseurs sont 1 et le nombre considéré, puisque tout nombre a pour diviseurs 1 et lui-même (comme le montre l’égalité n = 1 <span class="arithmatex">\(\times\)</span> n), les nombres premiers étant ceux qui n’en possèdent aucun autre. Par exemple, le nombre entier 7 est premier car 1 et 7 sont les seuls diviseurs entiers et positifs de 7.</p>
-<h2 id="https-exemple-dutilisation-conjointe-des-deux-systemes-de-chiffrements">HTTPS : exemple d'utilisation conjointe des deux systèmes de chiffrements<a class="headerlink" href="#https-exemple-dutilisation-conjointe-des-deux-systemes-de-chiffrements" title="Permanent link">&num;</a></h2>
-<h3 id="principe-generale">Principe générale<a class="headerlink" href="#principe-generale" title="Permanent link">&num;</a></h3>
+<h2 id="https">HTTPS<a class="headerlink" href="#https" title="Permanent link">&num;</a></h2>
 <p>Aujourd'hui, plus de 90 % du trafic sur internet est chiffré : les données ne transitent plus en clair (protocole http) mais de manière chiffrée (protocole https), ce qui empêche la lecture de paquets éventuellements interceptés.</p>
 <p>Le protocole https est la réunion de deux protocoles :</p>
 <ul>
