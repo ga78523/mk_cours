@@ -1042,7 +1042,7 @@ avec la clé privée.</li>
 <ul>
 <li>un nombre (dans un simple décalage des lettres de l'alphabet, comme le chiffre de César)</li>
 <li>une phrase (dans la méthode du <a href="https://fr.wikipedia.org/wiki/Masque_jetable">masque jetable</a>)</li>
-<li>une image (imaginez un chiffrement où on effectue un XOR par les pixels d'une image, comme dans cette énigme)</li>
+<li>une image.</li>
 </ul>
 <p>Un chiffrement est dit symétrique lorsque la connaissance de la clé ayant servi au chiffrement permet de déchiffrer le message. Par exemple, Alice chiffre son message en décalant les lettres de 3 rangs vers la droite dans l'alphabet, Bob saura qu'il doit les décaler de 3 rangs vers la gauche pour retrouver le message initial.</p>
 <h3 id="exemple-1-le-codage-de-cesar">Exemple 1 : le codage de César<a class="headerlink" href="#exemple-1-le-codage-de-cesar" title="Permanent link">&num;</a></h3>
@@ -1217,10 +1217,10 @@ par le schéma suivant :</p>
     Note left of A: kpuA : clé publique de A&lt;br&gt;kprA : clé privée de A
     Note right of B: kpuB : clé publique de B&lt;br&gt;kprB : clé privée de B</code></pre>
 <p>Si P intercepte le message m0, il sera incapable de déterminer m à partir de m0 sans la clé privée de B</p>
-<p>1) KpuB(m) <span class="arithmatex">\(\to\)</span> m'
-2) A $ \xrightarrow{\text{m'}} B$
-3) KprB(m') <span class="arithmatex">\(\to\)</span> m</p>
-<p>Le chiffrement asymétrique repose sur des problèmes très difficiles à résoudre dans un sens et faciles à résoudre dans l’autre sens. </p>
+<p>1) KpuB(m) <span class="arithmatex">\(\to\)</span> m'</p>
+<p>2) A $ \xrightarrow{\text{m'}} B$</p>
+<p>3) KprB(m') <span class="arithmatex">\(\to\)</span> m</p>
+<p>Le chiffrement asymétrique repose sur des problèmes très difficiles à résoudre dans un sens et faciles à résoudre dans l’autre sens.</p>
 <p>Prenons un exemple : l’algorithme de chiffrement asymétrique RSA (du nom de ses 3 inventeurs : Rivest Shamir et Adleman), est très couramment utilisé, notamment dans tout ce qui touche au commerce électronique. RSA se base sur la factorisation des très grands nombres premiers.</p>
 <p>Si vous prenez un nombre premier A (par exemple A = 16813007) et un nombre premier B (par exemple B = 258027589), il facile de déterminer C le produit de A par B (ici on a A <span class="arithmatex">\(\times\)</span> B = C avec C = 4338219660050123). En revanche si je vous donne C (ici 4338219660050123) il est très difficile de retrouver A et B. En tous les cas, à ce jour, aucun algorithme n’est capable de retrouver A et B connaissant C dans un temps "raisonnable". Nous avons donc bien ici un problème relativement facile dans un sens (trouver C à partir de A et B) est extrêmement difficile dans l’autre sens (trouver A et B à partir de C). Les détails du fonctionnement de RSA sont relativement complexes (mathématiquement parlant) et ne seront pas abordés ici. Vous devez juste savoir qu’il existe un lien entre une clé publique et la clé privée correspondante, mais qu’il est quasiment impossible de trouver la clé privée de quelqu’un à partir de sa clé publique.</p>
 <p><strong>Remarque :</strong> Un nombre premier est un entier naturel qui admet exactement deux diviseurs distincts entiers et positifs.</p>
