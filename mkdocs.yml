@@ -40,6 +40,11 @@ markdown_extensions:
   - tables
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 
 extra_javascript:
@@ -73,6 +78,7 @@ nav:
     - 'Terminale':
       - Programmation :
         - Calculabilité, décidabilité : Terminale/Programmation/decidabilite.md
+        - Sécurisation des données : Terminale/Programmation/crypto.md
       - Structures de Données: 
         - Graphes : Terminale/Struct_donnees/graphe.md
       - BDD :
