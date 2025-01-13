@@ -506,23 +506,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#le-javascript-un-langage" class="md-nav__link">
-    Le javascript : un langage
+  <a href="#le-javascript-un-langage-comme-python" class="md-nav__link">
+    Le javascript : un langage comme Python
   </a>
   
-    <nav class="md-nav" aria-label="Le javascript : un langage">
+    <nav class="md-nav" aria-label="Le javascript : un langage comme Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ou-ecrire-son-code" class="md-nav__link">
     Où écrire son code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-variables" class="md-nav__link">
-    Les variables
   </a>
   
 </li>
@@ -619,6 +612,13 @@
           <li class="md-nav__item">
   <a href="#detection-des-evenements-du-dom-dom-events" class="md-nav__link">
     Détection des évènements du DOM : DOM events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lignes-a-tester" class="md-nav__link">
+    Lignes à tester
   </a>
   
 </li>
@@ -726,6 +726,20 @@
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/crypto/" class="md-nav__link">
         Sécurisation des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/algos_arbre/" class="md-nav__link">
+        Arbres algos
       </a>
     </li>
   
@@ -1051,23 +1065,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#le-javascript-un-langage" class="md-nav__link">
-    Le javascript : un langage
+  <a href="#le-javascript-un-langage-comme-python" class="md-nav__link">
+    Le javascript : un langage comme Python
   </a>
   
-    <nav class="md-nav" aria-label="Le javascript : un langage">
+    <nav class="md-nav" aria-label="Le javascript : un langage comme Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ou-ecrire-son-code" class="md-nav__link">
     Où écrire son code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-variables" class="md-nav__link">
-    Les variables
   </a>
   
 </li>
@@ -1164,6 +1171,13 @@
           <li class="md-nav__item">
   <a href="#detection-des-evenements-du-dom-dom-events" class="md-nav__link">
     Détection des évènements du DOM : DOM events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lignes-a-tester" class="md-nav__link">
+    Lignes à tester
   </a>
   
 </li>
@@ -1277,60 +1291,56 @@ web avec l’instruction <code>document.write('Hello world!')</code></li>
 <p class="admonition-title">Exercice 1 :</p>
 <p>Afficher son prénom sur une boite de dialogue puis dans la console. Puis y placer un commentaire monoligne et un commentaire multiligne.</p>
 </div>
-<h2 id="le-javascript-un-langage">Le javascript : un langage<a class="headerlink" href="#le-javascript-un-langage" title="Permanent link">&num;</a></h2>
+<h2 id="le-javascript-un-langage-comme-python">Le javascript : un langage comme Python<a class="headerlink" href="#le-javascript-un-langage-comme-python" title="Permanent link">&num;</a></h2>
 <h3 id="ou-ecrire-son-code">Où écrire son code<a class="headerlink" href="#ou-ecrire-son-code" title="Permanent link">&num;</a></h3>
 <p>Il est possible, et même conseillé, d’écrire le code JavaScript dans un fichier externe, portant
 l’extension .js. Ce fichier est ensuite appelé depuis la page Web au moyen de l’élément <code>&lt;script&gt;</code> et
 de son attribut src qui contient l’URL du fichier.js. Ce code fichier.js s’insère dans l’HTML de la
 manière suivante :</p>
-<table class="language-html highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;fichier.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<p><table class="language-html highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;hello.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></code></pre></div>
 </td></tr></table>
-<p>Dans votre éditeur web, taper le code suivant :</p>
-<table class="language-html highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mon premier script JavaScript<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;document.getElementById(&#39;demo&#39;).innerHTML = &#39;Bonjour le monde !&#39;&quot;</span><span class="p">&gt;</span> Clic moi....<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;demo&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></code></pre></div>
-</td></tr></table>
-<div class="admonition example">
-<p class="admonition-title">Exercice 1</p>
-<ol>
-<li>Identifier le script et modifier le texte à afficher</li>
-<li>Comment le script indentifie-t-il l’élément html à modifier ?</li>
-<li>Modifier le script pour changer le titre.</li>
-</ol>
+Dans votre éditeur web, taper le code suivant :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">html</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>``` html linenums="1"
+&lt;!DOCTYPE html&gt;
+<html>
+    <head>
+        <title>Hello World!</title>
+    </head>
+    <body>
+        <p> Lorem ipsum dolor sit amet.<p>
+    <script src="hello.js"></script></p>
 </div>
-<h3 id="les-variables">Les variables<a class="headerlink" href="#les-variables" title="Permanent link">&num;</a></h3>
-<p>Contrairement à python, les variables utilisées en JavaScript doivent être déclarées.</p>
-<table class="language-JavaScript highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div class="language-JavaScript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">var</span> <span class="nx">variable1</span><span class="p">,</span> <span class="nx">variable2</span> <span class="o">=</span> <span class="s2">&quot;exemple&quot;</span><span class="p">;</span>   <span class="c1">// domaine d&#39;existence limité à la fonction où elle sont déclarées.</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kd">let</span> <span class="nx">variable3</span><span class="p">;</span>                          <span class="c1">// domaine d&#39;existence limité au bloc où elle est déclarée.</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kd">const</span> <span class="nx">vitesseLumiere</span> <span class="o">=</span> <span class="mf">3e8</span><span class="p">;</span>             <span class="c1">// définit une constante (qu&#39;on ne peut pas modifier par la suite).</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="nx">variable2</span> <span class="o">=</span> <span class="s2">&quot;exemple2&quot;</span><span class="p">;</span>                 <span class="c1">// affectation d&#39;une nouvelle valeur à variable2</span>
-</span></code></pre></div>
-</td></tr></table>
+</div>
+</div>
+<p></body>
+</html>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>=== &quot;js&quot;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    ``` js
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    alert(&#39;Hello world!&#39;); // affichage
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    ```
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>### Les variables
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Contrairement à python, les variables utilisées en JavaScript doivent être déclarées.
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>``` JavaScript linenums=&quot;1&quot;
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>var variable1, variable2 = &quot;exemple&quot;;   // domaine d&#39;existence limité à la fonction où elle sont déclarées.
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>let variable3;                          // domaine d&#39;existence limité au bloc où elle est déclarée.
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>const vitesseLumiere = 3e8;             // définit une constante (qu&#39;on ne peut pas modifier par la suite).
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>variable2 = &quot;exemple2&quot;;                 // affectation d&#39;une nouvelle valeur à variable2
+</span></code></pre></div></p>
+<p>Sachez seulement que :
+* let définit des variables dont la portée (=l'ensemble des lignes où la variable est connue et utilisable) est celle du bloc ;
+* var définit des variables dont la portée est celle de la fonction.</p>
+<p>En JavaScript, il existe 7 types de valeurs différents. Chaque valeur qu’on va pouvoir créer et manipuler en JavaScript va obligatoirement appartenir à l’un de ces types. Ces types peuvent être notamment :</p>
+<ul>
+<li>String ou « chaine de caractères » en français ;</li>
+<li>Number ou « nombre » en français ;</li>
+<li>Boolean ou « booléen » en français.</li>
+</ul>
 <h3 id="les-conversion-de-types">Les conversion de types<a class="headerlink" href="#les-conversion-de-types" title="Permanent link">&num;</a></h3>
 <p>Comme en Python, on peut avoir besoin de convertir une variable d’un type vers un autre. En
 Javascript, il existe de nombreuses manière de réaliser cette tâche mais les plus simples sont ces fonctions :</p>
@@ -1345,10 +1355,10 @@ dans une certaine base) la <code>variableAConvertir</code></li>
 dispose d’un champ pour y répondre. La réponse tapée est considérée par Javascript comme un
 chaîne de caractère.</p>
 <p>Exemples
-<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Quel est votre prénom&quot;</span><span class="p">);</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Tapez un valeur x?&quot;</span><span class="p">),</span><span class="mf">10</span><span class="p">);</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">;</span>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Quel est votre prénom&quot;</span><span class="p">);</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Tapez un valeur x?&quot;</span><span class="p">),</span><span class="mf">10</span><span class="p">);</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">;</span>
 </span></code></pre></div></p>
 <h3 id="les-operations-arithmetiques">Les opérations arithmétiques<a class="headerlink" href="#les-operations-arithmetiques" title="Permanent link">&num;</a></h3>
 <p>Les opérateurs arithmétiques vont nous permettre d’effectuer toutes sortes d’opérations mathématiques entre les valeurs de type Number contenues dans différentes variables.</p>
@@ -1398,23 +1408,23 @@ chaîne de caractère.</p>
 <h3 id="les-instructions-conditionnelles-et-les-boucles">Les instructions conditionnelles et les boucles<a class="headerlink" href="#les-instructions-conditionnelles-et-les-boucles" title="Permanent link">&num;</a></h3>
 <h4 id="condition-avec-if">Condition avec if<a class="headerlink" href="#condition-avec-if" title="Permanent link">&num;</a></h4>
 <p><strong>Syntaxe</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>if(condition)
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>{
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>instruction1;
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>}
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>else
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>{
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>instruction2;
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>if(condition)
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>{
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>instruction1;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>}
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>else
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>{
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>instruction2;
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>}
 </span></code></pre></div></p>
 <p><strong>Exemple :</strong>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;x?&quot;</span><span class="p">),</span><span class="mf">10</span><span class="p">);</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">){</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;x est strictement supérieure à 1&#39;</span><span class="p">);</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">else</span><span class="p">{</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;x est inférieure ou égale à 1&#39;</span><span class="p">);</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;x?&quot;</span><span class="p">),</span><span class="mf">10</span><span class="p">);</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">){</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;x est strictement supérieure à 1&#39;</span><span class="p">);</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">else</span><span class="p">{</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;x est inférieure ou égale à 1&#39;</span><span class="p">);</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <h4 id="les-operateurs-de-conditions-et-les-operateurs-logiques">Les opérateurs de conditions et les opérateurs logiques<a class="headerlink" href="#les-operateurs-de-conditions-et-les-operateurs-logiques" title="Permanent link">&num;</a></h4>
 <figure>
@@ -1498,25 +1508,25 @@ excède 15 euros, afficher "trop cher" et si elle est en dessous ou égale, affi
 </div>
 <h4 id="while-et-le-for">While et le for<a class="headerlink" href="#while-et-le-for" title="Permanent link">&num;</a></h4>
 <p>La synatxe de la boucle <code>while</code> s’écrit ainsi en Javascript :</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>while (condition) {
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>instruction_1;
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>instruction_2;
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>while (condition) {
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>instruction_1;
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>instruction_2;
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>}
 </span></code></pre></div>
 <p>Et la boucle <code>for</code> s’écrit ainsi en Javascript :</p>
 <p><strong>Modèle</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>for (initialisation; condition; incrémentation)
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>{
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>instruction_1;
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>instruction_2;
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>for (initialisation; condition; incrémentation)
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>{
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>instruction_1;
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>instruction_2;
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>}
 </span></code></pre></div>
 <p><strong>Exemple</strong>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">9</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nx">str</span> <span class="o">=</span> <span class="nx">str</span> <span class="o">+</span> <span class="nx">i</span><span class="p">;</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">}</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">9</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">str</span> <span class="o">=</span> <span class="nx">str</span> <span class="o">+</span> <span class="nx">i</span><span class="p">;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">}</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
 </span></code></pre></div></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 4</p>
@@ -1525,40 +1535,40 @@ excède 15 euros, afficher "trop cher" et si elle est en dessous ou égale, affi
 <div class="admonition example">
 <p class="admonition-title">Exercice 5</p>
 <p>Écrire un script Javascript qui tente de faire deviner un entier de votre choix et affiche, plus petit, ou plus grand jusqu’à la victoire. Vous pourrez utiliser la fonction suivante :
-<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">function</span> <span class="nx">getRandomInt</span><span class="p">(</span><span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">max</span><span class="p">);</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">}</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomInt</span><span class="p">(</span><span class="mf">3</span><span class="p">));</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1">// Expected output: 0, 1 or 2</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomInt</span><span class="p">(</span><span class="mf">1</span><span class="p">));</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1">// Expected output: 0</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="c1">// Expected output: a number from 0 to &lt;1</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">function</span> <span class="nx">getRandomInt</span><span class="p">(</span><span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">max</span><span class="p">);</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">}</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomInt</span><span class="p">(</span><span class="mf">3</span><span class="p">));</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1">// Expected output: 0, 1 or 2</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomInt</span><span class="p">(</span><span class="mf">1</span><span class="p">));</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1">// Expected output: 0</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1">// Expected output: a number from 0 to &lt;1</span>
 </span></code></pre></div></p>
 </div>
 <h3 id="les-fonctions">Les fonctions<a class="headerlink" href="#les-fonctions" title="Permanent link">&num;</a></h3>
 <p>La définition d’une fonction est introduite par le mot clé function suivi de ses arguments, puis du code de la fonction entre accolades Le résultat de la fonction est indiqué par le mot-clé <code>return</code>.</p>
 <p><strong>Modèle</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>function maFonction(arguments) {
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>// Le code à executer
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>function maFonction(arguments) {
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>// Le code à executer
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>}
 </span></code></pre></div></p>
 <p><strong>Exemple :</strong></p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">function</span> <span class="nx">carre</span><span class="p">(</span><span class="nx">i</span><span class="p">){</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">return</span><span class="p">(</span><span class="nx">i</span><span class="o">*</span><span class="nx">i</span><span class="p">);</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">}</span> 
+<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">function</span> <span class="nx">carre</span><span class="p">(</span><span class="nx">i</span><span class="p">){</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">return</span><span class="p">(</span><span class="nx">i</span><span class="o">*</span><span class="nx">i</span><span class="p">);</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">}</span> 
 </span></code></pre></div>
 <p>Pour appeler cette fonction, deux manières sont possibles : soit dans le fichier js soit dans le fichier js.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">js</label><label for="__tabbed_1_2">html</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">js</label><label for="__tabbed_2_2">html</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>document.write(carre(3));
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>document.write(carre(3));
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-html highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Le résultat : &quot;</span><span class="o">+</span><span class="nx">carre</span><span class="p">(</span><span class="mf">3</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;.&quot;</span><span class="p">);</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Le résultat : &quot;</span><span class="o">+</span><span class="nx">carre</span><span class="p">(</span><span class="mf">3</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;.&quot;</span><span class="p">);</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></code></pre></div>
 </div>
 </div>
@@ -1566,17 +1576,14 @@ excède 15 euros, afficher "trop cher" et si elle est en dessous ou égale, affi
 <p>`</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 6</p>
-<ul>
-<li>Reproduire les deux exemples précédents et observer le résultat.</li>
-<li>Écrire une fonction f en Javascript qui à une valeur x renvoie <span class="arithmatex">\(x^2 − 3x + 1\)</span>. On affichera l’image de 3.</li>
-</ul>
+<p>1) Écrire une fonction calculant le discriminant <span class="arithmatex">\(b^2 + 4\times a\times c\)</span> d'un polynôme de degré 2 . Cette fonction prendra trois arguments : a,b, et c et retournera la valeur du discriminant.
+2) Appeler cette fonction dans le fichier html puis dans le js.</p>
 </div>
 <h2 id="les-evenements">Les évènements<a class="headerlink" href="#les-evenements" title="Permanent link">&num;</a></h2>
 <p>De manière générale, on préfère l'utilisation de let ou const à l'utilisation de var qui date des tous débuts de JavaScript.</p>
 <h3 id="fonctionnement-dun-navigateur-web">Fonctionnement d’un navigateur web<a class="headerlink" href="#fonctionnement-dun-navigateur-web" title="Permanent link">&num;</a></h3>
 <p>L’un des principaux attraits de l’interpréteur Javascript d’un navigateur est la possibilité de modifier dynamiquement et en temps réel le rendu d’une page web.</p>
-<p>Le navigateur commence par télécharger le fichier HTML correspondant à l’URL visitée. Une fois
-récupérée, la page est transformée en une structure de donnée d’arbre.</p>
+<p>Le navigateur commence par télécharger le fichier HTML correspondant à l’URL visitée. Une fois récupérée, la page est transformée en une structure de donnée d’arbre.</p>
 <figure>
 <p><img alt="dom" src="../img_event/DOM.png" width="400px" /></p>
 </figure>
@@ -1590,28 +1597,28 @@ Ajouter ou supprimer des nœuds dans l’arbre correspond à ajouter ou supprime
 <ul>
 <li>
 <p>Sélection d'un élément par l'arborescence du DOM .</p>
-<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="s2">&quot;Le JavaScript&quot;</span><span class="p">;</span>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="s2">&quot;Le JavaScript&quot;</span><span class="p">;</span>
 </span></code></pre></div>
 </li>
 <li>
 <p>Sélection d'un élément par l'attribut <code>id</code>. Par définition un id n'est associé qu'à un seul élément.</p>
-<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;bloc_page&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="s1">&#39;250px&#39;</span><span class="p">;</span>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;bloc_page&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="s1">&#39;250px&#39;</span><span class="p">;</span>
 </span></code></pre></div>
 </li>
 <li>
 <p>Sélection de tous les éléments par l'attribut class. Le résultat est un tableau1 des différents éléments.</p>
-<p><div class="language-JavaScript highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">let</span> <span class="nx">imagesflottantes</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&quot;imagesflottantes&quot;</span><span class="p">);</span>
+<p><div class="language-JavaScript highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">let</span> <span class="nx">imagesflottantes</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&quot;imagesflottantes&quot;</span><span class="p">);</span>
 </span></code></pre></div>
 * Sélection de tous les éléments par le nom de balise. Le résultat est un tableau1 des différents éléments.</p>
-<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">let</span> <span class="nx">paragraphes</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">let</span> <span class="nx">paragraphes</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
 </span></code></pre></div>
 </li>
 <li>
 <p>Sélection d'un élément (le 1er si il y en a plusieurs) en reprenant la syntaxe des sélecteurs CSS.</p>
-<p><div class="language-Javascript highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;#bloc_page&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">;</span>
+<p><div class="language-Javascript highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;#bloc_page&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">;</span>
 </span></code></pre></div>
 * Sélection de plusieurs éléments en reprenant la syntaxe des sélecteurs CSS : le résultat est dans un tableau1.
-<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;p.important&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;gold&#39;</span><span class="p">;</span>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;p.important&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;gold&#39;</span><span class="p">;</span>
 </span></code></pre></div></p>
 </li>
 </ul>
@@ -1620,35 +1627,69 @@ Ajouter ou supprimer des nœuds dans l’arbre correspond à ajouter ou supprime
 <ul>
 <li>
 <p><code>onclick</code> : Le clic de la souris sur un élément</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">onclick</span><span class="o">=</span><span class="s2">&quot;this.innerHTML = &#39;Ooops!&#39;&quot;</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">on</span> <span class="k">this</span> <span class="nx">text</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">onclick</span><span class="o">=</span><span class="s2">&quot;this.innerHTML = &#39;Ooops!&#39;&quot;</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">on</span> <span class="k">this</span> <span class="nx">text</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
 </span></code></pre></div>
 </li>
 <li>
 <p><code>ondblclick</code>: le double-clic de la souris sur un élément</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">onclick</span><span class="o">=</span><span class="s2">&quot;this.innerHTML = &#39;Ooops! Ooops!&#39;&quot;</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">on</span> <span class="k">this</span> <span class="nx">text</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">onclick</span><span class="o">=</span><span class="s2">&quot;this.innerHTML = &#39;Ooops! Ooops!&#39;&quot;</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">on</span> <span class="k">this</span> <span class="nx">text</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
 </span></code></pre></div>
 </li>
 <li>
 <p><code>onmouseover</code> : le survol de la souris sur un élément.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmouseover</span><span class="o">=</span><span class="s2">&quot;this.style.backgroundColor = &#39;lightblue&#39;&quot;</span><span class="o">&gt;</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmouseover</span><span class="o">=</span><span class="s2">&quot;this.style.backgroundColor = &#39;lightblue&#39;&quot;</span><span class="o">&gt;</span>
 </span></code></pre></div>
 </li>
 <li>
 <p><code>onmouseout</code> : la sortie de la souris d'un élément.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmouseout</span><span class="o">=</span><span class="s2">&quot;this.style.backgroundColor = &#39;yellow&#39;&quot;</span><span class="o">&gt;</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmouseout</span><span class="o">=</span><span class="s2">&quot;this.style.backgroundColor = &#39;yellow&#39;&quot;</span><span class="o">&gt;</span>
 </span></code></pre></div>
 </li>
 <li>
 <p><code>onmousedown</code>  : le maintien du clic appuyé sur un élément.
-    <div class="language-javascript highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmousedown</span><span class="o">=</span><span class="s2">&quot;this.style.color = &#39;white&#39;&quot;</span><span class="o">&gt;</span>
+    <div class="language-javascript highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmousedown</span><span class="o">=</span><span class="s2">&quot;this.style.color = &#39;white&#39;&quot;</span><span class="o">&gt;</span>
 </span></code></pre></div></p>
 </li>
 <li>
 <p><code>onmouseup</code> : le relachement du clic de souris.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmouseup</span><span class="o">=</span><span class="s2">&quot;this.style.color = &#39;blue&#39;&quot;</span><span class="o">&gt;</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmouseup</span><span class="o">=</span><span class="s2">&quot;this.style.color = &#39;blue&#39;&quot;</span><span class="o">&gt;</span>
 </span></code></pre></div>
 </li>
 </ul>
+<h3 id="lignes-a-tester">Lignes à tester<a class="headerlink" href="#lignes-a-tester" title="Permanent link">&num;</a></h3>
+<ul>
+<li>
+<p>changement de la couleur de fond de la page :</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>réinitialisation de la couleur par défaut :</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>récupération d'un élément <span class="arithmatex">\(d\)</span>. Cette instruction qui peut remplacer querySelector doit être faite une fois pour que d soit définie, avant de tester les instructions suivantes.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kd">let</span> <span class="nx">d</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;valeur&quot;</span><span class="p">);</span> <span class="c1">//pour id=&quot;valeur&quot;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>changement de style de l'élément <span class="arithmatex">\(d\)</span> :</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nx">d</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">;</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="nx">d</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fontWeight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">;</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="nx">d</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">border</span><span class="o">=</span><span class="s2">&quot;1 pt dashed green&quot;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Changement de contenu de l'élément <span class="arithmatex">\(d\)</span> :</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nx">d</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="s2">&quot;Salut, tu vas bien&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice 7</p>
+<p>Tester les différentes instructions précédentes dans des fonctions.</p>
+</div>
 
               
             </article>
