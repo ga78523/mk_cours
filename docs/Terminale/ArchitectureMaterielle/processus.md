@@ -92,8 +92,6 @@ UID PID PPID F CPU PRI NI SZ RSS WCHAN S ADDR TTY TIME CMD
 502 453 1 4004 0 31 0 33768668 12676 - S 0 ?? 0:01.93 /usr/sbin/usernoted
 ```
 
-
-
 * La colonne S indique l’état (state) du processus : S pour stopped, R pour Running et Z pour Zombie
 * PID est le processus identifier : un identifiant sous forme d’entier donné par le système.
 * PPID est le parent processus identifier qui donne l’identifiant du parent qui a engendré le processus
@@ -114,7 +112,7 @@ UID PID PPID F CPU PRI NI SZ RSS WCHAN S ADDR TTY TIME CMD
 
 Il n’est parfois pas possible de fermer un processus graphique en cliquant par exemple sur la croix prévue pourtant à cet effet.On peut utiliser la commande kill si on connait le PID du processus à "tuer".
 
-## L'ordonnencement des processus
+## L'ordonnancement des processus
 
 ### Différents types d'ordonnancement
 
@@ -127,7 +125,7 @@ Si on vous donne 4 tâches A, B, C et D à accomplir, vous pouvez décider :
 * de faire à tour de rôle chaque tâche pendant un temps fixe jusqu'à ce qu'elles soient toutes terminées;
 * ...
 
-Plusieurs stratégies peuvent être appliquée :
+Plusieurs stratégies peuvent être appliquées :
 
 Le schéma ci-dessous (issu de ce [site](https://medium.com/@sheenam.mca17.du/process-scheduling-b86975413079)) présente quelques politiques d'ordonnancement :
 

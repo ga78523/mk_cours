@@ -362,7 +362,6 @@ Les éléments `div` sont des balises de type `blo`c tandis que les éléments s
 
     <!DOCTYPE html>
     <html>
-    
     <head>
         <meta charset="UTF-8" />
         <title>Premier essai</title>

@@ -39,33 +39,14 @@ Le cryptage XOR est un système de cryptage basique mais pas trop limité. Ainsi
 
  Le XOR est un opérateur logique qui correspond à un "OU exclusif" : c'est le (A OU B) qu'on utilise en logique mais qui exclue le cas où A et B sont simultanément vrais. Voici sa table de vérité :
 
-<CENTER>
-<TABLE width=300 border=1>
-<TBODY>
-<TR>
-<TD align=middle colSpan=3><b>Table de v&eacute;rit&eacute; du XOR</b></TD></TR>
-<TR>
-<TD align=middle><b>A</b></TD>
-<TD align=middle><b>B</b></TD>
-<TD align=middle><b>(A XOR B)</b></TD></TR>
-<TR>
-<TD align=middle>FAUX</TD>
-<TD align=middle>FAUX</TD>
-<TD align=middle>FAUX</TD></TR>
-<TR>
-<TD align=middle>FAUX</TD>
-<TD align=middle>VRAI</TD>
-<TD align=middle>VRAI</TD></TR>
-<TR>
-<TD align=middle>VRAI</TD>
-<TD align=middle>FAUX</TD>
-<TD align=middle>VRAI</TD></TR>
-<TR>
-<TD align=middle>VRAI</TD>
-<TD align=middle>VRAI</TD>
-<TD align=middle>FAUX</TD></TR></TBODY>
-</TABLE>
-</CENTER>
+<figure markdown>
+| A | B | S |
+|:-:|:-:|:-:|
+| 0 | 0 | Ø |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+</figure>
 
 Une particularité de cette opération est : si b1 xor b2 = b3 alors b1 xor b3 = b2 et b2 xor b3=b1. Ce qui permet un chiffrement symétrique.
 
@@ -116,7 +97,7 @@ def chiffre(message:str, cle:str)->list:
 print(chiffre(message,cle))
 ```
 
-Ce qui donne en console : 
+Ce qui donne en console :
 
 ``` py
 [47, 22, 29, 30, 135, 7, 23, 65, 89, 16, 27, 133, 31, 0, 3, 13, 83, 21,132, 30, 0, 23, 84, 5, 27, 157, 1, 69, 82]
@@ -138,7 +119,7 @@ Ce qui lui donne $26^5$ possibilités (plus de 11 millions) pour le masque, et p
 
 Cela signifie qu'il verra apparaître, dans sa tentative de déchiffrage, les mots "MARDI", "JEUDI", "JOUDI", "STYLO", "FSDJK", "LUNDI", "LUNDA"... Il n'a aucune possibilité de savoir où est le bon message original parmi toutes les propositions (on parle de sécurité sémantique).
 
-### Avantages d'un chiffrement symétrique 
+### Avantages d'un chiffrement symétrique
 
 Les chiffrements symétriques sont souvent rapides, consommant peu de ressources et donc adaptés au chiffrement de flux important d'informations.
 
@@ -181,7 +162,7 @@ Si P intercepte le message m0, il sera incapable de déterminer m à partir de m
 
 1) KpuB(m) $\to$ m'
 
-2) A $ \xrightarrow{\text{m'}} B$
+2) A $\rightarrow{\text{m'}}$ B
 
 3) KprB(m') $\to$ m
 
@@ -204,6 +185,10 @@ Le protocole https est la réunion de deux protocoles :
 * le protocole TLS (Transport Layer Security, qui a succédé au SSL) : ce protocole, basé sur du **chiffrement asymétrique**, va conduire à la génération d'une clé identique chez le client et chez le serveur.
 * le (bon vieux) protocole http, mais qui convoiera maintenant des données chiffrées avec la clé générée à l'étape précédente. Les données peuvent toujours être interceptées, mais sont illisibles. Le **chiffrement symétrique** utilisé est actuellement le chiffrement AES.
   
-<figure markdown>
-![https](/img_crypto/https.png)
-</markdown>
+<figure markdown="span">
+  ![https](img_crypto/https.png){ width="600" }
+</figure>
+
+## Pour plus d'information
+
+Regarder la [conférence](https://www.youtube.com/watch?v=rZB-K2wMV_I) de Cécile Pierrot (mathématicienne et informaticienne, chercheuse à l’Inria, Nancy) à la Cité des Sciences.

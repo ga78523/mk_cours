@@ -2,7 +2,7 @@
 
 ## Rappel
 
-Toute page internet s’écrit ainsi : 
+Toute page internet s’écrit ainsi :
 
 ``` html linenums="1"
 <!doctype html>
@@ -43,7 +43,6 @@ Dans la mesure où un front-end framework se résume à une collection de fichie
 
 Pour des considérations de performance (vitesse de téléchargement) et de robustesse (utilisation des fichiers les plus récents), il est préférable de s'appuyer sur un CDN (Content Delivery Network), un réseau de serveurs distribués sur internet qui mettent à disposition du contenu.
 
-
 Dans la page [http://getbootstrap.com/](https://getbootstrap.com/docs/5.3/getting-started/introduction/), dans la section **CDN links**, il faut copier/coller la ligne sous CSS only dans l’en-tête de la page web (entre les balises `<head>` et `</head>`) et copier/coller les lignes sous JS, Popper.js, and jQuery à la fin du corps de la page web juste avant `</body>`.
 
 Ci-dessous, en reprenant l'exemple donné ci-dessus, cela donne :
@@ -78,12 +77,10 @@ Conformément à la démarche de Responsive Web Design, le système de grille es
 | **Préfixe de classe**        | `.col-`      | `.col-sm-`  | `.col-md-`  | `.col-lg-`  | `.col-xl-`   | `.col-xxl-`   |
 | **Nombre de colonnes**       | 12           | 12          | 12          | 12          | 12           | 12            |
 
-
-Grâce à cette classification des largeurs d'écran, il est possible d'imaginer une mise en page pour chaque classe de support (smartphone, tablette, ordinateur). 
+Grâce à cette classification des largeurs d'écran, il est possible d'imaginer une mise en page pour chaque classe de support (smartphone, tablette, ordinateur).
 
 L'exemple suivant illustre cette démarche en définissant une mise en page en quatre colonnes pour les grands écrans, en deux
 colonnes pour les écrans moyens et enfin en une seule colonne pour les petits. On peut y placer des paragraphes, des images, etc...
-
 
 ``` html linenums="1"
 <div class="container">
@@ -109,9 +106,9 @@ colonnes pour les écrans moyens et enfin en une seule colonne pour les petits. 
 * Créer un dossier intitulé `exemple_Framworks` ;
 * Créer un sous-dossier intitulé `img`;
 * Enregistrer dans le sous-dossier `img`, les trois photos de motos suivantes :
-    * moto1.png  ([lien pour la télécharger](img_bootstrap/moto1.png));
-    * moto2.png([lien pour la télécharger](img_bootstrap/moto2.jpg));
-    * moto3.png ([lien pour la télécharger](img_bootstrap/moto3.jpg)).
+      * moto1.png  ([lien pour la télécharger](img_bootstrap/moto1.png)) ;
+      * moto2.png([lien pour la télécharger](img_bootstrap/moto2.jpg));
+      * moto3.png ([lien pour la télécharger](img_bootstrap/moto3.jpg)).
 * Ouvrir Visual Studio Code et créer un fichier que vous nommerez `bootstrap.html` et copier/coller le code ci-dessous.
 * Enregistrer et quitter
 * puis ouvrir `bootstrap.html` avec votre navigateur et faire varier la largeur de la fenêtre.
@@ -177,7 +174,6 @@ crossorigin="anonymous"></script>
 </html>
 ```
 
-## Et plus encore...
+## Et plus encore
 
-Grâce grâce à la documentation officielle, onp peut inclure aussi des caroussels, des images dont la taille s'adapte à l'écran, etc ...
-[http://getbootstrap.com/](http://getbootstrap.com/)
+Grâce grâce à la documentation officielle [http://getbootstrap.com/](http://getbootstrap.com/), onp peut inclure aussi des caroussels, des images dont la taille s'adapte à l'écran, etc ... 
