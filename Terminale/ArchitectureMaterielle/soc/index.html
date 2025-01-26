@@ -1129,13 +1129,15 @@
 <h1 id="les-soc-system-on-a-chip">Les SoC (System on a Chip)<a class="headerlink" href="#les-soc-system-on-a-chip" title="Permanent link">&num;</a></h1>
 <h2 id="rappels">Rappels<a class="headerlink" href="#rappels" title="Permanent link">&num;</a></h2>
 <h3 id="transistor-et-loi-de-moore">Transistor et loi de Moore<a class="headerlink" href="#transistor-et-loi-de-moore" title="Permanent link">&num;</a></h3>
-<p><img alt="https://www.youtube.com/watch?v=n9fb6F1MWHc" src="Rappel sur les transisitors" /></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n9fb6F1MWHc?si=ADZzfyoemW9Q4MF3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <p>En 1965, Gordon Moore postule que le nombre de transistors présents sur une puce de microprocesseur doublera tous les deux ans.</p>
 <figure>
 <p><img alt="loi de Moore" src="../img_SOC/LoiMoore.png" /></p>
 </figure>
 <div class="admonition example">
 <p class="admonition-title">Exercice 1</p>
+<p>Si dans les années 70, on pouvait placer 2000 transistors sur une surface de 10 mm<sup>2</sup>, quelle surface aurait été nécessaire pour placer deux milliards de transistor ?</p>
 </div>
 <h3 id="fonctionnement-dun-ordinateur">Fonctionnement d'un ordinateur<a class="headerlink" href="#fonctionnement-dun-ordinateur" title="Permanent link">&num;</a></h3>
 <p>Le fonctionnement d’un outil numérique, que ce soit un ordinateur, une tablette, un téléphone, un assistant GPS ou un appareil photo est basé sur des éléments fondamentaux :</p>
@@ -1145,6 +1147,10 @@
 <li>la carte graphique</li>
 <li>les interfaces réseaux</li>
 </ul>
+<figure>
+<p><img alt="Description d'un PC" src="../img_SOC/Personal_computer.png" /></p>
+</figure>
+<p>Éclaté d'un ordinateur personnel : 1 : Écran ; 2 : Carte mère ; 3 : Processeur ; 4 : Parallèle ATA ; 5 : Mémoire vive (RAM) ; 6 : Connecteurs d'extensions : Carte Graphique, Carte Son, Carte réseau, etc. ; 7 : Alimentation électrique ; 8 : Lecteur de disque optique ; 9 : Disque dur, disque électronique ; 10 : Clavier ; 11 : Souris.</p>
 <h2 id="loi-de-moore">Loi de Moore<a class="headerlink" href="#loi-de-moore" title="Permanent link">&num;</a></h2>
 <h2 id="les-soc">Les SoC<a class="headerlink" href="#les-soc" title="Permanent link">&num;</a></h2>
 <h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&num;</a></h3>
@@ -1158,14 +1164,13 @@ de calcul ;</li>
 <li>la mémoire statique (Rom, Flash, EPROM) ;</li>
 <li>les puces de communications (Bluetooth, WiFi,
 2G/3G/4G/5G, . . . )</li>
-<li>les capteurs nécessaires au fonctionnement
-d’un smartphone ou d’un objet connecté</li>
+<li>des capteurs ;</li>
 <li>...</li>
 </ul>
 <p>En clair, le système sur une puce comprend tous
 les éléments essentiels d’un ordinateur comprimé dans une 
 forme réduite.</p>
-<div class="admonition exercice">
+<div class="admonition example">
 <p class="admonition-title">Exercice 2 :</p>
 <p>Rechercher le SOC de votre téléphone portable.</p>
 </div>
@@ -1216,18 +1221,30 @@ Performance : Historiquement, les SoC x86 ont dominé en termes de performances 
 <p>Ces différences font que chaque architecture est mieux adaptée à certains types d'applications.</p>
 <h3 id="exemples-de-soc">Exemples de SOC<a class="headerlink" href="#exemples-de-soc" title="Permanent link">&num;</a></h3>
 <ul>
-<li><a href="L'Apple M4">https://fr.wikipedia.org/wiki/Apple_M4</a> est un système sur puce (SoC) basé sur une architecture ARM conçu par Apple, faisant partie de la série Apple Silicon, comprenant une unité centrale de traitement (CPU), une unité de traitement graphique (GPU), une unité de traitement neuronal (NPU) et un processeur de signal numérique (DSP). Il est introduit en mai 2024 pour l'iPad Pro (M4) et constitue la quatrième génération de l' architecture Apple Silicon de la série M, succédant à l' Apple M3.</li>
-</ul>
-<p>Le SoC M4 est fabriqué avec le procédé 3 nm (en) de deuxième génération de TSMC et contient 28 milliards de transistors.</p>
-<p>Il est fabriqué par TSMC (Taiwan Semiconductor Manufacturing Company). TSMC est, en 2021, la plus importante fonderie de semiconducteurs indépendante5. Son siège social est situé à Hsinchu, à Taïwan. Fondée en 1987, elle fabrique notamment les puces graphiques de Intel, Nvidia et AMD ainsi que les systèmes sur une puce Snapdragon de Qualcomm, mais également les puces d'Apple.</p>
-<figure>
-<p><img alt="M4pro" src="../img_SOC/image-2.jpg" /></p>
-<p>Il possède une variante : le A18 (SOC des iphones 16)</p>
-<h2 id="ressources">Ressources<a class="headerlink" href="#ressources" title="Permanent link">&num;</a></h2>
-<ul>
-<li><img alt="https://youtu.be/c9pL_3tTW2c?feature=shared" src="Arte Von Neumann" /></li>
-</ul>
+<li>
+<p><a href="https://fr.wikipedia.org/wiki/Apple_M4">L'Apple M4</a> est un système sur puce (SoC) basé sur une architecture ARM conçu par Apple, faisant partie de la série Apple Silicon, comprenant une unité centrale de traitement (CPU), une unité de traitement graphique (GPU), une unité de traitement neuronal (NPU) et un processeur de signal numérique (DSP). 
+Le SoC M4 est fabriqué avec le procédé 3 nm (en) de deuxième génération de TSMC et contient 28 milliards de transistors.</p>
+<p><figure markdown>
+<img alt="M4pro" src="../img_SOC/image-2.jpg" />
 </figure>
+Il possède une variante : le A18 (SOC des iphones 16)</p>
+<p>Il est fabriqué par TSMC (Taiwan Semiconductor Manufacturing Company). TSMC est, en 2021, la plus importante fonderie de semiconducteurs indépendante5. Son siège social est situé à Hsinchu, à Taïwan. Fondée en 1987, elle fabrique notamment les puces graphiques de Intel, Nvidia et AMD ainsi que les systèmes sur une puce Snapdragon de Qualcomm, mais également les puces d'Apple.</p>
+</li>
+<li>
+<p>On trouve aussi ce système de SoC sur des nano-ordinateurs comme le Rasberry Pi</p>
+</li>
+</ul>
+<figure>
+<p><img alt="Raspberry 5" src="../img_SOC/raspberry-pi-5-8-go-ref_TG2778_2.png" /></p>
+</figure>
+<ul>
+<li>Snapdragon 8 Elite Mobile Platform SOC qui équipe les samsung S25 ;</li>
+</ul>
+<figure>
+<p><img alt="Snapdragon 8" src="../img_SOC/qualcomm-snapdragon-8-elite-officiel-4.jpg" /></p>
+</figure>
+<h2 id="ressources">Ressources<a class="headerlink" href="#ressources" title="Permanent link">&num;</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c9pL_3tTW2c?si=VnWHW4xbtuyX6r66" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
               
             </article>
