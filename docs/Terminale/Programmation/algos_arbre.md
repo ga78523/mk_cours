@@ -101,7 +101,7 @@ Nous allons donc imaginer que l'on parcourt l'arbre de la façon indiquée ci-de
 Ce type de parcours est appelé parcours en profondeur de l'arbre.
 
 <figure markdown>
-    ![parcours_profondeur](img_arbre/parcours_profondeur.png)
+![if](img_arbre/parcours_profondeur.png){width=500px}
 </figure>
 
 Il existe trois façon d'énumérer les noeuds.
@@ -146,7 +146,7 @@ def parcours_prefixe(a):
         parcours_prefixe(a.droite)
 ```
 
-**Efficacité :** La fonction \mintinline{python}{parcours_prefixe} directement proportionnelle au nombre de noeud de l'arbre. Tout comme les méthodes \mintinline{python}{taille} et \mintinline{python}{hauteur}, elle fait un nombre d'opérations fini sur chaque noeud (ici l'affichage de la valeur) et parcourt une fois et une seule chaque noeud.
+**Efficacité :** La fonction `parcours_prefixe` directement proportionnelle au nombre de noeud de l'arbre. Tout comme les méthodes `taille` et `hauteur`, elle fait un nombre d'opérations fini sur chaque noeud (ici l'affichage de la valeur) et parcourt une fois et une seule chaque noeud.
 
 #### Parcours infixe
 
@@ -221,7 +221,7 @@ Quand on parcourt en largeur un arbre, on note chaque sommet niveau par niveau e
 Ce parcours est parfois noté *BPS* pour Breadth-First Search.
 
 <figure markdown>
-    ![parcours_largeur](img_arbre/parcours_largeur.png)
+![parcours_largeur](img_arbre/parcours_largeur.png){width=600px}
 </figure>
 
 **Exemple :** le parcours en largeur de l'arbre ci-dessous donne 8-5-7-9-3-5-1

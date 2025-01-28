@@ -180,10 +180,10 @@ HTML (Hyper Text Markup Language) est un langage hypertexte, cela signifie qu'il
 * sur un autre fichier HTML situé sur votre ordinateur.
 * sur un autre ordinateur en réseau, y compris sur le Web.
   
-Pour écrire un lien sur une page web, il faut adopter la syntaxe suivante: 
+Pour écrire un lien sur une page web, il faut adopter la syntaxe suivante :
 
 ``` html linenums="1"
-< a href="lien"> texte <\a>`
+<a href="lien"> texte </a>`
 ```
 
 avec:

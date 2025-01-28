@@ -123,7 +123,7 @@ Cela signifie qu'il verra apparaître, dans sa tentative de déchiffrage, les mo
 
 Les chiffrements symétriques sont souvent rapides, consommant peu de ressources et donc adaptés au chiffrement de flux important d'informations.
 
-### Inconvénients d'un chiffrement asymétrique
+### Inconvénients d'un chiffrement symétrique
 
 L'inconvénient est l'échange de la clé.
 

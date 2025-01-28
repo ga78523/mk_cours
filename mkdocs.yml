@@ -75,6 +75,8 @@ nav:
         - Frameworks : Premiere/IHM/frameworks.md
         - Formulaire : Premiere/IHM/formulaires.md
         - Javascript : Premiere/IHM/js.md
+      - Architecture Matérielle:
+        - Von Neumann : Premiere/ArchitectureMaterielle/von_neumann.md
     - 'Terminale':
       - Programmation :
         - Calculabilité, décidabilité : Terminale/Programmation/decidabilite.md
@@ -90,5 +92,4 @@ nav:
         - Routage : Terminale/ArchitectureMaterielle/reseau_routage.md
         - Linux : Terminale/ArchitectureMaterielle/commande_linux.md
         - processus : Terminale/ArchitectureMaterielle/processus.md
-    - 'Logiciels':
-      - git : Logiciels/git_github.md
+        - SoC : Terminale/ArchitectureMaterielle/soc.md
