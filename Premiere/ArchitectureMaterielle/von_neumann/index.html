@@ -1753,7 +1753,7 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 <h3 id="vue-globale">Vue globale<a class="headerlink" href="#vue-globale" title="Permanent link">&num;</a></h3>
 <p>Les grands principes de fonctionnement des ordinateurs tels que nous les connaissons aujourd’hui reposent sur des travaux réalisés au milieu des années 1940 par une équipe de chercheurs de l’université de Pennsylvanie.</p>
 <figure>
-<p><img alt="memoire" src="../img/memoire.png" /></p>
+<p><img alt="memoire" src="../img/memoire.png" width="400px" /></p>
 </figure>
 <p>Ces travaux concernaient la conception d’un ordinateur dans lequel les programmes à exécuter étaient stockés au même endroit que les données qu’ils devaient manipuler, à savoir dans la mémoire de l’ordinateur. Cette idée d’utiliser une zone de stockage unique est toujours utilisée aujourd’hui. Cette architecture est appelée modèle de Von Neumann, en l’honneur du mathématicien et physicien John Von Neumann qui participa et qui publia en 1945 un rapport sur un ordinateur basé sur ce concept.</p>
 <p>Ce modèle décompose l’ordinateur en 4 parties distinctes :</p>
@@ -1765,7 +1765,7 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 </ul>
 <p>Les différents éléments échangent des informations à l’aide de bus.</p>
 <figure>
-<p><img alt="modèle de Von Neumann" src="../img/modele_neumann2.png" /></p>
+<p><img alt="modèle de Von Neumann" src="../img/modele_Neumann.png" /></p>
 </figure>
 <p>Les deux premières parties sont habituellement rassemblées dans un ensemble de circuits électroniques qu’on appelle Unité Centrale de Traitement ou plus simplement processeur (ou CPU pour Centrale Processing Unit).</p>
 <p>Physiquement,un système informatique est constitué de plusieurs éléments :</p>
@@ -1787,7 +1787,7 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 <h4 id="lunite-arithmetique-et-logique-ual-ou-alu">L’unité arithmétique et logique UAL (ou ALU)<a class="headerlink" href="#lunite-arithmetique-et-logique-ual-ou-alu" title="Permanent link">&num;</a></h4>
 <p>L’unité arithmétique et logique est le cœur de l’ordinateur. On la représente habituellement par ce schéma (en forme de V) :</p>
 <figure>
-<p><img alt="alu" src="../img/alu.png" /></p>
+<p><img alt="alu" src="../img/alu.png" width="400px" /></p>
 </figure>
 <ul>
 <li>A et B sont les opérandes (les entrées) ;</li>
@@ -1799,12 +1799,12 @@ Cette unité est composée de plusieurs registres dits registres de données et 
 <h4 id="unite-de-controle">Unité de contrôle<a class="headerlink" href="#unite-de-controle" title="Permanent link">&num;</a></h4>
 <p>Cette unité joue le rôle de chef d’orchestre de l’ordinateur. C’est ce composant qui est chargé récupérer en mémoire la prochaine instruction à exécuter et les données sur lesquelles elle doit opérer puis les envoie à l’UAL.</p>
 <figure>
-<p><img alt="alu" src="../img/UC.png" /></p>
+<p><img alt="alu" src="../img/UC.png" width="400px" /></p>
 </figure>
 <h4 id="evolutions-et-limitations">Évolutions et limitations<a class="headerlink" href="#evolutions-et-limitations" title="Permanent link">&num;</a></h4>
 <p>Pendant des années, pour augmenter les performances des ordinateurs, les constructeurs augmentaient la fréquence d’horloge des microprocesseurs : la fréquence d’horloge d’un microprocesseur est liée à sa capacité d’exécuter un nombre plus ou moins important d’instructions machines par seconde. Plus la fréquence d’horloge du CPU est élevée, plus ce CPU est capable d’exécuter un grand nombre d’instructions machines par seconde (en fait, c’est un peu plus compliqué que cela, mais nous nous contenterons de cette explication).</p>
 <figure>
-<p><img alt="MOORE" src="../img/moore.png" /></p>
+<p><img alt="MOORE" src="../img/moore.png" width="400px" /></p>
 </figure>
 <p>Comme vous pouvez le remarquer sur le graphique ci-dessus, à partir de 2006 environ, la fréquence d’horloge a cessé d’augmenter, pourquoi ? À cause d’une contrainte physique : en effet plus on augmente la fréquence d’horloge d’un CPU, plus ce dernier chauffe. Il devenait difficile de refroidir le CPU, les constructeurs de microprocesseurs (principalement Intel et AMD) ont décidé d’arrêter la course à l’augmentation de la fréquence d’horloge, ils ont décidé d’adopter une nouvelle tactique.</p>
 <p>On pourrait se dire que l’augmentation du nombre de coeurs entraîne obligatoirement une augmentation des performances du CPU, en fait, c’est plus que complexe que cela : pour une application qui n’aura pas été conçue pour fonctionner avec un microprocesseur multicoeur, le gain de performance sera très faible, voir même nul. En effet, la conception d’applications capables de tirer profit d’un CPU multicoeur demande la mise en place de certaines techniques de programmation (techniques de programmation qui ne seront pas abordées ici). Il faut aussi avoir conscience que les différents coeurs d’un CPU doivent se "partager" l’accès à la mémoire vive : quand un coeur travaille sur une certaine zone de la RAM, cette même zone n’est
@@ -1831,7 +1831,7 @@ mots binaires depuis la mémoire. C’est également à cette étapes que sont c
 la mémoire possède une adresse (de 000 à 199), ces adresses sont codées en base 10 ;</li>
 </ul>
 <figure>
-<p><img alt="SIMULATEUR" src="../img/simulateur.png" /></p>
+<p><img alt="SIMULATEUR" src="../img/simulateur.png" width="700px" /></p>
 </figure>
 <p>Remarque : vous pouvez vous en assurer en cliquant sur OPTION puis binary.</p>
 <ul>
@@ -1839,24 +1839,26 @@ la mémoire possède une adresse (de 000 à 199), ces adresses sont codées en b
 <li>Le processeur (au centre) constitué principalement de l’Unité de Contrôle, de l’Unité Arithmétique et Logique et des registres de R0 à R12 plus un compteur de programme (PC pour Program counter) qui contient en permanence l’adresse de la prochaine instruction à exécuter.</li>
 </ul>
 <h3 id="les-instructions">Les instructions<a class="headerlink" href="#les-instructions" title="Permanent link">&num;</a></h3>
-<p>Pour le processeur précédent, le jeu d’instruction AQA est le suivant :
-* LDR Rd, <code>&lt;adresse mémoire&gt;</code>: charge la valeur enregistrée dans l’<code>&lt;adresse mémoire &gt;</code> dans le registe d ;
-* STR Rd,<code>&lt;adresse mémoire&gt;</code> : enregistre la valeur du registre d dans la mémoire spécifiée par <code>&lt;adresse mémoire &gt;</code>;
-* ADD Rd, Rn, <code>&lt;operand2&gt;</code> : ajoute la valeur spécifiée par <code>&lt;operand2&gt;</code> à la valeur du registre d et enregistre le résultat dans le registre d
-* SUB Rd, Rn, <code>&lt;operand2&gt;</code> : soustrait la valeur de <code>&lt;operand2&gt;</code> à la valeur du registre n et enregistre le résultat dans le registre d
-* MOV Rd, <code>&lt;operand2&gt;</code> : copie la valeur <code>&lt;operand2&gt;</code> dans le registre d
-* CMP Rn, <code>&lt;operand2&gt;</code> : compare la valeur de registre n avec la valeur de <code>&lt;operand2&gt;</code>
-* B <code>&lt;label&gt;</code>: Branchement inconditionnel jusqu’à la positon <code>&lt;label&gt;</code> dans le programme.
-* B<code>&lt;condition&gt;</code> <code>&lt;label&gt;</code> : branchement conditionnel vers la position <code>&lt;label&gt;</code> dans le programme si la dernière comparaison rempli le critère spécifié par <code>&lt;condition&gt;</code>. Les valeurs possibles sont : EQ :égal à ; NE : n’est pas égal à ; GT :Plus grand que ; LT : Moins grand que.
-* AND Rd, Rn, <code>&lt;operand2&gt;</code> : effectue l’opération bit à bit logique AND (ET) entre la valeur du registre n et la valeur <code>&lt;operand2&gt;</code> et enregistre le résultat dans le registre d.
-* ORR Rd, Rn, <code>&lt;operand2&gt;</code> : effectue l’opération bit à bit logique OR (OU) entre la valeur du
-registre n et la valeur <code>&lt;operand2&gt;</code>et enregistre le résultat dans le registre d.
-* EOR Rd, Rn, <code>&lt;operand2&gt;</code> : effectue l’opération bit à bit logique XOR(OU exclusif) entre la valeur du registre n et la valeur <code>&lt;operand2&gt;</code>et enregistre le résultat dans le registre d.
-* MVN Rd, <code>&lt;operand2&gt;</code>: effectue l’opération bit à bit logique NOT (NON) sur la valeur <code>&lt;operand2&gt;</code> et enregistre le résultat dans le registre d.
-* LSL Rd, Rn, <code>&lt;operand2&gt;</code> : décale de <code>&lt;operand2&gt;</code> bit(s) vers la gauche la valeur du registre n et enregistre le résultat dans le registre d
-* LSR Rd, Rn, &lt;<code>operand2&gt;</code> : décale de &lt;<code>operand2&gt;</code> bit(s) vers la droite la valeur du registre n et enregistre le résultat dans le registre d
-* HALT : arrête l’exécution du programme.
-<code>&lt;operand2&gt;</code> peut être #n (c’est à dire un nombre, exemple #42) ou bien Rm (c’est à dire le registre m, par exemple R1 est le registre numéro 1)</p>
+<p>Pour le processeur précédent, le jeu d’instruction AQA est le suivant :</p>
+<ul>
+<li>LDR Rd, <code>&lt;adresse mémoire&gt;</code>: charge la valeur enregistrée dans l’<code>&lt;adresse mémoire &gt;</code> dans le registe d ;</li>
+<li>STR Rd,<code>&lt;adresse mémoire&gt;</code> : enregistre la valeur du registre d dans la mémoire spécifiée par <code>&lt;adresse mémoire &gt;</code>;</li>
+<li>ADD Rd, Rn, <code>&lt;operand2&gt;</code> : ajoute la valeur spécifiée par <code>&lt;operand2&gt;</code> à la valeur du registre d et enregistre le résultat dans le registre d</li>
+<li>SUB Rd, Rn, <code>&lt;operand2&gt;</code> : soustrait la valeur de <code>&lt;operand2&gt;</code> à la valeur du registre n et enregistre le résultat dans le registre d</li>
+<li>MOV Rd, <code>&lt;operand2&gt;</code> : copie la valeur <code>&lt;operand2&gt;</code> dans le registre d</li>
+<li>CMP Rn, <code>&lt;operand2&gt;</code> : compare la valeur de registre n avec la valeur de <code>&lt;operand2&gt;</code></li>
+<li>B <code>&lt;label&gt;</code>: Branchement inconditionnel jusqu’à la positon <code>&lt;label&gt;</code> dans le programme.</li>
+<li>B<code>&lt;condition&gt;</code> <code>&lt;label&gt;</code> : branchement conditionnel vers la position <code>&lt;label&gt;</code> dans le programme si la dernière comparaison rempli le critère spécifié par <code>&lt;condition&gt;</code>. Les valeurs possibles sont : EQ :égal à ; NE : n’est pas égal à ; GT :Plus grand que ; LT : Moins grand que.</li>
+<li>AND Rd, Rn, <code>&lt;operand2&gt;</code> : effectue l’opération bit à bit logique AND (ET) entre la valeur du registre n et la valeur <code>&lt;operand2&gt;</code> et enregistre le résultat dans le registre d.</li>
+<li>ORR Rd, Rn, <code>&lt;operand2&gt;</code> : effectue l’opération bit à bit logique OR (OU) entre la valeur du
+registre n et la valeur <code>&lt;operand2&gt;</code>et enregistre le résultat dans le registre d.</li>
+<li>EOR Rd, Rn, <code>&lt;operand2&gt;</code> : effectue l’opération bit à bit logique XOR(OU exclusif) entre la valeur du registre n et la valeur <code>&lt;operand2&gt;</code>et enregistre le résultat dans le registre d.</li>
+<li>MVN Rd, <code>&lt;operand2&gt;</code>: effectue l’opération bit à bit logique NOT (NON) sur la valeur <code>&lt;operand2&gt;</code> et enregistre le résultat dans le registre d.</li>
+<li>LSL Rd, Rn, <code>&lt;operand2&gt;</code> : décale de <code>&lt;operand2&gt;</code> bit(s) vers la gauche la valeur du registre n et enregistre le résultat dans le registre d</li>
+<li>LSR Rd, Rn, &lt;<code>operand2&gt;</code> : décale de &lt;<code>operand2&gt;</code> bit(s) vers la droite la valeur du registre n et enregistre le résultat dans le registre d</li>
+<li>HALT : arrête l’exécution du programme.
+<code>&lt;operand2&gt;</code> peut être #n (c’est à dire un nombre, exemple #42) ou bien Rm (c’est à dire le registre m, par exemple R1 est le registre numéro 1)</li>
+</ul>
 <p>Les registres vont de R0 à R12.</p>
 <p>Compléments data, INP et OUT :</p>
 <ul>
