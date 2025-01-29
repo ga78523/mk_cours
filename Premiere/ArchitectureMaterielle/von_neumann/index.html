@@ -861,6 +861,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/recherche_textuelle/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1736,13 +1750,6 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 <td align="center"></td>
 <td align="center"></td>
 </tr>
-<tr>
-<td align="center">Tableau 2 – Table de vérité de l’additionneur</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -1765,7 +1772,7 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 </ul>
 <p>Les différents éléments échangent des informations à l’aide de bus.</p>
 <figure>
-<p><img alt="modèle de Von Neumann" src="../img/modele_Neumann.png" /></p>
+<p><img alt="modèle de Von Neumann" src="../img/modele_Neumann.png" width="400px" /></p>
 </figure>
 <p>Les deux premières parties sont habituellement rassemblées dans un ensemble de circuits électroniques qu’on appelle Unité Centrale de Traitement ou plus simplement processeur (ou CPU pour Centrale Processing Unit).</p>
 <p>Physiquement,un système informatique est constitué de plusieurs éléments :</p>
@@ -1787,7 +1794,7 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 <h4 id="lunite-arithmetique-et-logique-ual-ou-alu">L’unité arithmétique et logique UAL (ou ALU)<a class="headerlink" href="#lunite-arithmetique-et-logique-ual-ou-alu" title="Permanent link">&num;</a></h4>
 <p>L’unité arithmétique et logique est le cœur de l’ordinateur. On la représente habituellement par ce schéma (en forme de V) :</p>
 <figure>
-<p><img alt="alu" src="../img/alu.png" width="400px" /></p>
+<p><img alt="alu" src="../img/alu.png" width="200px" /></p>
 </figure>
 <ul>
 <li>A et B sont les opérandes (les entrées) ;</li>
@@ -1799,12 +1806,12 @@ Cette unité est composée de plusieurs registres dits registres de données et 
 <h4 id="unite-de-controle">Unité de contrôle<a class="headerlink" href="#unite-de-controle" title="Permanent link">&num;</a></h4>
 <p>Cette unité joue le rôle de chef d’orchestre de l’ordinateur. C’est ce composant qui est chargé récupérer en mémoire la prochaine instruction à exécuter et les données sur lesquelles elle doit opérer puis les envoie à l’UAL.</p>
 <figure>
-<p><img alt="alu" src="../img/UC.png" width="400px" /></p>
+<p><img alt="alu" src="../img/UC.png" width="200px" /></p>
 </figure>
 <h4 id="evolutions-et-limitations">Évolutions et limitations<a class="headerlink" href="#evolutions-et-limitations" title="Permanent link">&num;</a></h4>
 <p>Pendant des années, pour augmenter les performances des ordinateurs, les constructeurs augmentaient la fréquence d’horloge des microprocesseurs : la fréquence d’horloge d’un microprocesseur est liée à sa capacité d’exécuter un nombre plus ou moins important d’instructions machines par seconde. Plus la fréquence d’horloge du CPU est élevée, plus ce CPU est capable d’exécuter un grand nombre d’instructions machines par seconde (en fait, c’est un peu plus compliqué que cela, mais nous nous contenterons de cette explication).</p>
 <figure>
-<p><img alt="MOORE" src="../img/moore.png" width="400px" /></p>
+<p><img alt="MOORE" src="../img/moore.png" width="600px" /></p>
 </figure>
 <p>Comme vous pouvez le remarquer sur le graphique ci-dessus, à partir de 2006 environ, la fréquence d’horloge a cessé d’augmenter, pourquoi ? À cause d’une contrainte physique : en effet plus on augmente la fréquence d’horloge d’un CPU, plus ce dernier chauffe. Il devenait difficile de refroidir le CPU, les constructeurs de microprocesseurs (principalement Intel et AMD) ont décidé d’arrêter la course à l’augmentation de la fréquence d’horloge, ils ont décidé d’adopter une nouvelle tactique.</p>
 <p>On pourrait se dire que l’augmentation du nombre de coeurs entraîne obligatoirement une augmentation des performances du CPU, en fait, c’est plus que complexe que cela : pour une application qui n’aura pas été conçue pour fonctionner avec un microprocesseur multicoeur, le gain de performance sera très faible, voir même nul. En effet, la conception d’applications capables de tirer profit d’un CPU multicoeur demande la mise en place de certaines techniques de programmation (techniques de programmation qui ne seront pas abordées ici). Il faut aussi avoir conscience que les différents coeurs d’un CPU doivent se "partager" l’accès à la mémoire vive : quand un coeur travaille sur une certaine zone de la RAM, cette même zone n’est
