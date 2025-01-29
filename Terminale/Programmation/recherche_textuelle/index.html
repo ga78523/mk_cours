@@ -1105,7 +1105,7 @@
 <p>Les algorithmes qui permettent de trouver une sous-chaîne de caractères dans une chaîne de caractères plus grande sont des grands classiques de l’algorithmique.</p>
 <p>Un des secteurs qui utilise le plus cette recherche textuelle est le domaine de la bioinformatique notamment dans l’analyse des informations génétiques. Cette information génétique présente dans nos cellules est portée par les molécules d’ADN et permet la fabrication des protéines. Ces molécules d’ADN sont, entre autres, composées de bases azotées ayant pour noms : Adénine (représenté par un A), Thymine (représenté par un T), Guanine (représenté par un G) et Cytosine (représenté par un C).</p>
 <figure>
-<p><img alt="adn" src="../img_recherche/adn.png" /></p>
+<p><img alt="adn" src="../img_recherche/adn.png" width="300px" /></p>
 </figure>
 <p>Il est souvent nécessaire de détecter la présence de certains enchaînements de bases azotées (dans la plupart des cas un triplet de bases azotées code pour 1 acide aminé et la combinaison d’acides aminés forme une protéine).</p>
 <h2 id="comment-fonctionne-ces-algorithmes">Comment fonctionne ces algorithmes ?<a class="headerlink" href="#comment-fonctionne-ces-algorithmes" title="Permanent link">&num;</a></h2>
@@ -1148,7 +1148,7 @@
 <div class="language-text highlight"><pre><span></span><code>On parcourt le texte d’indice en indice depuis le début du texte en vérifiant à chaque pas si les lettres du mot coïncident comme illustré dans l&#39;[animation](https://boyer-moore.codekodo.net/recherche_naive.php) suivante.
 </code></pre></div>
 <figure>
-<p><img alt="naif" src="../img_recherche/exemple.png" /></p>
+<p><img alt="naif" src="../img_recherche/exemple.png" width="400px" /></p>
 </figure>
 <div class="admonition example">
 <p class="admonition-title">Exercice 1 :</p>
@@ -1204,26 +1204,26 @@ Que signifie le 196 affiché ?</p>
 <p>L’objectif est de rechercher l’occurrence <code>CGGCTG</code> dans la séquence <code>ATAACAGGAGTAAATAACGGCTGGAGTAAATA</code>.</p>
 <p>On aligne et on teste l’occurrence par la droite :</p>
 <figure>
-<p><img alt="exmple1" src="../img_recherche/exemple1.png" /></p>
+<p><img alt="exmple1" src="../img_recherche/exemple1.png" width="300px" /></p>
 </figure>
 <p>Il n'y a pas de correspondance car <span class="arithmatex">\(G\ne A\)</span>. On décale alors le motif  vers la droite car la lettre A n'est pas dans le motif. Les positions intermédiaires ne peuvent donc pas réussir. Donc on décale l'occurrence de 6 rangs (la longueur de l'occurrence).</p>
 <figure>
-<p><img alt="exmple1" src="../img_recherche/exemple2.png" /></p>
+<p><img alt="exmple1" src="../img_recherche/exemple2.png" width="300px" /></p>
 </figure>
 <p>On est dans une situation similaire, et en deux étapes on obtient ce que la méthode naïve aurait fait en 12 étapes !</p>
 <figure>
-<p><img alt="exmple1" src="../img_recherche/exemple3.png" /></p>
+<p><img alt="exmple1" src="../img_recherche/exemple3.png" width="300px" /></p>
 </figure>
 <p>Dans cette situation, le G et le C ne correspondent pas mais il y a un C dans l'occurrence, on décalera donc l'occurrence de 2 rangs (place du premier C depuis la fin de l'occurrence)</p>
 <p>On obtient donc :</p>
 <figure>
-<p><img alt="exmple1" src="../img_recherche/exemple4.png" /></p>
+<p><img alt="exmple1" src="../img_recherche/exemple4.png" width="300px" /></p>
 </figure>
 <p>Cette fois-ci les G correspondent puis T et G ne correspondent pas, or il y a un G (avant le T) dans l'occurrence.</p>
 <p>On décale donc de 3 rangs.</p>
 <p>On obtient donc:</p>
 <figure>
-<p><img alt="exmple1" src="../img_recherche/exemple5.png" /></p>
+<p><img alt="exmple1" src="../img_recherche/exemple5.png" width="300px" /></p>
 </figure>
 <p>On trouve une correspondance complète.</p>
 <p>Pour continuer la recherche il suffit de la relancer un rang plus loin...</p>
@@ -1241,11 +1241,11 @@ Que signifie le 196 affiché ?</p>
 <span class="normal"><a href="#__codelineno-4-6">6</a></span>
 <span class="normal"><a href="#__codelineno-4-7">7</a></span>
 <span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">table_saut</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">dico</span> <span class="o">=</span> <span class="p">{}</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="n">dico</span><span class="p">[</span><span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="k">return</span> <span class="n">dico</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="n">dico</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>        <span class="n">dico</span><span class="p">[</span><span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="k">return</span> <span class="n">dico</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">table_saut</span><span class="p">(</span><span class="s2">&quot;Valjean&quot;</span><span class="p">))</span>
 </span></code></pre></div>
