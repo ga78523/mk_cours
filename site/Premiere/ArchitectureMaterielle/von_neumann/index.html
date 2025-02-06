@@ -743,6 +743,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ressources" class="md-nav__link">
+    Ressources
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -855,6 +862,34 @@
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/algos_arbre/" class="md-nav__link">
         Arbres algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/recherche_textuelle/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/diviser_regner/" class="md-nav__link">
+        Diviser pour régner
       </a>
     </li>
   
@@ -1384,6 +1419,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ressources" class="md-nav__link">
+    Ressources
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1403,10 +1445,13 @@
 <h3 id="contexte">Contexte<a class="headerlink" href="#contexte" title="Permanent link">&num;</a></h3>
 <p>Les circuits d’un ordinateur manipulent uniquement des chiffres binaires 0 ou 1 qui sont simplement représentés par des tensions électriques (0 ou +V). On peut réaliser des opérations sur ces nombres binaires à l’aide de circuits logiques qui sont concrètement construits à partir de transistors. Ces transistors peuvent se comporter comme des interrupteurs à la manière de l’exemple suivant.</p>
 <figure>
-<p><img alt="transistor" src="../img/transistor.png" width="300px" /></p>
+<p><img alt="transistor" src="../img/transistor.png" />(width=300px)</p>
 </figure>
 <p>Lorsque la broche B est sous tension (+V), un courant peut s’établir entre E et la masse . Le sens du courant est indiqué par la petite flèche. Le transistor peut alors être considéré comme un interrupteur fermé.</p>
 <p>Inversement, quand B est à 0 V, la broche E reste sous tension haute et le transistor peut être considéré comme un interrupteur ouvert.</p>
+<figure>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/n9fb6F1MWHc?si=ADZzfyoemW9Q4MF3" title="YouTube video player" width="560"></iframe>
+</figure>
 <h3 id="porte-not">Porte NOT<a class="headerlink" href="#porte-not" title="Permanent link">&num;</a></h3>
 <p>La porte NOT implantée par un seul transistor est la plus simple de toutes les portes. Elle n’a qu’un seul bit en entrée (E) et sa sortie (S) vaut 1 quand l’entrée vaut 0 et inversement. on peut obtenir ce que l’on appelle la table de vérité de la porte "NOT" (voir ci-dessous).</p>
 <p>Graphiquement, on représente cette porte comme dans les schémas ci-dessous, avec à gauche la notation américaine et à droite la notation européenne. On peut fabriquer d’autres portes logiques en combinant plusieurs transistors comme par exemple la porte AND (ET), OU (OR)....</p>
@@ -1656,6 +1701,7 @@
 <p class="admonition-title">Exercice 1 :</p>
 <p>Cherchez l’adresse IP de votre ordinateur et le masque de sous-réseau. Sous Windows, il faut taper ipconfig et sous Linux , la commande est ifconfig. Écrire l’adresse du sous-réseau trouvé.</p>
 </div>
+<p><a href="../TP_logic_gates/">TP</a></p>
 <h2 id="circuit-combinatoire-et-circuit-sequentiel">Circuit combinatoire et circuit séquentiel<a class="headerlink" href="#circuit-combinatoire-et-circuit-sequentiel" title="Permanent link">&num;</a></h2>
 <p>D’une manière générale, les circuits électroniques possèdent plusieurs entrées et plusieurs sorties. Quand
 les sorties dépendent directement et uniquement des entrées, on parle de cicuits combinatoires. Il existe
@@ -1736,13 +1782,6 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 <td align="center"></td>
 <td align="center"></td>
 </tr>
-<tr>
-<td align="center">Tableau 2 – Table de vérité de l’additionneur</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -1765,7 +1804,7 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 </ul>
 <p>Les différents éléments échangent des informations à l’aide de bus.</p>
 <figure>
-<p><img alt="modèle de Von Neumann" src="../img/modele_Neumann.png" /></p>
+<p><img alt="modèle de Von Neumann" src="../img/modele_Neumann.png" width="400px" /></p>
 </figure>
 <p>Les deux premières parties sont habituellement rassemblées dans un ensemble de circuits électroniques qu’on appelle Unité Centrale de Traitement ou plus simplement processeur (ou CPU pour Centrale Processing Unit).</p>
 <p>Physiquement,un système informatique est constitué de plusieurs éléments :</p>
@@ -1787,7 +1826,7 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 <h4 id="lunite-arithmetique-et-logique-ual-ou-alu">L’unité arithmétique et logique UAL (ou ALU)<a class="headerlink" href="#lunite-arithmetique-et-logique-ual-ou-alu" title="Permanent link">&num;</a></h4>
 <p>L’unité arithmétique et logique est le cœur de l’ordinateur. On la représente habituellement par ce schéma (en forme de V) :</p>
 <figure>
-<p><img alt="alu" src="../img/alu.png" width="400px" /></p>
+<p><img alt="alu" src="../img/alu.png" width="200px" /></p>
 </figure>
 <ul>
 <li>A et B sont les opérandes (les entrées) ;</li>
@@ -1799,12 +1838,12 @@ Cette unité est composée de plusieurs registres dits registres de données et 
 <h4 id="unite-de-controle">Unité de contrôle<a class="headerlink" href="#unite-de-controle" title="Permanent link">&num;</a></h4>
 <p>Cette unité joue le rôle de chef d’orchestre de l’ordinateur. C’est ce composant qui est chargé récupérer en mémoire la prochaine instruction à exécuter et les données sur lesquelles elle doit opérer puis les envoie à l’UAL.</p>
 <figure>
-<p><img alt="alu" src="../img/UC.png" width="400px" /></p>
+<p><img alt="alu" src="../img/UC.png" width="200px" /></p>
 </figure>
 <h4 id="evolutions-et-limitations">Évolutions et limitations<a class="headerlink" href="#evolutions-et-limitations" title="Permanent link">&num;</a></h4>
 <p>Pendant des années, pour augmenter les performances des ordinateurs, les constructeurs augmentaient la fréquence d’horloge des microprocesseurs : la fréquence d’horloge d’un microprocesseur est liée à sa capacité d’exécuter un nombre plus ou moins important d’instructions machines par seconde. Plus la fréquence d’horloge du CPU est élevée, plus ce CPU est capable d’exécuter un grand nombre d’instructions machines par seconde (en fait, c’est un peu plus compliqué que cela, mais nous nous contenterons de cette explication).</p>
 <figure>
-<p><img alt="MOORE" src="../img/moore.png" width="400px" /></p>
+<p><img alt="MOORE" src="../img/moore.png" width="600px" /></p>
 </figure>
 <p>Comme vous pouvez le remarquer sur le graphique ci-dessus, à partir de 2006 environ, la fréquence d’horloge a cessé d’augmenter, pourquoi ? À cause d’une contrainte physique : en effet plus on augmente la fréquence d’horloge d’un CPU, plus ce dernier chauffe. Il devenait difficile de refroidir le CPU, les constructeurs de microprocesseurs (principalement Intel et AMD) ont décidé d’arrêter la course à l’augmentation de la fréquence d’horloge, ils ont décidé d’adopter une nouvelle tactique.</p>
 <p>On pourrait se dire que l’augmentation du nombre de coeurs entraîne obligatoirement une augmentation des performances du CPU, en fait, c’est plus que complexe que cela : pour une application qui n’aura pas été conçue pour fonctionner avec un microprocesseur multicoeur, le gain de performance sera très faible, voir même nul. En effet, la conception d’applications capables de tirer profit d’un CPU multicoeur demande la mise en place de certaines techniques de programmation (techniques de programmation qui ne seront pas abordées ici). Il faut aussi avoir conscience que les différents coeurs d’un CPU doivent se "partager" l’accès à la mémoire vive : quand un coeur travaille sur une certaine zone de la RAM, cette même zone n’est
@@ -1955,6 +1994,10 @@ registre n et la valeur <code>&lt;operand2&gt;</code>et enregistre le résultat 
 </span></code></pre></div>
 </td></tr></table>
 </div>
+<h2 id="ressources">Ressources<a class="headerlink" href="#ressources" title="Permanent link">&num;</a></h2>
+<figure>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/c9pL_3tTW2c?si=VnWHW4xbtuyX6r66" title="YouTube video player" width="560"></iframe>
+</figure>
 
               
             </article>

@@ -7,15 +7,9 @@
 !!! example "Exercice 1"
     Déterminer  la racine ; le nombre de feuilles ; le nombre de branches ; l’arité ; sa taille : T(B); la hauteur de B : H(B); LC(B); LCE(B); LCI(B); PM(B); PME(B); PMI(B) pour l'arbre ci-dessous.
 
-``` mermaid
-graph TB;
-    A((8))-->B((5))
-    A-->C((7));
-    B-->E((9))
-    C-->H((3))
-    C-->I((5))
-    E-->K((1))
-```
+<figure markdown>
+![arbre1](img_arbre/arbre1.png){width=500px}
+</figure>
 
 ### Représentation d'un arbre binaire avec classe
 
@@ -101,7 +95,7 @@ Nous allons donc imaginer que l'on parcourt l'arbre de la façon indiquée ci-de
 Ce type de parcours est appelé parcours en profondeur de l'arbre.
 
 <figure markdown>
-![if](img_arbre/parcours_profondeur.png){width=500px}
+![if](img_arbre/arbre_parcours.png){width=500px}
 </figure>
 
 Il existe trois façon d'énumérer les noeuds.
@@ -118,22 +112,9 @@ A-B-D-E-G-H-C-F-I
 !!! example "Exercice 7"
     Réaliser à la main le parcours préfixe de l'arbre ci-dessous :
 
-```mermaid
-graph TB;
-    A((11))-->B((15))
-    A-->C((12))
-    B-->E((29))
-    B-->M((23))
-    E-->F((31))
-    C-->I((21))
-    E-->K((111))
-    F-->G((5))
-    F-->J((7))
-    J-->L((2))
-    I-->N((31))
-    I-->P((3))
-    N-->V((43))
-```
+<figure markdown>
+![arbre2](img_arbre/arbre2.png){width=500px}
+</figure>
 
 **Code Python de la fonction donnant le parcours préfixe: **
 

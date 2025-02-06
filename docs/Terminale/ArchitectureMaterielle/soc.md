@@ -134,9 +134,3 @@ Le SoC M4 est fabriqué avec le procédé 3 nm (en) de deuxième génération de
 <figure markdown>
 ![Snapdragon 8](img_SOC/qualcomm-snapdragon-8-elite-officiel-4.jpg){width=500px}
 </figure>
-
-## Ressources
-
-<figure markdown>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/c9pL_3tTW2c?si=VnWHW4xbtuyX6r66" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</figure>

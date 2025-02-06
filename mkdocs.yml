@@ -82,6 +82,8 @@ nav:
         - Calculabilité, décidabilité : Terminale/Programmation/decidabilite.md
         - Sécurisation des données : Terminale/Programmation/crypto.md
         - Arbres algos : Terminale/Programmation/algos_arbre.md
+        - Recherche textuelle : Terminale/Programmation/recherche_textuelle.md
+        - Diviser pour régner : Terminale/Programmation/diviser_regner.md
       - Structures de Données: 
         - Graphes : Terminale/Struct_donnees/graphe.md
       - BDD :
@@ -93,3 +95,5 @@ nav:
         - Linux : Terminale/ArchitectureMaterielle/commande_linux.md
         - processus : Terminale/ArchitectureMaterielle/processus.md
         - SoC : Terminale/ArchitectureMaterielle/soc.md
+    - 'Logiciels':
+      - git : Logiciels/git_github.md

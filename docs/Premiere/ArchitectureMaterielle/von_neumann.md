@@ -7,12 +7,17 @@
 Les circuits d’un ordinateur manipulent uniquement des chiffres binaires 0 ou 1 qui sont simplement représentés par des tensions électriques (0 ou +V). On peut réaliser des opérations sur ces nombres binaires à l’aide de circuits logiques qui sont concrètement construits à partir de transistors. Ces transistors peuvent se comporter comme des interrupteurs à la manière de l’exemple suivant.
 
 <figure markdown>
-![transistor](img/transistor.png){width=300px}
+![transistor](img/transistor.png)(width=300px)
 </figure>
 
 Lorsque la broche B est sous tension (+V), un courant peut s’établir entre E et la masse . Le sens du courant est indiqué par la petite flèche. Le transistor peut alors être considéré comme un interrupteur fermé.
 
 Inversement, quand B est à 0 V, la broche E reste sous tension haute et le transistor peut être considéré comme un interrupteur ouvert.
+
+
+<figure markdown>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n9fb6F1MWHc?si=ADZzfyoemW9Q4MF3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 ### Porte NOT
 
@@ -145,6 +150,9 @@ Sur un processeur 32 bits, le AND est une opération primitive du processeur, do
 !!! example "Exercice 1 :"
     Cherchez l’adresse IP de votre ordinateur et le masque de sous-réseau. Sous Windows, il faut taper ipconfig et sous Linux , la commande est ifconfig. Écrire l’adresse du sous-réseau trouvé.
 
+[TP](TP_logic_gates.md)
+
+
 ## Circuit combinatoire et circuit séquentiel
 
 D’une manière générale, les circuits électroniques possèdent plusieurs entrées et plusieurs sorties. Quand
@@ -174,7 +182,8 @@ Comme son nom l’indique, l’additionneur permet d’additionner 2 bits (E1 et
     |1   |0   |1    |||
     |1   |1   |0    |||
     |1   |1   |1    |||
-    Tableau 2 – Table de vérité de l’additionneur
+
+ 
 
 ### Les mémoires
 
@@ -204,7 +213,7 @@ Ce modèle décompose l’ordinateur en 4 parties distinctes :
 Les différents éléments échangent des informations à l’aide de bus.
 
 <figure markdown>
-![modèle de Von Neumann](img/modele_Neumann.png)
+![modèle de Von Neumann](img/modele_Neumann.png){width=400px}
 </figure>
 
 Les deux premières parties sont habituellement rassemblées dans un ensemble de circuits électroniques qu’on appelle Unité Centrale de Traitement ou plus simplement processeur (ou CPU pour Centrale Processing Unit).
@@ -229,7 +238,7 @@ La mémoire de l’ordinateur contient à la fois les programmes et les données
 L’unité arithmétique et logique est le cœur de l’ordinateur. On la représente habituellement par ce schéma (en forme de V) :
 
 <figure markdown>
-![alu](img/alu.png){width=400px}
+![alu](img/alu.png){width=200px}
 </figure>
 
 * A et B sont les opérandes (les entrées) ;
@@ -243,7 +252,7 @@ Cette unité est composée de plusieurs registres dits registres de données et 
 Cette unité joue le rôle de chef d’orchestre de l’ordinateur. C’est ce composant qui est chargé récupérer en mémoire la prochaine instruction à exécuter et les données sur lesquelles elle doit opérer puis les envoie à l’UAL.
 
 <figure markdown>
-![alu](img/UC.png){width=400px}
+![alu](img/UC.png){width=200px}
 </figure>
 
 #### Évolutions et limitations
@@ -251,7 +260,7 @@ Cette unité joue le rôle de chef d’orchestre de l’ordinateur. C’est ce c
 Pendant des années, pour augmenter les performances des ordinateurs, les constructeurs augmentaient la fréquence d’horloge des microprocesseurs : la fréquence d’horloge d’un microprocesseur est liée à sa capacité d’exécuter un nombre plus ou moins important d’instructions machines par seconde. Plus la fréquence d’horloge du CPU est élevée, plus ce CPU est capable d’exécuter un grand nombre d’instructions machines par seconde (en fait, c’est un peu plus compliqué que cela, mais nous nous contenterons de cette explication).
 
 <figure markdown>
-![MOORE](img/moore.png){width=400px}
+![MOORE](img/moore.png){width=600px}
 </figure>
 
 Comme vous pouvez le remarquer sur le graphique ci-dessus, à partir de 2006 environ, la fréquence d’horloge a cessé d’augmenter, pourquoi ? À cause d’une contrainte physique : en effet plus on augmente la fréquence d’horloge d’un CPU, plus ce dernier chauffe. Il devenait difficile de refroidir le CPU, les constructeurs de microprocesseurs (principalement Intel et AMD) ont décidé d’arrêter la course à l’augmentation de la fréquence d’horloge, ils ont décidé d’adopter une nouvelle tactique.
@@ -385,4 +394,25 @@ Interprétation :
 
 * On place deux nombres dans les registres R0 et R1 grâce à la fonction INP ;
 * On compare le contenu du registre R1 au contenu du registre R0 ;
-* Si l
+* Si le contenu de R1 est plus grand que celui de R0, on effectue un branchement jusqu’au label HIGHER et on affiche le contenu de R1 ;
+* Sinon, on affiche le contenu de R0 ;
+* On effectue le branchement conditionnel vers done qui stoppe le programme.
+  
+!!! example "Exercice 5 :"
+    Réaliser un programme qui prend deux nombres et qui retourne le plus petit.
+
+!!! example "Exercice 6 :"
+    Traduire le programme python ci-dessous en assembleur.
+
+    ``` asm linenums="1"
+    x=0 // on met en memoire dans la variable nomme x la valeur 0   
+    while x<3:
+        x=x+1
+    print(x)
+    ```
+
+## Ressources
+
+<figure markdown>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c9pL_3tTW2c?si=VnWHW4xbtuyX6r66" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
