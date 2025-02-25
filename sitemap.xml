@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Premiere/Algorithmique/tris/</loc>
+         <lastmod>2025-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Premiere/ArchitectureMaterielle/TP_logic_gates/</loc>
          <lastmod>2025-02-25</lastmod>
          <changefreq>daily</changefreq>
