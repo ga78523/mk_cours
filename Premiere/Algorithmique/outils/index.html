@@ -587,15 +587,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#exemple" class="md-nav__link">
     Exemple
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -640,6 +640,13 @@
   
     <nav class="md-nav" aria-label="Une premère approche de la complexité">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#calcul-de-la-complexite" class="md-nav__link">
@@ -1146,15 +1153,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#exemple" class="md-nav__link">
     Exemple
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1199,6 +1206,13 @@
   
     <nav class="md-nav" aria-label="Une premère approche de la complexité">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#calcul-de-la-complexite" class="md-nav__link">
@@ -1259,7 +1273,7 @@
 <h2 id="variant-de-boucle">Variant de boucle<a class="headerlink" href="#variant-de-boucle" title="Permanent link">&num;</a></h2>
 <h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&num;</a></h3>
 <p>On appelle variant d’une boucle une expression dont la valeur varie à chacune des itérations de la boucle. Un variant de boucle bien choisi permet par exemple de prouver qu’une boucle while se terminera bien.</p>
-<h2 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&num;</a></h2>
+<h3 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&num;</a></h3>
 <p>Calcul de la plus petite puissance de deux supérieure ou égale à un entier n.</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1293,9 +1307,7 @@
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">puissance</span> <span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 </span></code></pre></div>
 </td></tr></table>
-<ol>
-<li>Tracer l'algorithme</li>
-</ol>
+<p><strong>1)</strong> Tracer l'algorithme</p>
 <table>
 <thead>
 <tr>
@@ -1379,9 +1391,7 @@
 </tr>
 </tbody>
 </table>
-<ol>
-<li>Vérifier que à chaque exécution du corps de boucle (ligne 4) la propriété r = 2i est vraie. r = 2i est-il un invariant de boucle ?</li>
-</ol>
+<p><strong>2)</strong> Vérifier que à chaque exécution du corps de boucle (ligne 4) la propriété r = 2i est vraie. r = 2i est-il un invariant de boucle ?</p>
 <h3 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">&num;</a></h3>
 <p>On considère la fonction suivante qui permet de calculer le quotient et le reste de la division euclidienne d’un entier positif par un entier strictement positif :</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1394,21 +1404,17 @@
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>        <span class="n">q</span><span class="o">=</span><span class="mi">0</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="n">r</span><span class="o">=</span><span class="n">a</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="k">while</span> <span class="n">r</span><span class="o">&gt;=</span><span class="n">b</span><span class="p">:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>            <span class="n">q</span><span class="o">=</span><span class="n">q</span><span class="o">+</span><span class="mi">1</span> <span class="c1">#on peut aussi écrire q+=1 6</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>            <span class="n">q</span><span class="o">=</span><span class="n">q</span><span class="o">+</span><span class="mi">1</span> <span class="c1">#on peut aussi écrire q+=1 </span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>            <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="o">-</span><span class="n">b</span> <span class="c1">#on peut aussi écrire r-=b</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>        <span class="k">return</span> <span class="n">q</span><span class="p">,</span><span class="n">r</span>
 </span></code></pre></div>
 </td></tr></table>
-<ol>
-<li>Écrire la trace de l’algorithme pour l’entrée (a = 17, b = 5) ;</li>
-<li>Montrer que la boucle <code>while</code> se termine en utilisant un variant de boucle ;</li>
-<li>Montrer que la propriété <span class="arithmatex">\(a = q \times b + r\)</span> est un invariant de la boucle <code>while</code> ;</li>
-<li>En déduire que l’algorithme produit le résultat attendu.</li>
-</ol>
+<p><strong>1)</strong> Écrire la trace de l’algorithme pour l’entrée (a = 17, b = 5) ;</p>
+<p><strong>2)</strong> Montrer que la boucle <code>while</code> se termine en utilisant un variant de boucle ;</p>
+<p><strong>3)</strong> Montrer que la propriété <span class="arithmatex">\(a = q \times b + r\)</span> est un invariant de la boucle <code>while</code> ;</p>
+<p><strong>4)</strong> En déduire que l’algorithme produit le résultat attendu.</p>
 <h2 id="une-premere-approche-de-la-complexite">Une premère approche de la complexité<a class="headerlink" href="#une-premere-approche-de-la-complexite" title="Permanent link">&num;</a></h2>
-<ol>
-<li>Définition</li>
-</ol>
+<h3 id="definition_2">Définition<a class="headerlink" href="#definition_2" title="Permanent link">&num;</a></h3>
 <p>La notion de complexité d’un algorithme va rendre compte de l’efficacité de cet algorithme. Pour un même problème, par exemple trier un tableau, il existe plusieurs algorithmes. Certains algorithmes sont plus efficaces que d’autres (par exemple un algorithme A mettra moins de temps qu’un algorithme B pour résoudre exactement le même problème, sur la même machine).</p>
 <p>Il existe 2 types de complexité : une complexité en temps et une complexité en mémoire. Nous nous intéresserons ici uniquement à la complexité en temps. La complexité en temps est directement liée au nombre d’opérations élémentaires qui doivent être exécutées afin de résoudre un problème donné.</p>
 <p>L’évaluation de ce nombre d’opérations élémentaires n’est pas chose facile, on rencontre souvent des cas litigieux.</p>
@@ -1438,9 +1444,7 @@
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="k">return</span> <span class="n">somme</span>
 </span></code></pre></div>
 </td></tr></table>
-<ol>
-<li>Déterminer la complexité T(n) de cet algorithme.</li>
-</ol>
+<p><strong>1)</strong> Déterminer la complexité T(n) de cet algorithme.</p>
 <p>La complexité de cet algorithme est dite linéaire. Ce sera le cas de tous les algorithmes avec 
 <span class="arithmatex">\(T(n) = a \times n + b\)</span> où <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span> sont des réels.</p>
 <h4 id="algorithmes-avec-deux-boucles-for-imbriquees">Algorithmes avec deux boucles for imbriquées<a class="headerlink" href="#algorithmes-avec-deux-boucles-for-imbriquees" title="Permanent link">&num;</a></h4>
@@ -1455,10 +1459,8 @@
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="k">return</span> <span class="kc">None</span>
 </span></code></pre></div>
 </td></tr></table>
-<ol>
-<li>Déterminer la complexité T(n) de cet algorithme.</li>
-</ol>
-<p>La complexité des algorithmes contenant deux boucles <code>for</code> est dite quadratique. Ce sera le cas de tous les algorithmes avec <span class="arithmatex">\(T(n) = a \times n^2 + b times n + c\)</span> où a, b et c sont des réels.</p>
+<p><strong>2)</strong> Déterminer la complexité T(n) de cet algorithme.</p>
+<p>La complexité des algorithmes contenant deux boucles <code>for</code> est dite quadratique. Ce sera le cas de tous les algorithmes avec <span class="arithmatex">\(T(n) = a \times n^2 + b \times n + c\)</span> où <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span> et <span class="arithmatex">\(c\)</span> sont des réels.</p>
 
               
             </article>
