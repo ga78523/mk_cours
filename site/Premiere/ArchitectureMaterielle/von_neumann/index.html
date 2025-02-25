@@ -548,8 +548,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#porte-nand" class="md-nav__link">
-    Porte NAND
+  <a href="#porte-nand-not-and" class="md-nav__link">
+    Porte NAND (Not AND)
   </a>
   
 </li>
@@ -584,6 +584,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#travaux-pratiques-sur-les-portes-logiques" class="md-nav__link">
+    Travaux pratiques sur les portes logiques
+  </a>
   
 </li>
       
@@ -754,6 +761,53 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/outils/" class="md-nav__link">
+        Outils
+      </a>
     </li>
   
 
@@ -1224,8 +1278,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#porte-nand" class="md-nav__link">
-    Porte NAND
+  <a href="#porte-nand-not-and" class="md-nav__link">
+    Porte NAND (Not AND)
   </a>
   
 </li>
@@ -1260,6 +1314,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#travaux-pratiques-sur-les-portes-logiques" class="md-nav__link">
+    Travaux pratiques sur les portes logiques
+  </a>
   
 </li>
       
@@ -1445,7 +1506,7 @@
 <h3 id="contexte">Contexte<a class="headerlink" href="#contexte" title="Permanent link">&num;</a></h3>
 <p>Les circuits d’un ordinateur manipulent uniquement des chiffres binaires 0 ou 1 qui sont simplement représentés par des tensions électriques (0 ou +V). On peut réaliser des opérations sur ces nombres binaires à l’aide de circuits logiques qui sont concrètement construits à partir de transistors. Ces transistors peuvent se comporter comme des interrupteurs à la manière de l’exemple suivant.</p>
 <figure>
-<p><img alt="transistor" src="../img/transistor.png" />(width=300px)</p>
+<p><img alt="transistor" src="../img/transistor.png" width="200px" /></p>
 </figure>
 <p>Lorsque la broche B est sous tension (+V), un courant peut s’établir entre E et la masse . Le sens du courant est indiqué par la petite flèche. Le transistor peut alors être considéré comme un interrupteur fermé.</p>
 <p>Inversement, quand B est à 0 V, la broche E reste sous tension haute et le transistor peut être considéré comme un interrupteur ouvert.</p>
@@ -1453,12 +1514,14 @@
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/n9fb6F1MWHc?si=ADZzfyoemW9Q4MF3" title="YouTube video player" width="560"></iframe>
 </figure>
 <h3 id="porte-not">Porte NOT<a class="headerlink" href="#porte-not" title="Permanent link">&num;</a></h3>
-<p>La porte NOT implantée par un seul transistor est la plus simple de toutes les portes. Elle n’a qu’un seul bit en entrée (E) et sa sortie (S) vaut 1 quand l’entrée vaut 0 et inversement. on peut obtenir ce que l’on appelle la table de vérité de la porte "NOT" (voir ci-dessous).</p>
-<p>Graphiquement, on représente cette porte comme dans les schémas ci-dessous, avec à gauche la notation américaine et à droite la notation européenne. On peut fabriquer d’autres portes logiques en combinant plusieurs transistors comme par exemple la porte AND (ET), OU (OR)....</p>
+<p>La porte NOT implantée par un seul transistor est la plus simple de toutes les portes. Elle n’a qu’un seul bit en entrée (E) et sa sortie (S) vaut 1 quand l’entrée vaut 0 et inversement.
+Elle peut la représenter comme ceci :</p>
 <figure>
-<p><img alt="porte NOT" src="../img/porte_NOT.png" width="300px" /></p>
+<p><img alt="porte NOT" src="../img/porte_NOT.png" width="300px" />
+<caption>Représentation de la porte not</caption></p>
 </figure>
-<p><span class="arithmatex">\(S = \overline{E}\)</span></p>
+<p>La fonction logique s'écrit <span class="arithmatex">\(S = \overline{E}\)</span>. Nous pouvons rassembler tous les états logiques de la sortie en fonction des états logiques des entrées dans ce qui s'appelle la table de vérité. Cette dernière s'écrit de la manière suivante pour la porte NOT.</p>
+<figure>
 <table>
 <thead>
 <tr>
@@ -1477,15 +1540,20 @@
 </tr>
 </tbody>
 </table>
-<p>Exemple de réalisation de porte NOT avec des transistors</p>
+<p><caption>Table de vérité</caption></p>
+</figure>
+<p><strong>Exemple de réalisation de porte NOT avec des transistors</strong></p>
 <figure>
 <p><img alt="circuit porte NOT" src="../img/circuit_porte_NOT.png" width="500px" /></p>
 </figure>
 <h3 id="porte-and">Porte AND<a class="headerlink" href="#porte-and" title="Permanent link">&num;</a></h3>
+<p>Avec deux transistors, nous pouvons réaliser une porte AND. Cette porte peut se représenter comme ceci :</p>
 <figure>
-<p><img alt="porte AND" src="../img/porte_AND.png" width="300px" /></p>
+<p><img alt="porte AND" src="../img/porte_AND.png" width="300px" />
+<caption>Représentation de la porte AND</caption></p>
 </figure>
-<p><span class="arithmatex">\(S = A.B\)</span></p>
+<p>La fonction s'écrit <span class="arithmatex">\(S = A.B\)</span> et la table de vérité s'écrit :</p>
+<figure>
 <table>
 <thead>
 <tr>
@@ -1517,11 +1585,15 @@
 </tr>
 </tbody>
 </table>
-<h3 id="porte-nand">Porte NAND<a class="headerlink" href="#porte-nand" title="Permanent link">&num;</a></h3>
-<figure>
-<p><img alt="porte NAND" src="../img/porte_NAND.png" width="300px" /></p>
+<p><caption>Table de vérité</caption></p>
 </figure>
-<p><span class="arithmatex">\(S = \overline{A.B}\)</span></p>
+<h3 id="porte-nand-not-and">Porte NAND (Not AND)<a class="headerlink" href="#porte-nand-not-and" title="Permanent link">&num;</a></h3>
+<figure>
+<p><img alt="porte NAND" src="../img/porte_NAND.png" width="300px" />
+<caption>Représentation de la porte NAND</caption></p>
+</figure>
+<p>La fonction s'écrit : <span class="arithmatex">\(S = \overline{A.B}\)</span></p>
+<figure>
 <table>
 <thead>
 <tr>
@@ -1553,15 +1625,19 @@
 </tr>
 </tbody>
 </table>
-<p>Un exemple de réalisation avec des transistors :</p>
+<p><caption>Table de vérité</caption></p>
+</figure>
+<p><strong>Un exemple de réalisation avec des transistors :</strong></p>
 <figure>
 <p><img alt="circuit NAND" src="../img/circuit_porte_nand.png" width="300px" /></p>
 </figure>
 <h3 id="porte-or">Porte OR<a class="headerlink" href="#porte-or" title="Permanent link">&num;</a></h3>
 <figure>
-<p><img alt="circuit OR" src="../img/porte_OR.png" width="300px" /></p>
+<p><img alt="circuit OR" src="../img/porte_OR.png" width="300px" />
+<caption>Représentation de la porte NAND</caption></p>
 </figure>
-<p><span class="arithmatex">\(S = A + B\)</span></p>
+<p>La fonction OR peut s'écrire : <span class="arithmatex">\(S = A + B\)</span></p>
+<figure>
 <table>
 <thead>
 <tr>
@@ -1593,11 +1669,15 @@
 </tr>
 </tbody>
 </table>
+<p><caption>Représentation de la porte NOR</caption></p>
+</figure>
 <h3 id="porte-nor">Porte NOR<a class="headerlink" href="#porte-nor" title="Permanent link">&num;</a></h3>
 <figure>
-<p><img alt="circuit NOR" src="../img/porte_NOR.png" width="300px" /></p>
+<p><img alt="circuit NOR" src="../img/porte_NOR.png" width="300px" />
+<caption>Représentation de la porte NOR</caption></p>
 </figure>
-<p><span class="arithmatex">\(S = \overline{A + B}\)</span></p>
+<p>La fonction s'écrit <span class="arithmatex">\(S = \overline{A + B}\)</span>.</p>
+<figure>
 <table>
 <thead>
 <tr>
@@ -1629,7 +1709,9 @@
 </tr>
 </tbody>
 </table>
-<p>Un exemple de réalisation de porte NOR avec des transistors</p>
+<p><caption>Table de vérité</caption></p>
+</figure>
+<p><strong>Un exemple de réalisation de porte NOR avec des transistors</strong></p>
 <figure>
 <p><img alt="circuit NOR" src="../img/circuit_porte_nor.png" width="500px" /></p>
 </figure>
@@ -1637,6 +1719,7 @@
 <figure>
 <p><img alt="circuit XOR" src="../img/porte_XOR.png" width="300px" /></p>
 </figure>
+<figure>
 <table>
 <thead>
 <tr>
@@ -1668,6 +1751,9 @@
 </tr>
 </tbody>
 </table>
+<p><caption> Table de vérité</p>
+</figure>
+</figure>
 <h3 id="une-application-des-portes-logiques-les-masques-de-sous-reseau">Une application des portes logiques : les masques de sous-réseau<a class="headerlink" href="#une-application-des-portes-logiques-les-masques-de-sous-reseau" title="Permanent link">&num;</a></h3>
 <p>Dans un réseau TCP/IP, un ordinateur a une adresse IP qui l’identifie de manière unique (comme un numéro de téléphone), ainsi qu’un masque de sous-réseau.</p>
 <p>L’adresse IP et le masque de sous-réseau sont des groupes de 4 entiers positifs, codés tous les deux sur 4 octets. Le masque identifie à quel sous réseau d’Internet il fait partie, et permet d’obtenir l’adresse IP du sous-réseau à l’aide d’une opération booléenne.</p>
@@ -1701,7 +1787,8 @@
 <p class="admonition-title">Exercice 1 :</p>
 <p>Cherchez l’adresse IP de votre ordinateur et le masque de sous-réseau. Sous Windows, il faut taper ipconfig et sous Linux , la commande est ifconfig. Écrire l’adresse du sous-réseau trouvé.</p>
 </div>
-<p><a href="../TP_logic_gates/">TP</a></p>
+<h2 id="travaux-pratiques-sur-les-portes-logiques">Travaux pratiques sur les portes logiques<a class="headerlink" href="#travaux-pratiques-sur-les-portes-logiques" title="Permanent link">&num;</a></h2>
+<p>Le TP sur les portes logiques est disponible <a href="../TP_logic_gates/">ici</a>.</p>
 <h2 id="circuit-combinatoire-et-circuit-sequentiel">Circuit combinatoire et circuit séquentiel<a class="headerlink" href="#circuit-combinatoire-et-circuit-sequentiel" title="Permanent link">&num;</a></h2>
 <p>D’une manière générale, les circuits électroniques possèdent plusieurs entrées et plusieurs sorties. Quand
 les sorties dépendent directement et uniquement des entrées, on parle de cicuits combinatoires. Il existe
@@ -1709,92 +1796,23 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 <h3 id="un-exemple-de-circuit-combinatoire-logique-ladditionneur">Un exemple de circuit combinatoire logique : l’additionneur<a class="headerlink" href="#un-exemple-de-circuit-combinatoire-logique-ladditionneur" title="Permanent link">&num;</a></h3>
 <p>En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur représenté ci-dessous</p>
 <figure>
-<p><img alt="additionneur" src="../img/additionneur.png" /></p>
+<p><img alt="additionneur" src="../img/additionneur.png" width="400px" /></p>
 </figure>
-<p>Comme son nom l’indique, l’additionneur permet d’additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante ("Cin" "carry in" en anglais). En sortie on obtient le résultat de l’addition (S) et la retenue sortante ("Cout").</p>
-<div class="admonition example">
-<p class="admonition-title">Exercice 2 :</p>
-<p>Établir la table de vérité de l’additionneur en complétant le tableau 2</p>
-<table>
-<thead>
-<tr>
-<th align="center">E1</th>
-<th align="center">E2</th>
-<th align="center">Cin</th>
-<th align="center">Cout</th>
-<th align="center">S</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>Comme son nom l’indique, l’additionneur permet d’additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante ("Cin" "carry in" en anglais). En sortie on obtient le résultat de l’addition (S) et la retenue sortante ("Cout") (cf TP).</p>
+<p>Donc nous pouvons, à partir des portes logiques de bases (NAND, NOR, XOR, etc...), nous pouvons construire des circuits logiques qui réalisent des opérations mathématiques.</p>
 <h3 id="les-memoires">Les mémoires<a class="headerlink" href="#les-memoires" title="Permanent link">&num;</a></h3>
 <p>On stocke l’information à l’aide de circuit dit de type "bascule". Ce circuit est une combinaison de plusieurs portes logiques.</p>
 <p>Il n’est pas question pour nous d’étudier ce type de circuit, le schéma ci-dessus vous permet juste de vérifier qu’une fois de plus nous avons bien à faire à une combinaison de porte logique.</p>
-<h2 id="architecture-de-von-neumann">Architecture de Von Neumann<a class="headerlink" href="#architecture-de-von-neumann" title="Permanent link">&num;</a></h2>
-<h3 id="vue-globale">Vue globale<a class="headerlink" href="#vue-globale" title="Permanent link">&num;</a></h3>
-<p>Les grands principes de fonctionnement des ordinateurs tels que nous les connaissons aujourd’hui reposent sur des travaux réalisés au milieu des années 1940 par une équipe de chercheurs de l’université de Pennsylvanie.</p>
 <figure>
 <p><img alt="memoire" src="../img/memoire.png" width="400px" /></p>
 </figure>
+<h2 id="architecture-de-von-neumann">Architecture de Von Neumann<a class="headerlink" href="#architecture-de-von-neumann" title="Permanent link">&num;</a></h2>
+<h3 id="vue-globale">Vue globale<a class="headerlink" href="#vue-globale" title="Permanent link">&num;</a></h3>
+<p>Les grands principes de fonctionnement des ordinateurs tels que nous les connaissons aujourd’hui reposent sur des travaux réalisés au milieu des années 1940 par une équipe de chercheurs de l’université de Pennsylvanie.</p>
 <p>Ces travaux concernaient la conception d’un ordinateur dans lequel les programmes à exécuter étaient stockés au même endroit que les données qu’ils devaient manipuler, à savoir dans la mémoire de l’ordinateur. Cette idée d’utiliser une zone de stockage unique est toujours utilisée aujourd’hui. Cette architecture est appelée modèle de Von Neumann, en l’honneur du mathématicien et physicien John Von Neumann qui participa et qui publia en 1945 un rapport sur un ordinateur basé sur ce concept.</p>
+<figure>
+<p><img alt="modèle de Von Neumann" src="../img/modele_Neumann.png" width="300px" /></p>
+</figure>
 <p>Ce modèle décompose l’ordinateur en 4 parties distinctes :</p>
 <ul>
 <li>l’unité arithmétique et logique (UAL ou ALU en anglais) ou unité de traitement : son rôle est d’effectuer les opérations de base ;</li>
@@ -1803,9 +1821,6 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 <li>les dispositifs d’entrée-sortie, qui permettent de communiquer avec le monde extérieur.</li>
 </ul>
 <p>Les différents éléments échangent des informations à l’aide de bus.</p>
-<figure>
-<p><img alt="modèle de Von Neumann" src="../img/modele_Neumann.png" width="400px" /></p>
-</figure>
 <p>Les deux premières parties sont habituellement rassemblées dans un ensemble de circuits électroniques qu’on appelle Unité Centrale de Traitement ou plus simplement processeur (ou CPU pour Centrale Processing Unit).</p>
 <p>Physiquement,un système informatique est constitué de plusieurs éléments :</p>
 <ul>
@@ -2027,13 +2042,13 @@ registre n et la valeur <code>&lt;operand2&gt;</code>et enregistre le résultat 
       
       
         
-        <a href="../../../Terminale/Programmation/decidabilite/" class="md-footer__link md-footer__link--next" aria-label="Next: Calculabilité, décidabilité" rel="next">
+        <a href="../../Algorithmique/outils/" class="md-footer__link md-footer__link--next" aria-label="Next: Outils" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Calculabilité, décidabilité
+              Outils
             </div>
           </div>
           <div class="md-footer__button md-icon">

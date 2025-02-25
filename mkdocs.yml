@@ -77,6 +77,8 @@ nav:
         - Javascript : Premiere/IHM/js.md
       - Architecture Matérielle:
         - Von Neumann : Premiere/ArchitectureMaterielle/von_neumann.md
+      - Algorithmique :
+        - Outils : Premiere/Algorithmique/outils.md
     - 'Terminale':
       - Programmation :
         - Calculabilité, décidabilité : Terminale/Programmation/decidabilite.md

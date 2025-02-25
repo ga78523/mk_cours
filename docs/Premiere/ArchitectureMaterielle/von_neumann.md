@@ -7,13 +7,12 @@
 Les circuits d’un ordinateur manipulent uniquement des chiffres binaires 0 ou 1 qui sont simplement représentés par des tensions électriques (0 ou +V). On peut réaliser des opérations sur ces nombres binaires à l’aide de circuits logiques qui sont concrètement construits à partir de transistors. Ces transistors peuvent se comporter comme des interrupteurs à la manière de l’exemple suivant.
 
 <figure markdown>
-![transistor](img/transistor.png)(width=300px)
+![transistor](img/transistor.png){width=200px}
 </figure>
 
 Lorsque la broche B est sous tension (+V), un courant peut s’établir entre E et la masse . Le sens du courant est indiqué par la petite flèche. Le transistor peut alors être considéré comme un interrupteur fermé.
 
 Inversement, quand B est à 0 V, la broche E reste sous tension haute et le transistor peut être considéré comme un interrupteur ouvert.
-
 
 <figure markdown>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/n9fb6F1MWHc?si=ADZzfyoemW9Q4MF3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -21,22 +20,26 @@ Inversement, quand B est à 0 V, la broche E reste sous tension haute et le tran
 
 ### Porte NOT
 
-La porte NOT implantée par un seul transistor est la plus simple de toutes les portes. Elle n’a qu’un seul bit en entrée (E) et sa sortie (S) vaut 1 quand l’entrée vaut 0 et inversement. on peut obtenir ce que l’on appelle la table de vérité de la porte "NOT" (voir ci-dessous).
-
-Graphiquement, on représente cette porte comme dans les schémas ci-dessous, avec à gauche la notation américaine et à droite la notation européenne. On peut fabriquer d’autres portes logiques en combinant plusieurs transistors comme par exemple la porte AND (ET), OU (OR)....
+La porte NOT implantée par un seul transistor est la plus simple de toutes les portes. Elle n’a qu’un seul bit en entrée (E) et sa sortie (S) vaut 1 quand l’entrée vaut 0 et inversement.
+Elle peut la représenter comme ceci :
 
 <figure markdown>
 ![porte NOT](img/porte_NOT.png){width=300px}
+<caption>Représentation de la porte not</caption>
 </figure>
 
-$S = \overline{E}$
+La fonction logique s'écrit $S = \overline{E}$. Nous pouvons rassembler tous les états logiques de la sortie en fonction des états logiques des entrées dans ce qui s'appelle la table de vérité. Cette dernière s'écrit de la manière suivante pour la porte NOT.
 
+<figure markdown>
 |Entrée (E) |Sortie (S)|
 |:---------:|:--------:|
 |0          |     1    |
 |1          |     0    |
 
-Exemple de réalisation de porte NOT avec des transistors
+<caption>Table de vérité</caption>
+</figure>
+
+**Exemple de réalisation de porte NOT avec des transistors**
 
 <figure markdown>
 ![circuit porte NOT](img/circuit_porte_NOT.png){width=500px}
@@ -44,12 +47,16 @@ Exemple de réalisation de porte NOT avec des transistors
 
 ### Porte AND
 
+Avec deux transistors, nous pouvons réaliser une porte AND. Cette porte peut se représenter comme ceci :
+
 <figure markdown>
 ![porte AND](img/porte_AND.png){width=300px}
+<caption>Représentation de la porte AND</caption>
 </figure>
 
-$S = A.B$
+La fonction s'écrit $S = A.B$ et la table de vérité s'écrit :
 
+<figure markdown>
 |Entrée (A)  |Entrée (B)  |Sortie (S)|
 |:----------:|:----------:|:--------:|
 |0           |0           |    0     |
@@ -57,14 +64,19 @@ $S = A.B$
 |1           |0           |    0     |
 |1           |1           |    1     |
 
-### Porte NAND
+<caption>Table de vérité</caption>
+</figure>
+
+### Porte NAND (Not AND)
 
 <figure markdown>
 ![porte NAND](img/porte_NAND.png){width=300px}
+<caption>Représentation de la porte NAND</caption>
 </figure>
 
-$S = \overline{A.B}$
+La fonction s'écrit : $S = \overline{A.B}$
 
+<figure markdown>
 |Entrée (A)  |Entrée (B)  |Sortie (S)|
 |:----------:|:----------:|:--------:|
 |0           |0           |    1     |
@@ -72,7 +84,10 @@ $S = \overline{A.B}$
 |1           |0           |    1     |
 |1           |1           |    0     |
 
-Un exemple de réalisation avec des transistors :
+<caption>Table de vérité</caption>
+</figure>
+
+**Un exemple de réalisation avec des transistors :**
 
 <figure markdown>
 ![circuit NAND](img/circuit_porte_nand.png){width=300px}
@@ -82,10 +97,12 @@ Un exemple de réalisation avec des transistors :
 
 <figure markdown>
 ![circuit OR](img/porte_OR.png){width=300px}
+<caption>Représentation de la porte NAND</caption>
 </figure>
 
-$S = A + B$
+La fonction OR peut s'écrire : $S = A + B$
 
+<figure markdown>
 |Entrée (A)  |Entrée (B)  |Sortie (S)|
 |:----------:|:----------:|:--------:|
 |0           |0           |    0     |
@@ -93,14 +110,19 @@ $S = A + B$
 |1           |0           |    1     |
 |1           |1           |    1     |
 
+<caption>Représentation de la porte NOR</caption>
+</figure>
+
 ### Porte NOR
 
 <figure markdown>
 ![circuit NOR](img/porte_NOR.png){width=300px}
+<caption>Représentation de la porte NOR</caption>
 </figure>
 
-$S = \overline{A + B}$
+La fonction s'écrit $S = \overline{A + B}$.
 
+<figure markdown>
 |Entrée (A)  |Entrée (B)  |Sortie (S)|
 |:----------:|:----------:|:--------:|
 |0           |0           |    1     |
@@ -108,7 +130,10 @@ $S = \overline{A + B}$
 |1           |0           |    0     |
 |1           |1           |    0     |
 
-Un exemple de réalisation de porte NOR avec des transistors
+<caption>Table de vérité</caption>
+</figure>
+
+**Un exemple de réalisation de porte NOR avec des transistors**
 
 <figure markdown>
 ![circuit NOR](img/circuit_porte_nor.png){width=500px}
@@ -120,12 +145,16 @@ Un exemple de réalisation de porte NOR avec des transistors
 ![circuit XOR](img/porte_XOR.png){width=300px}
 </figure>
 
+<figure markdown>
 |Entrée (A)  |Entrée (B)     |Sortie (S)|
 |:----------:|:----------:|:--------:|
 |0           |0           |    0     |
 |0           |1           |    1     |
 |1           |0           |    1     |
 |1           |1           |    0     |
+
+<caption> Table de vérité</figure>
+</figure>
 
 ### Une application des portes logiques : les masques de sous-réseau
 
@@ -150,8 +179,9 @@ Sur un processeur 32 bits, le AND est une opération primitive du processeur, do
 !!! example "Exercice 1 :"
     Cherchez l’adresse IP de votre ordinateur et le masque de sous-réseau. Sous Windows, il faut taper ipconfig et sous Linux , la commande est ifconfig. Écrire l’adresse du sous-réseau trouvé.
 
-[TP](TP_logic_gates.md)
+## Travaux pratiques sur les portes logiques
 
+Le TP sur les portes logiques est disponible [ici](TP_logic_gates.md).
 
 ## Circuit combinatoire et circuit séquentiel
 
@@ -164,26 +194,12 @@ d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties
 En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur représenté ci-dessous
 
 <figure markdown>
-![additionneur](img/additionneur.png)
+![additionneur](img/additionneur.png){width=400px}
 </figure>
 
-Comme son nom l’indique, l’additionneur permet d’additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante ("Cin" "carry in" en anglais). En sortie on obtient le résultat de l’addition (S) et la retenue sortante ("Cout").
+Comme son nom l’indique, l’additionneur permet d’additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante ("Cin" "carry in" en anglais). En sortie on obtient le résultat de l’addition (S) et la retenue sortante ("Cout") (cf TP).
 
-!!! example "Exercice 2 :" 
-    Établir la table de vérité de l’additionneur en complétant le tableau 2
-    
-    |E1  |E2  | Cin | Cout | S |
-    |:--:|:--:|:---:|:----:|:-:|
-    |0   | 0  |0    |0     | 0 |
-    |0   | 0  |1    | 0    |   |
-    |0   |1   | 0   |      |   |
-    |0   |1   |1    |||
-    |1   |0   | 0   |||
-    |1   |0   |1    |||
-    |1   |1   |0    |||
-    |1   |1   |1    |||
-
- 
+Donc nous pouvons, à partir des portes logiques de bases (NAND, NOR, XOR, etc...), nous pouvons construire des circuits logiques qui réalisent des opérations mathématiques.
 
 ### Les mémoires
 
@@ -191,17 +207,21 @@ On stocke l’information à l’aide de circuit dit de type "bascule". Ce circu
 
 Il n’est pas question pour nous d’étudier ce type de circuit, le schéma ci-dessus vous permet juste de vérifier qu’une fois de plus nous avons bien à faire à une combinaison de porte logique.
 
+<figure markdown>
+![memoire](img/memoire.png){width=400px}
+</figure>
+
 ## Architecture de Von Neumann
 
 ### Vue globale
 
 Les grands principes de fonctionnement des ordinateurs tels que nous les connaissons aujourd’hui reposent sur des travaux réalisés au milieu des années 1940 par une équipe de chercheurs de l’université de Pennsylvanie.
 
-<figure markdown>
-![memoire](img/memoire.png){width=400px}
-</figure>
-
 Ces travaux concernaient la conception d’un ordinateur dans lequel les programmes à exécuter étaient stockés au même endroit que les données qu’ils devaient manipuler, à savoir dans la mémoire de l’ordinateur. Cette idée d’utiliser une zone de stockage unique est toujours utilisée aujourd’hui. Cette architecture est appelée modèle de Von Neumann, en l’honneur du mathématicien et physicien John Von Neumann qui participa et qui publia en 1945 un rapport sur un ordinateur basé sur ce concept.
+
+<figure markdown>
+![modèle de Von Neumann](img/modele_Neumann.png){width=300px}
+</figure>
 
 Ce modèle décompose l’ordinateur en 4 parties distinctes :
 
@@ -211,10 +231,6 @@ Ce modèle décompose l’ordinateur en 4 parties distinctes :
 * les dispositifs d’entrée-sortie, qui permettent de communiquer avec le monde extérieur.
 
 Les différents éléments échangent des informations à l’aide de bus.
-
-<figure markdown>
-![modèle de Von Neumann](img/modele_Neumann.png){width=400px}
-</figure>
 
 Les deux premières parties sont habituellement rassemblées dans un ensemble de circuits électroniques qu’on appelle Unité Centrale de Traitement ou plus simplement processeur (ou CPU pour Centrale Processing Unit).
 
