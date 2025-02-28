@@ -942,6 +942,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/graphes/" class="md-nav__link">
+        Graphes algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/recherche_textuelle/" class="md-nav__link">
         Recherche textuelle
       </a>
@@ -1911,7 +1925,7 @@ la mémoire possède une adresse (de 000 à 199), ces adresses sont codées en b
 <ul>
 <li>LDR Rd, <code>&lt;adresse mémoire&gt;</code>: charge la valeur enregistrée dans l’<code>&lt;adresse mémoire &gt;</code> dans le registe d ;</li>
 <li>STR Rd,<code>&lt;adresse mémoire&gt;</code> : enregistre la valeur du registre d dans la mémoire spécifiée par <code>&lt;adresse mémoire &gt;</code>;</li>
-<li>ADD Rd, Rn, <code>&lt;operand2&gt;</code> : ajoute la valeur spécifiée par <code>&lt;operand2&gt;</code> à la valeur du registre d et enregistre le résultat dans le registre d</li>
+<li>ADD Rd, Rn, <code>&lt;operand2&gt;</code> : ajoute la valeur spécifiée par <code>&lt;operand2&gt;</code> à la valeur du registre n et enregistre le résultat dans le registre d</li>
 <li>SUB Rd, Rn, <code>&lt;operand2&gt;</code> : soustrait la valeur de <code>&lt;operand2&gt;</code> à la valeur du registre n et enregistre le résultat dans le registre d</li>
 <li>MOV Rd, <code>&lt;operand2&gt;</code> : copie la valeur <code>&lt;operand2&gt;</code> dans le registre d</li>
 <li>CMP Rn, <code>&lt;operand2&gt;</code> : compare la valeur de registre n avec la valeur de <code>&lt;operand2&gt;</code></li>
@@ -2013,13 +2027,22 @@ registre n et la valeur <code>&lt;operand2&gt;</code>et enregistre le résultat 
 <div class="admonition example">
 <p class="admonition-title">Exercice 6 :</p>
 <p>Traduire le programme python ci-dessous en assembleur.</p>
-<table class="language-asm highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div class="language-asm highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nf">x</span><span class="err">=</span><span class="mi">0</span><span class="w"> </span><span class="c1">// on met en memoire dans la variable nomme x la valeur 0   </span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nf">while</span><span class="w"> </span><span class="no">x</span><span class="err">&lt;</span><span class="mi">3</span><span class="p">:</span><span class="w"></span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nf">x</span><span class="err">=</span><span class="no">x</span><span class="err">+</span><span class="mi">1</span><span class="w"></span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nf">print</span><span class="p">(</span><span class="no">x</span><span class="p">)</span><span class="w"></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span><span class="o">=</span><span class="mi">0</span>    
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">while</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 7</p>
+<p>Traduire le programme python ci-dessous en assembleur.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
 </div>
