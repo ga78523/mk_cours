@@ -1230,9 +1230,25 @@
 <h1 id="algorithmes-sur-les-graphes">Algorithmes sur les graphes<a class="headerlink" href="#algorithmes-sur-les-graphes" title="Permanent link">&num;</a></h1>
 <h2 id="representations-dun-graphe">Représentations d'un graphe<a class="headerlink" href="#representations-dun-graphe" title="Permanent link">&num;</a></h2>
 <h3 id="rappels-et-exemple">Rappels et exemple<a class="headerlink" href="#rappels-et-exemple" title="Permanent link">&num;</a></h3>
-<p>Un graphe est caractérisé par sa matrice d'adjacence composée de 1 et de 0 selon que deux sommets sont ou ne sont pas reliés par une arête.</p>
+<p>Un graphe est un objet mathématique (très utilisé, notamment en informatique) constitué de sommets reliés entre eux par des arêtes (ou des arcs).</p>
+<p>Un graphe est caractérisé par sa matrice d'adjacence composée de 1 et de 0 selon que deux sommets sont ou ne sont pas reliés par une arête ou bin par une liste d'adjacence.</p>
 <p>Exemple de graphe :</p>
-<p><img alt="Graphe exemple" src="../img_graphes/img1.png" /></p>
+<figure>
+<pre class="mermaid"><code>flowchart LR
+    B((b)) &lt;--&gt; A((a))
+    A &lt;--&gt; C((c))
+    B &lt;--&gt; D((d))
+    C &lt;--&gt; D
+    B &lt;--&gt; E((e))
+    D &lt;--&gt; E
+    E &lt;--&gt; G((g))
+    E &lt;--&gt; F((f))
+    G&lt;--&gt; F
+    G&lt;--&gt;H((h))</code></pre>
+</figure>
+<!-- 
+![Graphe exemple](img_graphes/img1.png) -->
+
 <h3 id="representation-a-laide-dun-dictionnaire">Représentation à l'aide d'un dictionnaire<a class="headerlink" href="#representation-a-laide-dun-dictionnaire" title="Permanent link">&num;</a></h3>
 <p>Implémentation Python avec un dictionnaire :</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">G</span> <span class="o">=</span> <span class="p">{}</span>
