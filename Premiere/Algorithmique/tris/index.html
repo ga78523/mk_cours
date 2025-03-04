@@ -636,11 +636,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tri-a-bulles" class="md-nav__link">
-    Tri à bulles
+  <a href="#tri-par-insertion" class="md-nav__link">
+    Tri par insertion
   </a>
   
-    <nav class="md-nav" aria-label="Tri à bulles">
+    <nav class="md-nav" aria-label="Tri par insertion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -652,33 +652,6 @@
         
           <li class="md-nav__item">
   <a href="#algorithme_1" class="md-nav__link">
-    algorithme
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tri-par-insertion" class="md-nav__link">
-    Tri par insertion
-  </a>
-  
-    <nav class="md-nav" aria-label="Tri par insertion">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principe_2" class="md-nav__link">
-    Principe
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#algorithme_2" class="md-nav__link">
     Algorithme
   </a>
   
@@ -694,6 +667,33 @@
           <li class="md-nav__item">
   <a href="#invariant-de-boucle-terminaison" class="md-nav__link">
     Invariant de boucle : terminaison
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tri-a-bulles" class="md-nav__link">
+    Tri à bulles
+  </a>
+  
+    <nav class="md-nav" aria-label="Tri à bulles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe_2" class="md-nav__link">
+    Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithme_2" class="md-nav__link">
+    algorithme
   </a>
   
 </li>
@@ -1257,11 +1257,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tri-a-bulles" class="md-nav__link">
-    Tri à bulles
+  <a href="#tri-par-insertion" class="md-nav__link">
+    Tri par insertion
   </a>
   
-    <nav class="md-nav" aria-label="Tri à bulles">
+    <nav class="md-nav" aria-label="Tri par insertion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1273,33 +1273,6 @@
         
           <li class="md-nav__item">
   <a href="#algorithme_1" class="md-nav__link">
-    algorithme
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tri-par-insertion" class="md-nav__link">
-    Tri par insertion
-  </a>
-  
-    <nav class="md-nav" aria-label="Tri par insertion">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principe_2" class="md-nav__link">
-    Principe
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#algorithme_2" class="md-nav__link">
     Algorithme
   </a>
   
@@ -1315,6 +1288,33 @@
           <li class="md-nav__item">
   <a href="#invariant-de-boucle-terminaison" class="md-nav__link">
     Invariant de boucle : terminaison
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tri-a-bulles" class="md-nav__link">
+    Tri à bulles
+  </a>
+  
+    <nav class="md-nav" aria-label="Tri à bulles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe_2" class="md-nav__link">
+    Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithme_2" class="md-nav__link">
+    algorithme
   </a>
   
 </li>
@@ -1536,48 +1536,10 @@
 <li>quand <span class="arithmatex">\(k\)</span> vaut 0, on place le minimum <span class="arithmatex">\(m_0\)</span> de la liste en position 0, la sous-liste [m_0] est donc triée.</li>
 <li>si la sous-liste de <span class="arithmatex">\(k\)</span> éléments [<span class="arithmatex">\(m_0\)</span>,<span class="arithmatex">\(m_1\)</span>, ..., <span class="arithmatex">\(m_{k-1}\)</span>] est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de <span class="arithmatex">\(k\)</span> éléments. La sous-liste de <span class="arithmatex">\(k+1\)</span> éléments [<span class="arithmatex">\(m_0\)</span>, <span class="arithmatex">\(m_{1}\)</span>, ....,<span class="arithmatex">\(m_{k-1}\)</span>,<span class="arithmatex">\(m_k\)</span>] est donc elle aussi triée.</li>
 </ul>
-<h3 id="tri-a-bulles">Tri à bulles<a class="headerlink" href="#tri-a-bulles" title="Permanent link">&num;</a></h3>
-<h4 id="principe_1">Principe<a class="headerlink" href="#principe_1" title="Permanent link">&num;</a></h4>
-<p>Le tri à bulles est un algorithme de tri. Il consiste à comparer répétitivement les éléments consécutifs d’un tableau 2 à 2 et de les permuter s’ils ne sont pas dans le bon ordre. Il doit son nom au fait qu’il déplace rapidement le plus grand élément restant en fin de tableau comme une bulle qui remonterait rapidement à la surface d’un liquide.</p>
-<ul>
-<li>Étape 1 (1ère itération) : On balaye tous les éléments de la liste en les comparant 2 à 2 et on les permute s’ils ne sont pas dans le bon ordre. On remarque que le plus grand élément est bien remonté en fin de liste.</li>
-<li>Étape 2 (2ème itération) : On recommence de nouveau en partant du 1er élément du tableau mais le dernier élément de la liste n’est pas comparé car il se trouve déjà à la bonne place.</li>
-<li>On poursuit ainsi les itérations jusqu’à ce que le tableau soit totalement trié. </li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Exercice 10</p>
-<p>Faire tourner « à la main » cet algorithme afin de trier la liste suivante.  En déduire combien d’étapes sont nécessaires pour trier le tableau (à chaque étape surligner le plus grand élément et vérifier qu’il remonte bien en fin de liste). En déduire combien d’étapes sont nécessaires pour trier un tableau de n éléments.</p>
-<table>
-<thead>
-<tr>
-<th align="center">Liste origine</th>
-<th align="center">10</th>
-<th align="center">2</th>
-<th align="center">8</th>
-<th align="center">3</th>
-<th align="center">1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">étape 1</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h4 id="algorithme_1">algorithme<a class="headerlink" href="#algorithme_1" title="Permanent link">&num;</a></h4>
-<div class="admonition example">
-<p class="admonition-title">Exercice 11</p>
-<p>Écrire une fonction <code>tri_bulles</code> qui prend en argument un tableau d'entiers et retourne le tableau trié. Le tester.</p>
-</div>
 <h3 id="tri-par-insertion">Tri par insertion<a class="headerlink" href="#tri-par-insertion" title="Permanent link">&num;</a></h3>
-<h4 id="principe_2">Principe<a class="headerlink" href="#principe_2" title="Permanent link">&num;</a></h4>
+<h4 id="principe_1">Principe<a class="headerlink" href="#principe_1" title="Permanent link">&num;</a></h4>
 <p>Le tri par insertion est un algorithme de tri classique utilisé tout naturellement par les joueurs de cartes : ils prennent les cartes mélangées une à une sur la table, et forment une main en insérant chaque carte à sa place.</p>
+<p>Exemple :</p>
 <p>Considérons la liste [7, 5, 2, 8, 1, 4]
 Voici le fonctionnement de l'algorithme :</p>
 <figure>
@@ -1586,7 +1548,7 @@ Voici le fonctionnement de l'algorithme :</p>
 <p>Explications :</p>
 <p>On traite successivement toutes les valeurs à trier, en commençant par celle en deuxième position.
 Traitement : tant que la valeur à traiter est inférieure à celle située à sa gauche, on échange ces deux valeurs.</p>
-<h4 id="algorithme_2">Algorithme<a class="headerlink" href="#algorithme_2" title="Permanent link">&num;</a></h4>
+<h4 id="algorithme_1">Algorithme<a class="headerlink" href="#algorithme_1" title="Permanent link">&num;</a></h4>
 <p>La fonction suivante prend en argument une liste de nombres et la retourne triée suivant un algorithme de tri par insertion : </p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
@@ -1609,7 +1571,7 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 </td></tr></table>
 <h4 id="trace-de-la-fonction-tri_insertion">Trace de la fonction <code>tri_insertion</code><a class="headerlink" href="#trace-de-la-fonction-tri_insertion" title="Permanent link">&num;</a></h4>
 <div class="admonition example">
-<p class="admonition-title">Exercice 12</p>
+<p class="admonition-title">Exercice 10</p>
 <p>Effectuer la trace de cette fonction qui prend en argument la liste <code>[10, 2, 8, 3, 1]</code>. Exécuter le script afin de vérifier qu’elle réalise bien la tâche demandée. </p>
 <table>
 <thead>
@@ -1640,6 +1602,10 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 </tbody>
 </table>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 11</p>
+<p>Déterminer la complexité de cet algorithme.</p>
+</div>
 <h4 id="invariant-de-boucle-terminaison">Invariant de boucle : terminaison<a class="headerlink" href="#invariant-de-boucle-terminaison" title="Permanent link">&num;</a></h4>
 <p>Comme pour l'algorithme de tri par sélection, on va tenter d'affirmer que le tri par insertion est correct (correction) en déterminant un invariant de boucle.</p>
 <p>Pour déterminer un invariant de boucle (propriété), nous devons montrer que cet invariant est valide dans trois conditions :</p>
@@ -1652,12 +1618,51 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 <p><strong>Choix de l’invariant de boucle :</strong></p>
 <p>On constate qu’en début de chaque itération de la boucle for, la sous-liste <code>lst [0… j-1]</code> est triée. Nous allons considérer cette propriété comme invariant de boucle. </p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 13 </p>
+<p class="admonition-title">Exercice 12 </p>
 <ul>
 <li>Initialisation : Montrer que l’invariant de boucle est vrai avant la 1ère itération. </li>
 <li>Conservation : Montrer que chaque itération conserve l’invariant.</li>
 <li>Terminaison : Montrer que l’invariant est vérifié en fin de boucle.</li>
 </ul>
+</div>
+<h3 id="tri-a-bulles">Tri à bulles<a class="headerlink" href="#tri-a-bulles" title="Permanent link">&num;</a></h3>
+<h4 id="principe_2">Principe<a class="headerlink" href="#principe_2" title="Permanent link">&num;</a></h4>
+<p>Le tri à bulles est un algorithme de tri. Il consiste à comparer répétitivement les éléments consécutifs d’un tableau 2 à 2 et de les permuter s’ils ne sont pas dans le bon ordre. Il doit son nom au fait qu’il déplace rapidement le plus grand élément restant en fin de tableau comme une bulle qui remonterait rapidement à la surface d’un liquide.</p>
+<ul>
+<li>Étape 1 (1ère itération) : On balaye tous les éléments de la liste en les comparant 2 à 2 et on les permute s’ils ne sont pas dans le bon ordre. On remarque que le plus grand élément est bien remonté en fin de liste.</li>
+<li>Étape 2 (2ème itération) : On recommence de nouveau en partant du 1er élément du tableau mais le dernier élément de la liste n’est pas comparé car il se trouve déjà à la bonne place.</li>
+<li>On poursuit ainsi les itérations jusqu’à ce que le tableau soit totalement trié. </li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice 13</p>
+<p>Faire tourner « à la main » cet algorithme afin de trier la liste suivante.  En déduire combien d’étapes sont nécessaires pour trier le tableau (à chaque étape surligner le plus grand élément et vérifier qu’il remonte bien en fin de liste). En déduire combien d’étapes sont nécessaires pour trier un tableau de n éléments.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Liste origine</th>
+<th align="center">10</th>
+<th align="center">2</th>
+<th align="center">8</th>
+<th align="center">3</th>
+<th align="center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">étape 1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="algorithme_2">algorithme<a class="headerlink" href="#algorithme_2" title="Permanent link">&num;</a></h4>
+<div class="admonition example">
+<p class="admonition-title">Exercice 14</p>
+<p>Écrire une fonction <code>tri_bulles</code> qui prend en argument un tableau d'entiers et retourne le tableau trié. Le tester.</p>
 </div>
 <h3 id="une-approche-du-tri-par-fusion">Une approche du tri par fusion<a class="headerlink" href="#une-approche-du-tri-par-fusion" title="Permanent link">&num;</a></h3>
 <h4 id="principe_3">Principe<a class="headerlink" href="#principe_3" title="Permanent link">&num;</a></h4>
@@ -1731,7 +1736,7 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 </span></code></pre></div>
 </td></tr></table>
 <div class="admonition example">
-<p class="admonition-title">Exercice 14</p>
+<p class="admonition-title">Exercice 15</p>
 <p>Réaliser un programme qui génère aléatoirement une liste L de n entiers à trier (dont les valeurs sont comprises entre 0 et 100000).  Cette liste sera dupliquée en 4 listes L1, L2, L3 et L4. Les 4 listes dupliquées seront triées respectivement par sélection, par insertion, par tri à bulles et par fusion et ces 4 tris seront chronométrés.</p>
 <p><span class="arithmatex">\(n\)</span> prendra les valeurs 100, 1000, 5000, 10000, 20000 et 30000 et on superposera 4 courbes (1 pour chaque tri) représentant le temps de calcul en fonction du nombre d’éléments à trier. Conclure. </p>
 </div>
