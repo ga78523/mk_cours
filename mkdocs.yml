@@ -40,6 +40,8 @@ markdown_extensions:
   - tables
   - pymdownx.arithmatex:
       generic: true
+  - attr_list
+  - md_in_html
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -59,7 +61,7 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css 
   
-
+  
 nav:
     - Home: index.md
     - About: about.md
@@ -79,11 +81,13 @@ nav:
         - Von Neumann : Premiere/ArchitectureMaterielle/von_neumann.md
       - Algorithmique :
         - Outils : Premiere/Algorithmique/outils.md
+        - Tris : Premiere/Algorithmique/tris.md
     - 'Terminale':
       - Programmation :
         - Calculabilité, décidabilité : Terminale/Programmation/decidabilite.md
         - Sécurisation des données : Terminale/Programmation/crypto.md
         - Arbres algos : Terminale/Programmation/algos_arbre.md
+        - Graphes algos : Terminale/Programmation/graphes.md
         - Recherche textuelle : Terminale/Programmation/recherche_textuelle.md
         - Diviser pour régner : Terminale/Programmation/diviser_regner.md
       - Structures de Données: 

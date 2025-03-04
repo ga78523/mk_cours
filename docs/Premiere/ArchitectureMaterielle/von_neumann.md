@@ -328,7 +328,7 @@ Pour le processeur précédent, le jeu d’instruction AQA est le suivant :
 
 * LDR Rd, `<adresse mémoire> `: charge la valeur enregistrée dans l’`<adresse mémoire >` dans le registe d ;
 * STR Rd,` <adresse mémoire>` : enregistre la valeur du registre d dans la mémoire spécifiée par `<adresse mémoire >`;
-* ADD Rd, Rn, `<operand2>` : ajoute la valeur spécifiée par `<operand2>` à la valeur du registre d et enregistre le résultat dans le registre d
+* ADD Rd, Rn, `<operand2>` : ajoute la valeur spécifiée par `<operand2>` à la valeur du registre n et enregistre le résultat dans le registre d
 * SUB Rd, Rn, `<operand2>` : soustrait la valeur de `<operand2>` à la valeur du registre n et enregistre le résultat dans le registre d
 * MOV Rd, `<operand2>` : copie la valeur `<operand2>` dans le registre d
 * CMP Rn, `<operand2>` : compare la valeur de registre n avec la valeur de `<operand2>`
@@ -420,12 +420,21 @@ Interprétation :
 !!! example "Exercice 6 :"
     Traduire le programme python ci-dessous en assembleur.
 
-    ``` asm linenums="1"
-    x=0 // on met en memoire dans la variable nomme x la valeur 0   
+    ``` py linenums="1"
+    x=0    
     while x<3:
         x=x+1
     print(x)
     ```
+
+!!! example "Exercice 7"
+    Traduire le programme python ci-dessous en assembleur.
+
+    ```py linenums="1"
+    for i in range(4):
+        print(5)
+    ```
+
 
 ## Ressources
 

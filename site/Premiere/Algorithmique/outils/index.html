@@ -696,6 +696,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tris/" class="md-nav__link">
+        Tris
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -799,6 +813,20 @@
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/algos_arbre/" class="md-nav__link">
         Arbres algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/graphes/" class="md-nav__link">
+        Graphes algos
       </a>
     </li>
   
@@ -1269,42 +1297,83 @@
 
 <h1 id="outils-pour-lanalyse-algorithmique">Outils pour l'analyse algorithmique<a class="headerlink" href="#outils-pour-lanalyse-algorithmique" title="Permanent link">&num;</a></h1>
 <h2 id="trace-dun-programme">Trace d'un programme<a class="headerlink" href="#trace-dun-programme" title="Permanent link">&num;</a></h2>
-<p>cf chapitre sur les bases Python</p>
-<h2 id="variant-de-boucle">Variant de boucle<a class="headerlink" href="#variant-de-boucle" title="Permanent link">&num;</a></h2>
-<h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&num;</a></h3>
-<p>On appelle variant d’une boucle une expression dont la valeur varie à chacune des itérations de la boucle. Un variant de boucle bien choisi permet par exemple de prouver qu’une boucle while se terminera bien.</p>
-<h3 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&num;</a></h3>
-<p>Calcul de la plus petite puissance de deux supérieure ou égale à un entier n.</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<p>La trace d'un programme est un tableau qui permet de rendre compte du fonctionnement du programme.
+Pour savoir comment la trace d'un programme s'effectue, il faut se rendre au chapitre sur le contrôle du flux d'exécution.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1</p>
+<p>Effectuer la trace des deux programmes suivants :</p>
+</div>
+<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Programme 1</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="k">while</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>       <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">p</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="k">return</span> <span class="n">p</span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span>
+<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a  = &quot;</span><span class="p">))</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">a</span><span class="o">//</span><span class="mi">2</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a vaut : </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">else</span><span class="p">:</span> 
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">a</span> <span class="o">%</span> <span class="mi">2</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a vaut  : </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fin du programme&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Programme 2</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="nb">print</span><span class="p">((</span><span class="sa">f</span><span class="s2">&quot;tour de boucle </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fin du programme&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<h2 id="variant-de-boucle">Variant de boucle<a class="headerlink" href="#variant-de-boucle" title="Permanent link">&num;</a></h2>
+<h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&num;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Définition</p>
+<p>On appelle variant d’une boucle une expression dont la valeur varie à chacune des itérations de la boucle. Un variant de boucle bien choisi permet par exemple de prouver qu’une boucle while se terminera bien.</p>
+</div>
+<h3 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&num;</a></h3>
+<p>Calcul de la plus petite puissance de deux supérieure ou égale à un entier <span class="arithmatex">\(n\)</span>.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="k">while</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>       <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">p</span> <span class="c1"># ou p *= 2</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="k">return</span> <span class="n">p</span>
 </span></code></pre></div>
 </td></tr></table>
 <p>Dans l’algorithme ci-dessus, <code>p</code> est un variant de la boucle <code>while</code> car sa valeur (non nulle) est multipliée par 2 à chacune des itérations. Dans l’algorithme précédent, le variant de boucle non nul <code>p</code> est multiplié par 2 à chaque itération, il finit donc par devenir supérieur ou égal à <code>n</code> et la boucle <code>while</code> se terminera bien.</p>
 <h2 id="invariant-de-boucle">Invariant de boucle<a class="headerlink" href="#invariant-de-boucle" title="Permanent link">&num;</a></h2>
 <h3 id="definition_1">Définition<a class="headerlink" href="#definition_1" title="Permanent link">&num;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Définition</p>
 <p>On appelle invariant d’une boucle une propriété qui, si elle est vraie avant l’exécution d’une itération, le demeure pendant et après l’exécution de l’itération.</p>
+</div>
 <h3 id="exemple_1">Exemple<a class="headerlink" href="#exemple_1" title="Permanent link">&num;</a></h3>
 <p>La fonction suivante calcule 2 à la puissance <code>n</code> :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="mi">2</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="k">return</span> <span class="n">r</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">puissance</span> <span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="mi">2</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="k">return</span> <span class="n">r</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">puissance</span> <span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 </span></code></pre></div>
 </td></tr></table>
 <p><strong>1)</strong> Tracer l'algorithme</p>
@@ -1391,22 +1460,22 @@
 </tr>
 </tbody>
 </table>
-<p><strong>2)</strong> Vérifier que à chaque exécution du corps de boucle (ligne 4) la propriété r = 2i est vraie. r = 2i est-il un invariant de boucle ?</p>
+<p><strong>2)</strong> Vérifier que à chaque exécution du corps de boucle (ligne 4) la propriété <span class="arithmatex">\(r = 2^i\)</span> est vraie. <span class="arithmatex">\(r = 2^i\)</span> est-il un invariant de boucle ?</p>
 <h3 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">&num;</a></h3>
 <p>On considère la fonction suivante qui permet de calculer le quotient et le reste de la division euclidienne d’un entier positif par un entier strictement positif :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#__codelineno-2-6">6</a></span>
-<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">division_euclidienne</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span><span class="n">b</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>        <span class="n">q</span><span class="o">=</span><span class="mi">0</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="n">r</span><span class="o">=</span><span class="n">a</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="k">while</span> <span class="n">r</span><span class="o">&gt;=</span><span class="n">b</span><span class="p">:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>            <span class="n">q</span><span class="o">=</span><span class="n">q</span><span class="o">+</span><span class="mi">1</span> <span class="c1">#on peut aussi écrire q+=1 </span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>            <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="o">-</span><span class="n">b</span> <span class="c1">#on peut aussi écrire r-=b</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>        <span class="k">return</span> <span class="n">q</span><span class="p">,</span><span class="n">r</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">division_euclidienne</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span><span class="n">b</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>        <span class="n">q</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="n">r</span> <span class="o">=</span> <span class="n">a</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="k">while</span> <span class="n">r</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>            <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1">#on peut aussi écrire q += 1 </span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>            <span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">-</span> <span class="n">b</span> <span class="c1">#on peut aussi écrire r -= b</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>        <span class="k">return</span> <span class="n">q</span><span class="p">,</span><span class="n">r</span>
 </span></code></pre></div>
 </td></tr></table>
 <p><strong>1)</strong> Écrire la trace de l’algorithme pour l’entrée (a = 17, b = 5) ;</p>
@@ -1433,30 +1502,30 @@
 <p>Déterminons le coût de la ligne suivante que l’on notera T(n) : a = a + 1</p>
 <p>T(n) = 1 (accès à la mémoire) + 1 (addition) + 1 (affectation) = 3</p>
 <h4 id="algorithme-avec-une-boucle-for">Algorithme avec une boucle for<a class="headerlink" href="#algorithme-avec-une-boucle-for" title="Permanent link">&num;</a></h4>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">somme_entiers</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="n">somme</span> <span class="o">+=</span> <span class="n">i</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="k">return</span> <span class="n">somme</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span> <span class="nf">somme_entiers</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>        <span class="n">somme</span> <span class="o">+=</span> <span class="n">i</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="k">return</span> <span class="n">somme</span>
 </span></code></pre></div>
 </td></tr></table>
 <p><strong>1)</strong> Déterminer la complexité T(n) de cet algorithme.</p>
 <p>La complexité de cet algorithme est dite linéaire. Ce sera le cas de tous les algorithmes avec 
 <span class="arithmatex">\(T(n) = a \times n + b\)</span> où <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span> sont des réels.</p>
 <h4 id="algorithmes-avec-deux-boucles-for-imbriquees">Algorithmes avec deux boucles for imbriquées<a class="headerlink" href="#algorithmes-avec-deux-boucles-for-imbriquees" title="Permanent link">&num;</a></h4>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">tables_multiplication</span><span class="p">():</span> 
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="p">)</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="k">return</span> <span class="kc">None</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span> <span class="nf">tables_multiplication</span><span class="p">():</span> 
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="k">return</span> <span class="kc">None</span>
 </span></code></pre></div>
 </td></tr></table>
 <p><strong>2)</strong> Déterminer la complexité T(n) de cet algorithme.</p>
@@ -1490,13 +1559,13 @@
       
       
         
-        <a href="../../../Terminale/Programmation/decidabilite/" class="md-footer__link md-footer__link--next" aria-label="Next: Calculabilité, décidabilité" rel="next">
+        <a href="../tris/" class="md-footer__link md-footer__link--next" aria-label="Next: Tris" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Calculabilité, décidabilité
+              Tris
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -2,23 +2,49 @@
 
 ## Trace d'un programme
 
-cf chapitre sur les bases Python
+La trace d'un programme est un tableau qui permet de rendre compte du fonctionnement du programme.
+Pour savoir comment la trace d'un programme s'effectue, il faut se rendre au chapitre sur le contrôle du flux d'exécution.
+
+!!! example  "Exercice 1"
+    Effectuer la trace des deux programmes suivants :
+
+``` py linenums="1" title="Programme 1"
+a = int(input("a  = "))
+if a < 10 :
+    a = a + a//2
+    print(f"a vaut : {a}")
+else: 
+    a = a + a % 2
+    print(f"a vaut  : {a}")
+
+print("Fin du programme")
+```
+
+``` py linenums="1" title="Programme 2"
+lst = [ 3, 7, 1, 5]
+for i in range(len(lst)):
+    print((f"tour de boucle {i+1}"))
+
+print("Fin du programme")
+```
+
 
 ## Variant de boucle
 
 ### Définition
 
- On appelle variant d’une boucle une expression dont la valeur varie à chacune des itérations de la boucle. Un variant de boucle bien choisi permet par exemple de prouver qu’une boucle while se terminera bien.
+!!! success "Définition"
+    On appelle variant d’une boucle une expression dont la valeur varie à chacune des itérations de la boucle. Un variant de boucle bien choisi permet par exemple de prouver qu’une boucle while se terminera bien.
 
 ### Exemple
 
-Calcul de la plus petite puissance de deux supérieure ou égale à un entier n.
+Calcul de la plus petite puissance de deux supérieure ou égale à un entier $n$.
 
 ``` py linenums="1"
 def puissance(n: int)-> int:
     p = 1
     while p < n:
-       p = 2 * p
+       p = 2 * p # ou p *= 2
     return p
 ```
 
@@ -28,7 +54,8 @@ Dans l’algorithme ci-dessus, `p` est un variant de la boucle `while` car sa va
 
 ### Définition
 
-On appelle invariant d’une boucle une propriété qui, si elle est vraie avant l’exécution d’une itération, le demeure pendant et après l’exécution de l’itération.
+!!! success "Définition"
+    On appelle invariant d’une boucle une propriété qui, si elle est vraie avant l’exécution d’une itération, le demeure pendant et après l’exécution de l’itération.
 
 ### Exemple
 
@@ -59,7 +86,7 @@ print(puissance (3))
 |                 |          |          |          |                     |
 |                 |          |          |          |                     |
 
-**2)** Vérifier que à chaque exécution du corps de boucle (ligne 4) la propriété r = 2i est vraie. r = 2i est-il un invariant de boucle ?
+**2)** Vérifier que à chaque exécution du corps de boucle (ligne 4) la propriété $r = 2^i$ est vraie. $r = 2^i$ est-il un invariant de boucle ?
 
 ### Exercice
 
@@ -67,11 +94,11 @@ On considère la fonction suivante qui permet de calculer le quotient et le rest
 
 ``` py linenums="1"
 def division_euclidienne(a:int,b:int)-> int:
-        q=0
-        r=a
-        while r>=b:
-            q=q+1 #on peut aussi écrire q+=1 
-            r=r-b #on peut aussi écrire r-=b
+        q = 0
+        r = a
+        while r >= b:
+            q = q + 1 #on peut aussi écrire q += 1 
+            r = r - b #on peut aussi écrire r -= b
         return q,r
 ```
 

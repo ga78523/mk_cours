@@ -34,6 +34,7 @@ Voici le principe de la fonction auxiliaire de fusion ordonnée de deux listes `
     * On incrémente j
 
 * Une fois la liste M de la façon suivante :
+  
   * Si i = k et j < l, on ajoute les éléments L2[j], ....., L2[l − 1] dans cet ordre à la fin de la liste M.
   * Si i < k et j = l, on ajoute les éléments L1[i], ......, L1[k − 1] dans cet ordre à la fin de la liste M.
   
