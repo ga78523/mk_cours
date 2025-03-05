@@ -822,22 +822,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementation-en-python" class="md-nav__link">
-    Implémentation en python
-  </a>
-  
-    <nav class="md-nav" aria-label="Implémentation en python">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#dfs-version-1" class="md-nav__link">
     DFS version 1
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -863,6 +850,33 @@
           <li class="md-nav__item">
   <a href="#application-un-chemin-entre-deux-sommets_1" class="md-nav__link">
     Application : un chemin entre deux sommets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche-de-cycle" class="md-nav__link">
+    Recherche de cycle
+  </a>
+  
+    <nav class="md-nav" aria-label="Recherche de cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rappels" class="md-nav__link">
+    Rappels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithme-de-la-presence-dun-cycle" class="md-nav__link">
+    Algorithme de la présence d'un cycle
   </a>
   
 </li>
@@ -1334,22 +1348,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementation-en-python" class="md-nav__link">
-    Implémentation en python
-  </a>
-  
-    <nav class="md-nav" aria-label="Implémentation en python">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#dfs-version-1" class="md-nav__link">
     DFS version 1
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1375,6 +1376,33 @@
           <li class="md-nav__item">
   <a href="#application-un-chemin-entre-deux-sommets_1" class="md-nav__link">
     Application : un chemin entre deux sommets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche-de-cycle" class="md-nav__link">
+    Recherche de cycle
+  </a>
+  
+    <nav class="md-nav" aria-label="Recherche de cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rappels" class="md-nav__link">
+    Rappels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithme-de-la-presence-dun-cycle" class="md-nav__link">
+    Algorithme de la présence d'un cycle
   </a>
   
 </li>
@@ -2130,19 +2158,19 @@ sommets_visités. Puis tant que la pile n’est pas vide :</p>
 <li>voisins reçoit la liste des voisins de tmp non déjà visités</li>
 <li>
 <p>Si voisins n’est pas vide :</p>
-</li>
-<li>
-<p>v←un voisin choisi au hasard</p>
-</li>
+<ul>
+<li>v←un voisin choisi au hasard</li>
 <li>sommets_visités←v</li>
-<li>
-<p>On empile v</p>
+<li>On empile v</li>
+</ul>
 </li>
 <li>
 <p>Sinon :</p>
-</li>
+<ul>
 <li>sommets_fermés ← tmp</li>
 <li>On dépile p</li>
+</ul>
+</li>
 </ul>
 <p>Voici les contenus des variables au premier tour de la boucle tant que :</p>
 <div style="text-align:center;font-size :x-large;font-style:bold"> Premier tour </div>
@@ -2353,8 +2381,7 @@ sommets_visités. Puis tant que la pile n’est pas vide :</p>
 <figure>
 <p><img alt="etape1_dfs" src="../img_graphes/dfs_final.png" width="400px" /></p>
 </figure>
-<h4 id="implementation-en-python">Implémentation en python<a class="headerlink" href="#implementation-en-python" title="Permanent link">&num;</a></h4>
-<h5 id="dfs-version-1">DFS version 1<a class="headerlink" href="#dfs-version-1" title="Permanent link">&num;</a></h5>
+<h4 id="dfs-version-1">DFS version 1<a class="headerlink" href="#dfs-version-1" title="Permanent link">&num;</a></h4>
 <p>Voici une classe Pile :</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
@@ -2571,9 +2598,120 @@ parents[depart] = None</p>
 <p>Implémenter l’algorithme en Python et la fonction Solution pour faire afficher un chemin entre les sommets b et h de notre graphe G.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 12</p>
+<p class="admonition-title">Exercice 13</p>
 <p>Reprendre ce dernier travail en utilisant et modifiant la fonction <code>dfs_bis</code>.</p>
 </div>
+<h2 id="recherche-de-cycle">Recherche de cycle<a class="headerlink" href="#recherche-de-cycle" title="Permanent link">&num;</a></h2>
+<h3 id="rappels">Rappels<a class="headerlink" href="#rappels" title="Permanent link">&num;</a></h3>
+<p>Une chaîne est une suite d’arêtes consécutives dans un graphe, un peu comme si on se promenait sur le graphe. On la désigne par les lettres des sommets qu’elle comporte. On utilise le terme de chaîne pour les graphes non orientés et le terme de chemin pour les graphes orientés.</p>
+<p>Un cycle est une chaîne qui commence et se termine au même sommet.</p>
+<figure>
+<p><img alt="img1" src="../img_graphes/cycle_img1.png" width="350px" /></p>
+</figure>
+<p>a - b - e - d - c - a est un cycle</p>
+<p>L’existence de cycle dans un graphe permet d'effectuer un trajet en revenant à son point de départ sans faire demi-tour...</p>
+<figure>
+<p><img alt="img1" src="../img_graphes/cycle_img2.png" width="350px" /></p>
+</figure>
+<h3 id="algorithme-de-la-presence-dun-cycle">Algorithme de la présence d'un cycle<a class="headerlink" href="#algorithme-de-la-presence-dun-cycle" title="Permanent link">&num;</a></h3>
+<p>Voici un programme qui détecte la présence d’un cycle dans un graphe connexe non-orienté:</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-32-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-32-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-32-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-32-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-32-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-32-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-32-10">10</a></span>
+<span class="normal"><a href="#__codelineno-32-11">11</a></span>
+<span class="normal"><a href="#__codelineno-32-12">12</a></span>
+<span class="normal"><a href="#__codelineno-32-13">13</a></span>
+<span class="normal"><a href="#__codelineno-32-14">14</a></span>
+<span class="normal"><a href="#__codelineno-32-15">15</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="k">def</span> <span class="nf">detection_cycle</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2"></a>    <span class="n">sommets_visites</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3"></a>    <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4"></a>    <span class="n">sommets_visites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5"></a>    <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">((</span><span class="n">sommet</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6"></a>    <span class="k">while</span> <span class="ow">not</span> <span class="n">f</span><span class="o">.</span><span class="n">vide</span><span class="p">():</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7"></a>        <span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8"></a>        <span class="n">voisins</span> <span class="o">=</span> <span class="n">voisin</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">tmp</span><span class="p">)</span>
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9"></a>        <span class="k">for</span> <span class="n">vois</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10"></a>            <span class="k">if</span> <span class="n">vois</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sommets_visites</span><span class="p">:</span>
+</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11"></a>                <span class="n">sommets_visites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vois</span><span class="p">)</span>
+</span><span id="__span-32-12"><a id="__codelineno-32-12" name="__codelineno-32-12"></a>                <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">((</span><span class="n">vois</span><span class="p">,</span> <span class="n">tmp</span><span class="p">))</span>
+</span><span id="__span-32-13"><a id="__codelineno-32-13" name="__codelineno-32-13"></a>            <span class="k">elif</span> <span class="n">vois</span> <span class="o">!=</span> <span class="n">parent</span><span class="p">:</span>
+</span><span id="__span-32-14"><a id="__codelineno-32-14" name="__codelineno-32-14"></a>                <span class="k">return</span> <span class="kc">True</span>
+</span><span id="__span-32-15"><a id="__codelineno-32-15" name="__codelineno-32-15"></a>    <span class="k">return</span> <span class="kc">False</span>
+</span></code></pre></div>
+</td></tr></table>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1</p>
+<ol>
+<li>Quel type de parcours utilise ce programme ?</li>
+<li>Quel est le type des éléments placés dans la file ?</li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<p>Faire fonctionner ce programme à la main sur ce graphe en partant du sommet 'a' :</p>
+<p><figure markdown>
+<img alt="img1" src="../img_graphes/cycle_img3.png" width="350px" />
+</figure></p>
+<p><strong> <div style="font-size=x-large">   1  tour<div></strong></p>
+<ul>
+<li>tmp :  </li>
+<li>parent : </li>
+<li>f : </li>
+<li>voisins :</li>
+<li>sommets_visites :</li>
+<li>f :</li>
+</ul>
+<p><strong> <div style="font-size=x-large">   2&lt;&gt;  tour<div></strong></p>
+<ul>
+<li>tmp :  </li>
+<li>parent : </li>
+<li>f : </li>
+<li>voisins :</li>
+<li>sommets_visites :</li>
+<li>f :</li>
+</ul>
+<p><strong> <div style="font-size=x-large">   3  tour<div></strong></p>
+<ul>
+<li>tmp :  </li>
+<li>parent : </li>
+<li>f : </li>
+<li>voisins :</li>
+<li>sommets_visites :</li>
+<li>f :</li>
+</ul>
+<p><strong> <div style="font-size=x-large">   4  tour<div></strong></p>
+<ul>
+<li>tmp :</li>
+<li>parent : </li>
+<li>f : </li>
+<li>voisins :</li>
+<li>sommets_visites :</li>
+<li>f :</li>
+</ul>
+<p><strong> <div style="font-size=x-large">   6  tour<div></strong></p>
+<ul>
+<li>tmp :  </li>
+<li>parent : </li>
+<li>f : </li>
+<li>voisins :</li>
+<li>sommets_visites :</li>
+<li>f :</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>Pour finir de vous convaincre...Faire  fonctionner  ce  programme  à  la  main  pour  le  graphe  ci-dessous  en  partant  du sommet 'a'. Noter les contenus des variables au dernier tour.</p>
+</div>
+<figure>
+<p><img alt="img1" src="../img_graphes/cycle_img4.png" width="350px" /></p>
+</figure>
 <h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">&num;</a></h2>
 <ul>
 <li><a href="pixees">https://informatique-lycee.forge.apps.education.fr/terminale_nsi/cours-terminale/</a></li>

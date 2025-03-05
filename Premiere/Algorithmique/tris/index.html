@@ -15,7 +15,7 @@
     
     
       
-        <title>Tris - Site de cours</title>
+        <title>tris - Site de cours</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tris
+              tris
             
           </span>
         </div>
@@ -704,11 +704,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#une-approche-du-tri-par-fusion" class="md-nav__link">
-    Une approche du tri par fusion
+  <a href="#tri-fusion" class="md-nav__link">
+    Tri fusion
   </a>
   
-    <nav class="md-nav" aria-label="Une approche du tri par fusion">
+    <nav class="md-nav" aria-label="Tri fusion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1325,11 +1325,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#une-approche-du-tri-par-fusion" class="md-nav__link">
-    Une approche du tri par fusion
+  <a href="#tri-fusion" class="md-nav__link">
+    Tri fusion
   </a>
   
-    <nav class="md-nav" aria-label="Une approche du tri par fusion">
+    <nav class="md-nav" aria-label="Tri fusion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1377,6 +1377,7 @@
                 
 
 
+<p>`</p>
 <h1 id="tris">Tris<a class="headerlink" href="#tris" title="Permanent link">&num;</a></h1>
 <h2 id="pourquoi-trier-les-valeurs">Pourquoi trier les valeurs<a class="headerlink" href="#pourquoi-trier-les-valeurs" title="Permanent link">&num;</a></h2>
 <p>Les tris sont une des opérations les plus souvent effectuées par les ordinateurs, que ce soit dans les applications professionnelles (gestion des bases de données, des opérations bancaires...), la compression des données ou les jeuxvidéo. On estime qu’un quart des cycles d’horloge des ordinateurs sont consacrés à des opérations de tri. Le coût énergétique de ces opérations de tris représente près de 2% de la consommation totale d’électricité en Europe. Sur des effectifs de plusieurs millions de données, les temps d’exécution des différents algorithmes de tris varient entre une dizaine de secondes et une dizaine de jours. D’où l’importance d’optimiser l’efficacité de ces algorithmes.</p>
@@ -1425,11 +1426,13 @@
 <ul>
 <li>
 <p>Étape 1 (première itération) : On rechercher le plus petit élément de la liste.</p>
-<ul>
-<li>Si c’est le premier élément, on ne fait rien ;
-<em>-</em> Sinon on inverse ce plus petit élément avec le 1er élément de la liste ;</li>
-<li>A l’issue de cette étape, le plus petit élément est bien en début de la liste (indice 0).</li>
-</ul>
+</li>
+<li>
+<p>Si c’est le premier élément, on ne fait rien ;</p>
+</li>
+<li>Sinon on inverse ce plus petit élément avec le 1er élément de la liste ;</li>
+<li>
+<p>A l’issue de cette étape, le plus petit élément est bien en début de la liste (indice 0).</p>
 </li>
 <li>
 <p>Étape 2 (seconde itération) : On recherche ensuite le plus petit élément dans la liste à partir du deuxième élément (le premier étant déjà à la bonne place).</p>
@@ -1528,7 +1531,7 @@
 <p><strong>Principe du raisonnement par récurrence :</strong> </p>
 <p>Une propriété est <span class="arithmatex">\(P(n)\)</span> est vraie si :</p>
 <ul>
-<li>P(0) par exemple est vraie</li>
+<li><span class="arithmatex">\(P(0)\)</span> par exemple est vraie</li>
 <li>Pour tout entier naturel <span class="arithmatex">\(n\)</span>, si <span class="arithmatex">\(P(n)\)</span> est vraie alors <span class="arithmatex">\(P(n+1)\)</span> est vraie</li>
 </ul>
 <p>Ici, la propriété (donc l'invariant de boucle) serait : « Quand varie entre 0 et <code>longueur(liste) -1</code>, la sous-liste de longueur est triée dans l'ordre croissant.</p>
@@ -1539,13 +1542,13 @@
 <h3 id="tri-par-insertion">Tri par insertion<a class="headerlink" href="#tri-par-insertion" title="Permanent link">&num;</a></h3>
 <h4 id="principe_1">Principe<a class="headerlink" href="#principe_1" title="Permanent link">&num;</a></h4>
 <p>Le tri par insertion est un algorithme de tri classique utilisé tout naturellement par les joueurs de cartes : ils prennent les cartes mélangées une à une sur la table, et forment une main en insérant chaque carte à sa place.</p>
-<p>Exemple :</p>
-<p>Considérons la liste [7, 5, 2, 8, 1, 4]
+<p><strong>Exemple :</strong></p>
+<p>Considérons la liste  : <code>lst = [7, 5, 2, 8, 1, 4]</code>
 Voici le fonctionnement de l'algorithme :</p>
 <figure>
 <p><img alt="tri_insertion_fct" src="../img_tris/tri_fct.png" /></p>
 </figure>
-<p>Explications :</p>
+<p><strong>Explications :</strong></p>
 <p>On traite successivement toutes les valeurs à trier, en commençant par celle en deuxième position.
 Traitement : tant que la valeur à traiter est inférieure à celle située à sa gauche, on échange ces deux valeurs.</p>
 <h4 id="algorithme_1">Algorithme<a class="headerlink" href="#algorithme_1" title="Permanent link">&num;</a></h4>
@@ -1635,11 +1638,11 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exercice 13</p>
-<p>Faire tourner « à la main » cet algorithme afin de trier la liste suivante.  En déduire combien d’étapes sont nécessaires pour trier le tableau (à chaque étape surligner le plus grand élément et vérifier qu’il remonte bien en fin de liste). En déduire combien d’étapes sont nécessaires pour trier un tableau de n éléments.</p>
+<p>Faire tourner cet algorithme afin de trier la liste suivante "lst = [10, 2, 8, 3, 1]".  En déduire combien d’étapes sont nécessaires pour trier le tableau (à chaque étape surligner le plus grand élément et vérifier qu’il remonte bien en fin de liste). En déduire combien d’étapes sont nécessaires pour trier un tableau de n éléments.</p>
 <table>
 <thead>
 <tr>
-<th align="center">Liste origine</th>
+<th align="center">lst</th>
 <th align="center">10</th>
 <th align="center">2</th>
 <th align="center">8</th>
@@ -1664,7 +1667,7 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 <p class="admonition-title">Exercice 14</p>
 <p>Écrire une fonction <code>tri_bulles</code> qui prend en argument un tableau d'entiers et retourne le tableau trié. Le tester.</p>
 </div>
-<h3 id="une-approche-du-tri-par-fusion">Une approche du tri par fusion<a class="headerlink" href="#une-approche-du-tri-par-fusion" title="Permanent link">&num;</a></h3>
+<h3 id="tri-fusion">Tri fusion<a class="headerlink" href="#tri-fusion" title="Permanent link">&num;</a></h3>
 <h4 id="principe_3">Principe<a class="headerlink" href="#principe_3" title="Permanent link">&num;</a></h4>
 <p>Le tri fusion est construit suivant la stratégie "diviser pour régner", en anglais "divide and conquer". Le principe de base de la stratégie "diviser pour régner" est que pour résoudre un gros problème, il est souvent plus facile de le diviser en petits problèmes élémentaires. Une fois chaque petit problème résolu, il n’y a plus qu’à combiner les différentes solutions pour résoudre le problème global. La méthode "diviser pour régner" est tout à fait applicable au problème de tri : plutôt que de trier le tableau complet, il est préférable de trier deux sous tableaux de taille égale, puis de fusionner les résultats.</p>
 <p>Exemple de tri par fusion appliqué à un tableau de 7 éléments :</p>
@@ -1737,8 +1740,8 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 </td></tr></table>
 <div class="admonition example">
 <p class="admonition-title">Exercice 15</p>
-<p>Réaliser un programme qui génère aléatoirement une liste L de n entiers à trier (dont les valeurs sont comprises entre 0 et 100000).  Cette liste sera dupliquée en 4 listes L1, L2, L3 et L4. Les 4 listes dupliquées seront triées respectivement par sélection, par insertion, par tri à bulles et par fusion et ces 4 tris seront chronométrés.</p>
-<p><span class="arithmatex">\(n\)</span> prendra les valeurs 100, 1000, 5000, 10000, 20000 et 30000 et on superposera 4 courbes (1 pour chaque tri) représentant le temps de calcul en fonction du nombre d’éléments à trier. Conclure. </p>
+<p>Réaliser un programme qui génère aléatoirement une liste L de n entiers à trier (dont les valeurs sont comprises entre 0 et 100000).  Cette liste sera dupliquée en 4 listes L1, L2, L3 et L4. Les 4 listes dupliquées seront triées respectivement par sélection, par insertion, par tri à bulles et par fusion et ces 4 tris seront chronométrés.
+<span class="arithmatex">\(n\)</span> prendra les valeurs 100, 1000, 5000, 10000, 20000 et 30000 et on superposera 4 courbes (1 pour chaque tri) représentant le temps de calcul en fonction du nombre d’éléments à trier. Conclure. </p>
 </div>
 
               
