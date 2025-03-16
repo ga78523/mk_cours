@@ -2165,7 +2165,7 @@ sommets_visités. Puis tant que la pile n’est pas vide :</p>
 </ul>
 </li>
 <li>
-<p>Sinon :</p>
+<p>Sinon :`</p>
 <ul>
 <li>sommets_fermés ← tmp</li>
 <li>On dépile p</li>
@@ -2500,16 +2500,16 @@ sommets_visités. Puis tant que la pile n’est pas vide :</p>
 <span class="normal"><a href="#__codelineno-29-15">15</a></span>
 <span class="normal"><a href="#__codelineno-29-16">16</a></span>
 <span class="normal"><a href="#__codelineno-29-17">17</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="k">def</span> <span class="nf">dfs_bis</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">sommet</span><span class="p">):</span>
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2"></a>    <span class="n">p</span><span class="o">=</span><span class="n">Pile</span><span class="p">()</span>
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3"></a>    <span class="n">sommets_visites</span><span class="o">=</span><span class="p">[]</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2"></a>    <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3"></a>    <span class="n">sommets_visites</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4"></a>    <span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
 </span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5"></a>    <span class="k">while</span> <span class="n">p</span><span class="o">.</span><span class="n">vide</span><span class="p">()</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
 </span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6"></a>        <span class="n">tmp</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
 </span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7"></a>        <span class="k">if</span> <span class="n">tmp</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sommets_visites</span><span class="p">:</span>                         
 </span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8"></a>            <span class="n">sommets_visites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
-</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9"></a>            <span class="nb">print</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10"></a>        <span class="n">voisins</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">voisin</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">tmp</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sommets_visites</span><span class="p">]</span>
-</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11"></a>        <span class="k">for</span> <span class="n">voisin</span> <span class="n">voisins</span><span class="p">:</span>
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9"></a>            <span class="c1">#print(tmp, end=&quot; &quot;)</span>
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10"></a>            <span class="n">voisins</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">voisin</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">tmp</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sommets_visites</span><span class="p">]</span>
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11"></a>        <span class="k">for</span> <span class="n">vois</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
 </span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12"></a>            <span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">vois</span><span class="p">)</span> 
 </span><span id="__span-29-13"><a id="__codelineno-29-13" name="__codelineno-29-13"></a>    <span class="k">return</span> <span class="n">sommets_visites</span>
 </span><span id="__span-29-14"><a id="__codelineno-29-14" name="__codelineno-29-14"></a>
