@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Premiere/Algorithmique/algo_recherche/</loc>
+         <lastmod>2025-03-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Premiere/Algorithmique/outils/</loc>
          <lastmod>2025-03-17</lastmod>
          <changefreq>daily</changefreq>
