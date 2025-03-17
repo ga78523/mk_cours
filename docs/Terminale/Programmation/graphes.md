@@ -111,10 +111,8 @@ A = [[0, 1, 1, 0, 0, 0, 0, 0],
 [0, 0, 0, 0, 0, 0, 1, 0]]
 ```
 
-!!! example "Exercice 3"
+!!! example "Exercice 2"
     Implémenter le graphe G avec cette matrice.
-
-!!! example "Exercice 4"
     Écrire les mêmes fonctions que précédemment.
 
 
@@ -124,7 +122,7 @@ A = [[0, 1, 1, 0, 0, 0, 0, 0],
     * Sommet de plus haut degré
     * Voisins d'un sommet
 
-!!! example "Exercice 5"
+!!! example "Exercice 3"
     Implémenter le graphe du réseau social suivant et determiner celui qui a le plus d’amis.
     
 
@@ -253,10 +251,8 @@ Voici quelques fonctions  :
 * `g.successors(i) : liste des successeurs du sommet $i$
 * `g.neighbors(i)` : liste des voisins du sommet $i$
 
-!!! example "Exercice 6"
+!!! example "Exercice 4"
     Tester ces différents programmes.
-
-!!! example "Exercice 7"
     Écrire des fonctions permettant d’obtenir les informations suivantes sur le graphe G :
 
     * le nombre de sommets du graphe ;
@@ -265,7 +261,7 @@ Voici quelques fonctions  :
     * le sommet de plus haut degré ;
     * les voisins d’un sommet
 
-!!! example "Exercice 8"
+!!! example "Exercice 5"
     Implémenter le graphe du réseau social suivant et faire afficher celui qui a le plus d’amis un réseau social comporte 6 abonnés (A, B, C, D, E et F) où :
 
     * A est ami avec B, C et D
@@ -727,13 +723,14 @@ sommets_visités. Puis tant que la pile n’est pas vide :
 * voisins reçoit la liste des voisins de tmp non déjà visités
 * Si voisins n’est pas vide :
 
-  * v←un voisin choisi au hasard
-  * sommets_visités←v
-  * On empile v
+    * v←un voisin choisi au hasard
+    * sommets_visités←v
+    * On empile v
 
-* Sinon :
-  * sommets_fermés ← tmp
-  * On dépile p
+* Sinon :`
+
+    * sommets_fermés ← tmp
+    * On dépile p
 
 Voici les contenus des variables au premier tour de la boucle tant que :
 
@@ -947,9 +944,7 @@ Au final l’arborescence associée au parcours peut  donc  être  modélisée  
 ![etape1_dfs](img_graphes/dfs_final.png){width=400px}
 </figure>
 
-#### Implémentation en python
-
-##### DFS version 1
+#### DFS version 1
 
 Voici une classe Pile :
 
@@ -1036,16 +1031,16 @@ fonction parcours_profondeur(G,sommet):
 
 ``` py linenums="1"
 def dfs_bis(G,sommet):
-    p=Pile()
-    sommets_visites=[]
+    p = Pile()
+    sommets_visites = []
     p.empiler(sommet)
     while p.vide() == False:
         tmp = p.depiler()
         if tmp not in sommets_visites:                         
             sommets_visites.append(tmp)
-            print(tmp, end=" ")
-        voisins = [y for y in voisin(G,tmp) if y not in sommets_visites]
-        for voisin voisins:
+            #print(tmp, end=" ")
+            voisins = [y for y in voisin(G,tmp) if y not in sommets_visites]
+        for vois in voisins:
             p.empiler(vois) 
     return sommets_visites
             
@@ -1057,23 +1052,24 @@ print(c)
 !!! example "Exercice 10"
     Tester cette version sur notre graphe G.
 
-
 #### DFS  version 3 (récursive)
 
 On peut utiliser un algorithme récursif pour parcourir un graphe en profondeur. En voici la description :
 
 1. On part d’un nœud du graphe.
-2.  On le marque comme visité s’il ne l’est pas déjà.
+2. On le marque comme visité s’il ne l’est pas déjà.
 3. Pour chacun de ses voisins non visités, on reprend à partir du 1.
 
 Il y a une "boucle" du 3. au 1. Cela présage une méthode récursive. Voici l’algorithme davantage détaillé :
 
-```  plaintext
-Données : G est un graphe
+``` plaintext
+
+Données :
+G est un graphe
 sommet est un sommet du graphe
 sommets_visites est une liste
 
-fonction_dfs((G,sommet)):
+fonction dfs((G,sommet)):
     Si le sommet n'est pas dans la liste sommets_visites alors
         on le met dans la liste
     voisins <- la liste des voisins de sommet non deja visites
@@ -1085,10 +1081,7 @@ fonction_dfs((G,sommet)):
 !!! example "Exercice 11"
     Écrire la fonction dfs et la faire fonctionner avec notre graphe avec comme sommet de départ ’g’.
 
-**Remarque :** Le choix du 1er voisin est le premier de la liste voisins qui correspond à celle implantée lors de la création du graphe: `G['g'] = ['e', 'f', 'h']`, en la modifiant par `G['g'] = ['f', 'e', 'h']`, vous obtiendrez un autre parcours...
-
-Le résultat attendu est : `[’g’, ’e’, ’b’, ’a’, ’c’, ’d’, ’f’, ’h’]`
-Et en renversant la liste `[’h’, ’f’, ’d’, ’c’, ’a’, ’b’, ’e’, ’g’]` pour obtenir la liste des sommets fermés de la version itérative.
+**Remarque :** Le choix du premier voisin est le premier de la liste voisins qui correspond à celle implantée lors de la création du graphe: `G['g'] = ['e', 'f', 'h']`, en la modifiant par `G['g'] = ['f', 'e', 'h']`, vous obtiendrez un autre parcours...
 
 ### Application : un chemin entre deux sommets
 
@@ -1112,24 +1105,22 @@ flowchart LR
 
 Par exemple : `a - b - e - g - h` est l’un des chemins possible entre a et h
 
-
 La méthode consiste à mémoriser les sommets voisins du sommet visité comme clés d’un dictionnaire et ayant pour valeur son parent(le sommet visité).Le sommet de départ n’aura bien entendu pas de parent (None).
 
-``` plaintext linenums="1" title ="Algorithme DFS modifié"
+``` plaintext linenums="1" title="Algorithme DFS modifié"
 
-Données : G est un graphe
+Données :
+G est un graphe
 depart : un sommet du graphe
 arrivee : un sommet du graphe
 sommets_visites est une liste
 parents est un dictionnaire
 parents[depart] = None
 
-fonction dfs2(G, depart):
-    
-fonction_dfs((G,sommet)):
+fonction dfs(G,depart):
     Si depart n'est pas dans la liste sommets_visites alors
         on le met dans la liste
-    voisins <- la liste des voisins de sommet non deja visites
+    voisins <- la liste des voisins de depart non deja visites
     Pour chaque voisin dans voisins faire 
         parents[voisin] = depart
         dfs(G,voisin)
@@ -1139,7 +1130,7 @@ fonction_dfs((G,sommet)):
 Cette fonction renvoie un dictionnaire qui contient les sommets visités(clés) et leurs parents(valeurs).Il faut maintenant exploiter ce dictionnaire pour faire afficher un chemin entre deux sommets. C’est ce que réalise cette fonction qui prend en paramètre l’arrivée et le dictionnaire parents.
 
 ``` py linenums="1"
-def Solution(end, parents):
+def solution(end, parents):
     chemin = []
     courant = end
     while courant !=None:
@@ -1151,8 +1142,113 @@ def Solution(end, parents):
 !!! example "Exercice 12"
     Implémenter l’algorithme en Python et la fonction Solution pour faire afficher un chemin entre les sommets b et h de notre graphe G.
 
-!!! example "Exercice 12"
+!!! example "Exercice 13"
     Reprendre ce dernier travail en utilisant et modifiant la fonction `dfs_bis`.
+
+## Recherche de cycle
+
+### Rappels
+
+Une chaîne est une suite d’arêtes consécutives dans un graphe, un peu comme si on se promenait sur le graphe. On la désigne par les lettres des sommets qu’elle comporte. On utilise le terme de chaîne pour les graphes non orientés et le terme de chemin pour les graphes orientés.
+
+Un cycle est une chaîne qui commence et se termine au même sommet.
+
+<figure markdown>
+![img1](img_graphes/cycle_img1.png){width=350px}
+</figure>
+
+a - b - e - d - c - a est un cycle
+
+L’existence de cycle dans un graphe permet d'effectuer un trajet en revenant à son point de départ sans faire demi-tour...
+
+<figure markdown>
+![img1](img_graphes/cycle_img2.png){width=350px}
+</figure>
+
+### Algorithme de la présence d'un cycle
+
+Voici un programme qui détecte la présence d’un cycle dans un graphe connexe non-orienté:
+
+``` py linenums="1"
+def detection_cycle(G, sommet):
+    sommets_visites = []
+    f = File()
+    sommets_visites.append(sommet)
+    f.enfiler((sommet, -1))
+    while not f.vide():
+        (tmp, parent) = f.defiler()
+        voisins = voisin(G, tmp)
+        for vois in voisins:
+            if vois not in sommets_visites:
+                sommets_visites.append(vois)
+                f.enfiler((vois, tmp))
+            elif vois != parent:
+                return True
+    return False
+```
+
+!!! example "Exercice 1"
+    1. Quel type de parcours utilise ce programme ?
+    2. Quel est le type des éléments placés dans la file ?
+
+!!! example "Exercice 2"
+    Faire fonctionner ce programme à la main sur ce graphe en partant du sommet 'a' :
+
+    <figure markdown>
+    ![img1](img_graphes/cycle_img3.png){width=350px}
+    </figure>
+
+    ** <div style="font-size=x-large">   1  tour<div>**
+
+    * tmp :  
+    * parent : 
+    * f : 
+    * voisins :
+    * sommets_visites :
+    * f :
+  
+    ** <div style="font-size=x-large">   2<>  tour<div>**
+
+    * tmp :  
+    *  parent : 
+    * f : 
+    * voisins :
+    * sommets_visites :
+    * f :
+
+    ** <div style="font-size=x-large">   3  tour<div>**
+
+    * tmp :  
+    *  parent : 
+    * f : 
+    * voisins :
+    * sommets_visites :
+    * f :
+
+    ** <div style="font-size=x-large">   4  tour<div>**
+
+    * tmp :
+    * parent : 
+    * f : 
+    * voisins :
+    * sommets_visites :
+    * f :
+
+    ** <div style="font-size=x-large">   6  tour<div>**
+
+    * tmp :  
+    *  parent : 
+    * f : 
+    * voisins :
+    * sommets_visites :
+    * f :
+
+!!! example "Exercice 3"
+    Pour finir de vous convaincre...Faire  fonctionner  ce  programme  à  la  main  pour  le  graphe  ci-dessous  en  partant  du sommet 'a'. Noter les contenus des variables au dernier tour.
+
+<figure markdown>
+![img1](img_graphes/cycle_img4.png){width=350px}
+</figure>
 
 ## Bibliographie
 

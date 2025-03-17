@@ -1,4 +1,12 @@
-# Tris
+---
+title: tris
+authors:
+    - Eric Galand
+    - Hubert Forey
+date: 2025-03-04
+---
+`
+# Tris 
 
 ## Pourquoi trier les valeurs
 
