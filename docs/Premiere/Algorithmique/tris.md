@@ -90,7 +90,7 @@ Le principe est simple : pour un tri par valeurs croissantes de n éléments dan
     Écrire de nouveau une fonction qui effectue le tri par sélection mais sans faire appel à la fonction `get_index_min_since` et à la fonction `echange`. Cette fonction sera nommée `tri_selection`.
 
 !!! example "Exercice 9"
-    Quelle est la complexité d'un algorithme d'un tel algorithme.
+    Quelle est la complexité d'un algorithme d'un tel algorithme dans le pire des cas.
 
 #### Terminaison
 
@@ -107,7 +107,7 @@ Une propriété est $P(n)$ est vraie si :
 
 Ici, la propriété (donc l'invariant de boucle) serait : « Quand varie entre 0 et `longueur(liste) -1`, la sous-liste de longueur est triée dans l'ordre croissant.
 
-* quand $k$ vaut 0, on place le minimum $m_0$ de la liste en position 0, la sous-liste [m_0] est donc triée.
+* quand $k$ vaut 0, on place le minimum $m_0$ de la liste en position 0, la sous-liste [$m_0$] est donc triée.
 * si la sous-liste de $k$ éléments [$m_0$,$m_1$, ..., $m_{k-1}$] est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de $k$ éléments. La sous-liste de $k+1$ éléments [$m_0$, $m_{1}$, ....,$m_{k-1}$,$m_k$] est donc elle aussi triée.
 
 ### Tri par insertion
@@ -135,15 +135,13 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 La fonction suivante prend en argument une liste de nombres et la retourne triée suivant un algorithme de tri par insertion : 
 
 ``` py linenums="1"
-def tri_insertion(L: list) -> None :
-    for i in range(1, len(L)):
-        j = i
-        elt = L[i]
-        while j > 0 and L[j-1]>elt:
-            L[j] = L[j-1]
-            j -= 1
-        L[j] = elt
-    return L
+def tri_insertion(lst: list) -> list:
+    for i in range(1, len(lst)):                 
+        j = i                                    
+        while j > 0 and lst[j-1] > lst[j] :      
+            lst[j], lst[j-1] = lst[j-1], lst[j]      
+            j = j - 1 
+    return lst
 ```
 
 #### Trace de la fonction `tri_insertion`
@@ -156,7 +154,7 @@ def tri_insertion(L: list) -> None :
     |       |       |       |      |        |        |     |         |             |
 
 !!! example "Exercice 11"
-    Déterminer la complexité de cet algorithme.
+    Déterminer la complexité de cet algorithme dans le pire des cas.
 
 #### Terminaison
 
@@ -172,7 +170,7 @@ Si les deux premières propriétés sont vérifiées, alors l’invariant est vr
 
 **Choix de l’invariant de boucle :**
 
-On constate qu’en début de chaque itération de la boucle for, la sous-liste `lst [0… j-1]` est triée. Nous allons considérer cette propriété comme invariant de boucle. 
+On constate qu’en début de chaque itération de la boucle for, la sous-liste `lst[0… j-1]` est triée. Nous allons considérer cette propriété comme invariant de boucle. 
 
 !!! example "Exercice 12 "
 
@@ -191,7 +189,7 @@ Le tri à bulles est un algorithme de tri. Il consiste à comparer répétitivem
 * On poursuit ainsi les itérations jusqu’à ce que le tableau soit totalement trié. 
 
 !!! example "Exercice 13"
-    Faire tourner cet algorithme afin de trier la liste suivante "lst = [10, 2, 8, 3, 1]".  En déduire combien d’étapes sont nécessaires pour trier le tableau (à chaque étape surligner le plus grand élément et vérifier qu’il remonte bien en fin de liste). En déduire combien d’étapes sont nécessaires pour trier un tableau de n éléments.
+    Faire tourner àla main cet algorithme afin de trier la liste suivante `lst = [10, 2, 8, 3, 1]`.  En déduire combien d’étapes sont nécessaires pour trier le tableau (à chaque étape surligner le plus grand élément et vérifier qu’il remonte bien en fin de liste). En déduire combien d’étapes sont nécessaires pour trier un tableau de n éléments.
 
     | lst           |10	| 2    |	8	|3 	 |1  |
     |:-------------:|:-:|:----:|:------:|:--:|:-:|
@@ -210,13 +208,13 @@ Le tri fusion est construit suivant la stratégie "diviser pour régner", en ang
 
 Exemple de tri par fusion appliqué à un tableau de 7 éléments :
 
+<figure markdown>
+![fct tri fusion](img_tris/principe_tri_fusion.png){width=300px}
+</figure>
+
 #### Algorithme
 
 Cet algorithme n’est pas au programme de 1ère mais à celui de terminale car il fait appel à la récursivité (une fonction qui s’appelle elle-même). Il pourra être copié-collé dans python afin d’être testé puis afin de  comparer les vitesses d’exécution des différents algorithmes de tri. 
-
-<figure markdown>
-![tri_fusion](img_tris/principe_tri_fusion.png){width=300px}
-</figure>
 
 ``` py linenums="1"
 def fusion(lst1:list,lst2:list)-> list:

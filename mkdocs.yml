@@ -82,6 +82,8 @@ nav:
       - Algorithmique :
         - Outils : Premiere/Algorithmique/outils.md
         - Tris : Premiere/Algorithmique/tris.md
+        - Recherche : Premiere/Algorithmique/algo_recherche.md
+        - Gloutons : Premiere/Algorithmique/algo_gloutons.md
     - 'Terminale':
       - Programmation :
         - Calculabilité, décidabilité : Terminale/Programmation/decidabilite.md

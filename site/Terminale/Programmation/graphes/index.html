@@ -550,6 +550,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/algo_recherche/" class="md-nav__link">
+        Recherche
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/algo_gloutons/" class="md-nav__link">
+        Gloutons
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1519,13 +1547,6 @@
 </td></tr></table>
 <h3 id="a-laide-dune-liste-de-liste">A l'aide d'une liste de liste<a class="headerlink" href="#a-laide-dune-liste-de-liste" title="Permanent link">&num;</a></h3>
 <p>Nous avons vu précédement que un graphe pouvait être représenté par une matrice d'adjacence.</p>
-<p>Par exemple pour le graphe 1 donné en exemple, cette matrice serait :</p>
-<p>$ A = \begin{pmatrix}
- &amp; a_{1,2} &amp; \cdots &amp; a_{1,n} \
-a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,n} \
-\vdots  &amp; \vdots  &amp; \ddots &amp; \vdots  \
-a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,n} 
-\end{pmatrix}</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -2529,7 +2550,7 @@ sommets_visités. Puis tant que la pile n’est pas vide :</p>
 </span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>sommet est un sommet du graphe
 </span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>sommets_visites est une liste
 </span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
-</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>fonction dfs((G,sommet)):
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>fonction dfs(G,sommet):
 </span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    Si le sommet n&#39;est pas dans la liste sommets_visites alors
 </span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>        on le met dans la liste
 </span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>    voisins &lt;- la liste des voisins de sommet non deja visites

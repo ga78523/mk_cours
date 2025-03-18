@@ -89,16 +89,6 @@ for i in range(n):
 
 Nous avons vu précédement que un graphe pouvait être représenté par une matrice d'adjacence.
 
-Par exemple pour le graphe 1 donné en exemple, cette matrice serait :
-
-$ A = \begin{pmatrix}
- & a_{1,2} & \cdots & a_{1,n} \\
-a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
-\vdots  & \vdots  & \ddots & \vdots  \\
-a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
-\end{pmatrix}
-
-
 ``` py linenums="1"
 
 A = [[0, 1, 1, 0, 0, 0, 0, 0],
@@ -1069,7 +1059,7 @@ G est un graphe
 sommet est un sommet du graphe
 sommets_visites est une liste
 
-fonction dfs((G,sommet)):
+fonction dfs(G,sommet):
     Si le sommet n'est pas dans la liste sommets_visites alors
         on le met dans la liste
     voisins <- la liste des voisins de sommet non deja visites

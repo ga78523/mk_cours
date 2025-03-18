@@ -751,6 +751,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algo_recherche/" class="md-nav__link">
+        Recherche
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algo_gloutons/" class="md-nav__link">
+        Gloutons
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1523,7 +1551,7 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 9</p>
-<p>Quelle est la complexité d'un algorithme d'un tel algorithme.</p>
+<p>Quelle est la complexité d'un algorithme d'un tel algorithme dans le pire des cas.</p>
 </div>
 <h4 id="terminaison">Terminaison<a class="headerlink" href="#terminaison" title="Permanent link">&num;</a></h4>
 <p>Les preuves de correction sont des preuves théoriques qui reposent sur la notion d'invariant de boucle.</p>
@@ -1536,7 +1564,7 @@
 </ul>
 <p>Ici, la propriété (donc l'invariant de boucle) serait : « Quand varie entre 0 et <code>longueur(liste) -1</code>, la sous-liste de longueur est triée dans l'ordre croissant.</p>
 <ul>
-<li>quand <span class="arithmatex">\(k\)</span> vaut 0, on place le minimum <span class="arithmatex">\(m_0\)</span> de la liste en position 0, la sous-liste [m_0] est donc triée.</li>
+<li>quand <span class="arithmatex">\(k\)</span> vaut 0, on place le minimum <span class="arithmatex">\(m_0\)</span> de la liste en position 0, la sous-liste [<span class="arithmatex">\(m_0\)</span>] est donc triée.</li>
 <li>si la sous-liste de <span class="arithmatex">\(k\)</span> éléments [<span class="arithmatex">\(m_0\)</span>,<span class="arithmatex">\(m_1\)</span>, ..., <span class="arithmatex">\(m_{k-1}\)</span>] est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de <span class="arithmatex">\(k\)</span> éléments. La sous-liste de <span class="arithmatex">\(k+1\)</span> éléments [<span class="arithmatex">\(m_0\)</span>, <span class="arithmatex">\(m_{1}\)</span>, ....,<span class="arithmatex">\(m_{k-1}\)</span>,<span class="arithmatex">\(m_k\)</span>] est donc elle aussi triée.</li>
 </ul>
 <h3 id="tri-par-insertion">Tri par insertion<a class="headerlink" href="#tri-par-insertion" title="Permanent link">&num;</a></h3>
@@ -1559,17 +1587,13 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">8</a></span>
-<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">L</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="p">:</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="n">elt</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="n">elt</span><span class="p">:</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>            <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>            <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>        <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">elt</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="k">return</span> <span class="n">L</span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>                 
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span>                                    
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">:</span>      
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>            <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>      
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span> 
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="k">return</span> <span class="n">lst</span>
 </span></code></pre></div>
 </td></tr></table>
 <h4 id="trace-de-la-fonction-tri_insertion">Trace de la fonction <code>tri_insertion</code><a class="headerlink" href="#trace-de-la-fonction-tri_insertion" title="Permanent link">&num;</a></h4>
@@ -1607,7 +1631,7 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 11</p>
-<p>Déterminer la complexité de cet algorithme.</p>
+<p>Déterminer la complexité de cet algorithme dans le pire des cas.</p>
 </div>
 <h4 id="terminaison_1">Terminaison<a class="headerlink" href="#terminaison_1" title="Permanent link">&num;</a></h4>
 <p>Comme pour l'algorithme de tri par sélection, on va tenter d'affirmer que le tri par insertion est correct (correction) en déterminant un invariant de boucle.</p>
@@ -1619,7 +1643,7 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 </ul>
 <p>Si les deux premières propriétés sont vérifiées, alors l’invariant est vrai avant chaque itération de la boucle. La troisième propriété est utilisée pour prouver la validité de l’algorithme</p>
 <p><strong>Choix de l’invariant de boucle :</strong></p>
-<p>On constate qu’en début de chaque itération de la boucle for, la sous-liste <code>lst [0… j-1]</code> est triée. Nous allons considérer cette propriété comme invariant de boucle. </p>
+<p>On constate qu’en début de chaque itération de la boucle for, la sous-liste <code>lst[0… j-1]</code> est triée. Nous allons considérer cette propriété comme invariant de boucle. </p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 12 </p>
 <ul>
@@ -1638,7 +1662,7 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exercice 13</p>
-<p>Faire tourner cet algorithme afin de trier la liste suivante "lst = [10, 2, 8, 3, 1]".  En déduire combien d’étapes sont nécessaires pour trier le tableau (à chaque étape surligner le plus grand élément et vérifier qu’il remonte bien en fin de liste). En déduire combien d’étapes sont nécessaires pour trier un tableau de n éléments.</p>
+<p>Faire tourner àla main cet algorithme afin de trier la liste suivante <code>lst = [10, 2, 8, 3, 1]</code>.  En déduire combien d’étapes sont nécessaires pour trier le tableau (à chaque étape surligner le plus grand élément et vérifier qu’il remonte bien en fin de liste). En déduire combien d’étapes sont nécessaires pour trier un tableau de n éléments.</p>
 <table>
 <thead>
 <tr>
@@ -1671,11 +1695,11 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 <h4 id="principe_3">Principe<a class="headerlink" href="#principe_3" title="Permanent link">&num;</a></h4>
 <p>Le tri fusion est construit suivant la stratégie "diviser pour régner", en anglais "divide and conquer". Le principe de base de la stratégie "diviser pour régner" est que pour résoudre un gros problème, il est souvent plus facile de le diviser en petits problèmes élémentaires. Une fois chaque petit problème résolu, il n’y a plus qu’à combiner les différentes solutions pour résoudre le problème global. La méthode "diviser pour régner" est tout à fait applicable au problème de tri : plutôt que de trier le tableau complet, il est préférable de trier deux sous tableaux de taille égale, puis de fusionner les résultats.</p>
 <p>Exemple de tri par fusion appliqué à un tableau de 7 éléments :</p>
+<figure>
+<p><img alt="fct tri fusion" src="../img_tris/principe_tri_fusion.png" width="300px" /></p>
+</figure>
 <h4 id="algorithme_3">Algorithme<a class="headerlink" href="#algorithme_3" title="Permanent link">&num;</a></h4>
 <p>Cet algorithme n’est pas au programme de 1ère mais à celui de terminale car il fait appel à la récursivité (une fonction qui s’appelle elle-même). Il pourra être copié-collé dans python afin d’être testé puis afin de  comparer les vitesses d’exécution des différents algorithmes de tri. </p>
-<figure>
-<p><img alt="tri_fusion" src="../img_tris/principe_tri_fusion.png" width="300px" /></p>
-</figure>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1772,13 +1796,13 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
       
       
         
-        <a href="../../../Terminale/Programmation/decidabilite/" class="md-footer__link md-footer__link--next" aria-label="Next: Calculabilité, décidabilité" rel="next">
+        <a href="../algo_recherche/" class="md-footer__link md-footer__link--next" aria-label="Next: Recherche" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Calculabilité, décidabilité
+              Recherche
             </div>
           </div>
           <div class="md-footer__button md-icon">
