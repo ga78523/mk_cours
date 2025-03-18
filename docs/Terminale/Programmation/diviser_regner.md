@@ -1,9 +1,5 @@
 # Diviser pour régner
 
-
-
-
-
 ## Principe
 
 Le diviser pour régner est une méthode algorithmique basée sur le principe suivant. On prend un problème (généralement complexe à résoudre), on divise ce problème en une multitude de petits problèmes, l’idée étant que les "petits problèmes" seront plus simples à résoudre que le problème original. Une fois les petits problèmes résolus, on recombine les "petits problèmes résolus" afin d’obtenir la solution du problème de départ.
@@ -42,6 +38,30 @@ Et ainsi de suite.
 !!! example "Exercice 2"
   Réaliser la fonction `recherche_dicho()`sur une liste triée.
 
+### Autre algorithme qui utilise la dichotomie
+
+``` py linenums="1"
+def dicho_rec_2(tab, val, i=0, j=None): 
+    if j is None:                        
+        j = len(tab)-1
+    if i > j :
+        return False
+    m = (i + j) // 2
+    if tab[m] < val :
+        return dicho_rec_2(tab, val, m + 1, j)
+    elif tab[m] > val :
+        return dicho_rec_2(tab, val, i, m - 1 )
+    else :
+        return True
+
+tab = [1, 5, 7, 9, 12, 13]
+print(dicho_rec_2(tab, 12)) #affiche True
+print(dicho_rec_2(tab, 17)) # affiche False
+```
+
+!!! example "Exercice 3"
+  Comparer ces trois algorithmes. Lequel est le plus rapide ?
+
 ## Tris fusion
 
 ### Présentation
@@ -68,7 +88,7 @@ Voici le principe de la fonction auxiliaire de fusion ordonnée de deux listes `
   * Si `i = k` et `j < l`, on ajoute les éléments `L2[j]`, ....., `L2[l − 1]` dans cet ordre à la fin de la liste `M`.
   * Si `i < k` et `j = l`, on ajoute les éléments `L1[i]`, ......, `L1[k − 1]` dans cet ordre à la fin de la liste `M`.
   
-```example "Exercice 3"
+```example "Exercice 4"
     Suivons l’algorithme précédent pour réaliser à la main la fusion ordonnée des listes `L1 = [2, 5, 12]` et `L2 = [1, 6, 11, 15]` dans une liste `M`. Recopiez et complétez le tableau suivant :
 
     | i   | j   | M   | L1[i] | L2[j] |
@@ -87,7 +107,7 @@ Voici dans la figure ci-dessou une représentation de l’algorithme de tri fusi
 
 On définit d’abord une fonction permettant de fusionner deux listes triées au préalable en une seule liste triée.
 
-!!! example "Exercice 4"
+!!! example "Exercice 5"
 
     Écrire la fonction fusion. On utilisera le découpage (ou slicing) pour la deuxième partie de l’algorithme.
 
@@ -101,7 +121,7 @@ On définit d’abord une fonction permettant de fusionner deux listes triées a
 
 Cette fonction renvoie une copie triée de la liste passée en argument, sans la modifier.
 
-!!! example "Exercice 5"
+!!! example "Exercice 6"
     Tester cette fonction avec la liste `L = [23, 12, 4, 56, 35, 57, 3, 11, 6]`
 
 ### Complexité
