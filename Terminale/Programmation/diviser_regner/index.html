@@ -766,6 +766,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#recherche-dichotomique" class="md-nav__link">
+    Recherche dichotomique
+  </a>
+  
+    <nav class="md-nav" aria-label="Recherche dichotomique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe_1" class="md-nav__link">
+    Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recherche-naive" class="md-nav__link">
+    Recherche naïve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recherche-dicho" class="md-nav__link">
+    Recherche dicho
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tris-fusion" class="md-nav__link">
     Tris fusion
   </a>
@@ -1114,6 +1148,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#recherche-dichotomique" class="md-nav__link">
+    Recherche dichotomique
+  </a>
+  
+    <nav class="md-nav" aria-label="Recherche dichotomique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe_1" class="md-nav__link">
+    Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recherche-naive" class="md-nav__link">
+    Recherche naïve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recherche-dicho" class="md-nav__link">
+    Recherche dicho
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tris-fusion" class="md-nav__link">
     Tris fusion
   </a>
@@ -1166,11 +1234,32 @@
 <p>Le diviser pour régner est une méthode algorithmique basée sur le principe suivant. On prend un problème (généralement complexe à résoudre), on divise ce problème en une multitude de petits problèmes, l’idée étant que les "petits problèmes" seront plus simples à résoudre que le problème original. Une fois les petits problèmes résolus, on recombine les "petits problèmes résolus" afin d’obtenir la solution du problème de départ.</p>
 <p>Le paradigme "diviser pour régner" repose donc sur 3 étapes :</p>
 <ul>
-<li>DIVISER : le problème d’origine est divisé en un certain nombre de sous-problèmes</li>
+<li>DIVISER : le problème d’origine est divisé en un certain nombre de sous-problèmes indépendants</li>
 <li>RÉGNER : on résout les sous-problèmes (les sous-problèmes sont plus faciles à résoudre que le problème d’origine)</li>
 <li>COMBINER : les solutions des sous-problèmes sont combinées afin d’obtenir la solution du problème d’origine.</li>
 </ul>
 <p>Les algorithmes basés sur le paradigme "diviser pour régner" sont très souvent des algorithmes récursifs.</p>
+<h2 id="recherche-dichotomique">Recherche dichotomique<a class="headerlink" href="#recherche-dichotomique" title="Permanent link">&num;</a></h2>
+<h3 id="principe_1">Principe<a class="headerlink" href="#principe_1" title="Permanent link">&num;</a></h3>
+<p>La recherche par dichotomie (du grec dikhotomia, « division en deux parties ») est la recherche de la présence (ou non) d'un élément dans une liste triée. Notre fonction renverra donc un booléen.</p>
+<h3 id="recherche-naive">Recherche naïve<a class="headerlink" href="#recherche-naive" title="Permanent link">&num;</a></h3>
+<p>La recherche naïve (élément par élément) est naturellement de complexité linéaire. Nous allons voir que la méthode dichotomique est plus efficace.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1</p>
+</div>
+<p>Écrire une fonction qui recherche un élement dans une liste triée et qui renvoie un booléen.</p>
+<h3 id="recherche-dicho">Recherche dicho<a class="headerlink" href="#recherche-dicho" title="Permanent link">&num;</a></h3>
+<p>On recherche sur une liste triée. On compare le nombre recherché au nombre qui se trouve au centre du tableau.</p>
+<ul>
+<li>Si le nombre recherché est égal au nombre qui se trouve au centre du tableau, c’est terminé.</li>
+<li>Si le nombre recherché est inférieur au nombre qui se trouve au centre du tableau, on recommence sur la première moitié du tableau.</li>
+<li>Si le nombre recherché est supérieur au nombre qui se trouve au centre du tableau, on recommence sur la deuxième moitié du tableau.</li>
+</ul>
+<p>Et ainsi de suite.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+</div>
+<p>Réaliser la fonction <code>recherche_dicho()</code>sur une liste triée.</p>
 <h2 id="tris-fusion">Tris fusion<a class="headerlink" href="#tris-fusion" title="Permanent link">&num;</a></h2>
 <h3 id="presentation">Présentation<a class="headerlink" href="#presentation" title="Permanent link">&num;</a></h3>
 <p>Le tri fusion est un tri récursif basé sur le principe "diviser pour régner". Cet algorithme repose donc sur une fonction auxiliaire, la fonction de fusion, qui prendra en argument deux listes triées et renverra la liste fusionnée.</p>
@@ -1183,26 +1272,26 @@
 <li>
 <p>Si <code>L1[i] &lt; L2[j]</code> alors :</p>
 <ul>
-<li>On ajoute L1[i] à la fin de M.</li>
-<li>On incrémente i</li>
+<li>On ajoute <code>L1[i]</code> à la fin de <code>M</code>.</li>
+<li>On incrémente <code>i</code></li>
 </ul>
 </li>
 <li>
 <p>Sinon :</p>
 <ul>
-<li>On ajoute L2[j] à la fin de M ;</li>
-<li>On incrémente j</li>
+<li>On ajoute <code>L2[j]</code> à la fin de <code>M</code> ;</li>
+<li>On incrémente <code>j</code></li>
 </ul>
 </li>
 <li>
-<p>Une fois la liste M de la façon suivante :</p>
+<p>Une fois la liste <code>M</code> de la façon suivante :</p>
 </li>
 <li>
-<p>Si i = k et j &lt; l, on ajoute les éléments L2[j], ....., L2[l − 1] dans cet ordre à la fin de la liste M.</p>
+<p>Si <code>i = k</code> et <code>j &lt; l</code>, on ajoute les éléments <code>L2[j]</code>, ....., <code>L2[l − 1]</code> dans cet ordre à la fin de la liste <code>M</code>.</p>
 </li>
-<li>Si i &lt; k et j = l, on ajoute les éléments L1[i], ......, L1[k − 1] dans cet ordre à la fin de la liste M.</li>
+<li>Si <code>i &lt; k</code> et <code>j = l</code>, on ajoute les éléments <code>L1[i]</code>, ......, <code>L1[k − 1]</code> dans cet ordre à la fin de la liste <code>M</code>.</li>
 </ul>
-<p><code>``example "Exercice n°1 :"
+<p><code>``example "Exercice 3"
     Suivons l’algorithme précédent pour réaliser à la main la fusion ordonnée des listes</code>L1 = [2, 5, 12]<code>et</code>L2 = [1, 6, 11, 15]<code>dans une liste</code>M`. Recopiez et complétez le tableau suivant :</p>
 <div class="language-text highlight"><pre><span></span><code>| i   | j   | M   | L1[i] | L2[j] |
 |:---:|:---:|:---:|:-----:|:-----:|
@@ -1217,15 +1306,15 @@ Voici dans la figure ci-dessou une représentation de l’algorithme de tri fusi
 <h3 id="implementation-en-python">Implémentation en Python<a class="headerlink" href="#implementation-en-python" title="Permanent link">&num;</a></h3>
 <p>On définit d’abord une fonction permettant de fusionner deux listes triées au préalable en une seule liste triée.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 2 :</p>
+<p class="admonition-title">Exercice 4</p>
 <p>Écrire la fonction fusion. On utilisera le découpage (ou slicing) pour la deuxième partie de l’algorithme.</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>    <span class="k">def</span> <span class="nf">triFusion</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="sd">&quot;&quot;&quot;tri fusion d&#39;une liste en récursif&quot;&quot;&quot;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>    <span class="k">def</span> <span class="nf">tri_fusion</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="sd">&quot;&quot;&quot; tri fusion d&#39;une liste en récursif &quot;&quot;&quot;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="k">return</span> <span class="n">L</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="k">return</span> <span class="n">fusion</span><span class="p">(</span><span class="n">triFusion</span><span class="p">(</span><span class="n">L</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]),</span><span class="n">triFusion</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">:]))</span>
 </span></code></pre></div>
@@ -1233,16 +1322,11 @@ Voici dans la figure ci-dessou une représentation de l’algorithme de tri fusi
 </div>
 <p>Cette fonction renvoie une copie triée de la liste passée en argument, sans la modifier.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 3 :</p>
-<p>Tester cette fonction avec la liste <code>L=[23,12,4,56,35,57,3,11,6]</code></p>
+<p class="admonition-title">Exercice 5</p>
+<p>Tester cette fonction avec la liste <code>L = [23, 12, 4, 56, 35, 57, 3, 11, 6]</code></p>
 </div>
 <h3 id="complexite">Complexité<a class="headerlink" href="#complexite" title="Permanent link">&num;</a></h3>
-<p>Nous avons vu que le tri par insertion et tri par sélection ont tous les deux une complexité <span class="arithmatex">\(O(n^2)\)</span>. Qu’en est-il pour le tri-fusion ?</p>
-<p>Le calcul rigoureux de la complexité de cet algorithme sort du cadre de ce cours.
-Mais, la première phase (DIVISER) consiste à "couper" les tableaux en deux plusieurs fois de suite,la complexité de cette phase est en logarithme base 2. Si il y a n éléments dans le tableau, la complexité est donc en O(log2(n)).</p>
-<p>La deuxième phase consiste à faire des comparaisons entre les premiers éléments de chaque tableau à fusionner, on peut donc supposer que pour un tableau de n éléments, on aura n comparaisons.</p>
-<p>En combinant ces 2 constations on peut donc dire que la complexité du tri-fusion est en <span class="arithmatex">\(O(n.log_2(n))\)</span> (encore une fois la "démonstration" proposée ici n’a rien de rigoureux).</p>
-<p>La comparaison des courbes de la fonction <span class="arithmatex">\(n^2\)</span> (en rouge) et n.log2(n) (en bleu).</p>
+<p>À chaque tour de la boucle while, la taille de la liste est divisée par 2. Ceci confère à cet algorithme une complexité logarithmique bien meilleure qu'une complexité linéaire. En conclusion, la complexité dans le pire des cas vaut $O(log_2(n)) avec <span class="arithmatex">\(n\)</span> la longueur de la liste.</p>
 
               
             </article>
