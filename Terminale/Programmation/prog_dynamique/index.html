@@ -822,8 +822,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#le-rendu-de-monnaie" class="md-nav__link">
-    Le rendu de monnaie
+  <a href="#expose-du-probleme-du-rendu-de-monnaie" class="md-nav__link">
+    Exposé du problème du rendu de monnaie
   </a>
   
 </li>
@@ -1218,8 +1218,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#le-rendu-de-monnaie" class="md-nav__link">
-    Le rendu de monnaie
+  <a href="#expose-du-probleme-du-rendu-de-monnaie" class="md-nav__link">
+    Exposé du problème du rendu de monnaie
   </a>
   
 </li>
@@ -1372,7 +1372,7 @@ Cette technique minimise le nombre d'opérations et accélère grandement l'exé
 <li>problème du voyageur ;</li>
 <li>problème du sac à dos.</li>
 </ul>
-<h3 id="le-rendu-de-monnaie">Le rendu de monnaie<a class="headerlink" href="#le-rendu-de-monnaie" title="Permanent link">&num;</a></h3>
+<h3 id="expose-du-probleme-du-rendu-de-monnaie">Exposé du problème du rendu de monnaie<a class="headerlink" href="#expose-du-probleme-du-rendu-de-monnaie" title="Permanent link">&num;</a></h3>
 <p>Supposons qu’un achat induise un rendu de 49 euros. Quelles pièces peuvent être rendues? La réponse, bien qu’évidente, n’est pas unique. Quatre pièces de 10 euros, 1 pièce de 5 euros et deux pièces de 2 euros conviennent. Mais quarante-neuf pièces de 1 euros conviennent également! Si la question est de <strong>rendre la monnaie avec un minimum de pièces</strong>, le problème change de nature. Mais la réponse reste simple : c’est la première solution proposée. Toutefois, comment parvient-on à un tel résultat ? Quels choix ont été faits qui optimisent le nombre de pièces rendus? C’est le problème du rendu de monnaie dont la solution dépend du système de monnaie utilisé.</p>
 <p>Dans le système monétaire français, les pièces prennent les valeurs 1, 2, 5, 10, 20, 50, 100 euros (on oublie le billet de 500 euros). Rendre 49 euros avec un minimum de pièces est un problème d’optimisation. En pratique, sans s’en rendre compte généralement, tout individu met en œuvre un algorithme glouton.</p>
 <p><strong>On choisit d’abord la plus grandeur valeur de monnaie</strong>, parmi 1, 2, 5, 10, contenue dans 49 euros. En l’occurence, quatre fois une pièce de 10 euros. La somme de 9 euros restant à rendre, il choisit une pièce de 5 euros, puis deux pièces de 2 euros. Cette stratégie gagnante pour la somme de 49 euros l’est-elle pour n’importe quelle somme à rendre ? On peut montrer que la réponse
