@@ -1382,7 +1382,7 @@ est positive pour le système monétaire français. Pour cette raison, un tel sy
 <p>On cherche, pour un système de pièces canonique, à rendre à chaque fois la plus grosse pièce possible.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 4</p>
-<p>Proposer une fonction 'rendu_glouton` pour le rendu de monnaie qui prend en argument la liste des différentes pièces classées par valeurs croissantes et la valeur à rendre et qui renvoie le nombre de pièce à rendre.</p>
+<p>Proposer une fonction <code>rendu_glouton</code> pour le rendu de monnaie qui prend en argument la liste des différentes pièces classées par valeurs croissantes et la valeur à rendre et qui renvoie le nombre de pièce à rendre.</p>
 <p>Exemple d'utilisation :</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_glouton</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
@@ -1390,17 +1390,17 @@ est positive pour le système monétaire français. Pour cette raison, un tel sy
 </span></code></pre></div>
 </td></tr></table>
 <p>Tester avec : </p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_glouton</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
+<p><table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_glouton</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
-<p>Que nous donne cet algorithme ?</p>
+Que nous donne cet algorithme ?</p>
 </div>
 <h3 id="algorithme-recursif">Algorithme récursif<a class="headerlink" href="#algorithme-recursif" title="Permanent link">&num;</a></h3>
 <p>Il est possible aussi de construire cet algorithme de manière récursive.</p>
 <p>Il faut pour cela faire les observations suivantes :</p>
 <ul>
 <li>Pour rappel, le rendu est toujours possible : dans le pire des cas, le nombre de pièces à rendre est égal à la somme de départ (rendu effectué à coups de pièces de 1)</li>
-<li>Si <code>p</code> est une pièce de <code>pieces</code>, le nombre minimal de pièces nécessaires (contenant <code>p</code>) pour rendre la somme <span class="arithmatex">\(somme\)</span> est égal à <span class="arithmatex">\(1 + le nombre minimal de pièces nécessaires pour rendre la somme\)</span> <code>somme - p</code>.</li>
+<li>Si <code>p</code> est une pièce de <code>pieces</code>, le nombre minimal de pièces nécessaires (contenant <code>p</code>) pour rendre la somme <span class="arithmatex">\(somme\)</span> est égal à 1 + le nombre minimal de pièces nécessaires pour rendre la somme$ <code>somme - p</code>.</li>
 </ul>
 <p>Cette dernière observation est cruciale. Elle repose sur le fait qu'il suffit d'ajouter 1 pièce (la pièce de valeur p) à la meilleure combinaison qui rend <span class="arithmatex">\(somme - p\)</span> pour avoir la meilleure combinaison qui rend somme (meilleure combinaison parmi celles contenant p).</p>
 <p>On va donc passer en revue toutes les pièces p et mettre à jour à chaque fois le nombre minimal de pièces.</p>
