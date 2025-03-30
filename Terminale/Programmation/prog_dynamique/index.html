@@ -1407,50 +1407,6 @@ Que nous donne cet algorithme ?</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 5</p>
 <p>Compléter la fonction <code>rendu_rec()</code>.
-``` py linenums="1"</p>
-<p>def rendu_rec(pieces, somme):
-    if somme == 0:
-        return ....
-    if ..... &lt; 0:
-        return float('inf')</p>
-<div class="language-text highlight"><pre><span></span><code>min_pieces = float(&#39;inf&#39;)
-for piece in pieces:
-    nb_pieces = ... + rendu_rec(...., somme-.....)
-    min_pieces = min(min_pieces, ...)
-</code></pre></div>
-<p>return min_pieces</p>
-</div>
-<p>print(rendu_rec([1,2,10],20))
-print(rendu_rec([1,6,10],12))</p>
-<div class="language-text highlight"><pre><span></span><code>print(rendu_recursif([1, 2, 5], 12)) # affiche 3
-print(rendu_recursif([1, 6, 10], 12)) # affiche 2
-
-def rendu_rec(pieces, somme):
-    nb_pieces = ...
-    if somme == 0:
-        return ...
-    for p in pieces:
-        if ... &lt;= ... :  
-            nb_pieces = min(nb_pieces, ... + rendu_recursif(pieces, ...))
-    return ...
-
-print(rendu_recursif([1, 2, 5], 12)) # affiche 3
-print(rendu_recursif([1, 6, 10], 12)) # affiche 2
-```
-Conclusion ?
-y-a-t-il un autre problème ?
-</code></pre></div>
-<p>Le temps de calcul étant trop grand pour les "grandes" valeurs de somme, on peut donc légitimement penser à mémoïser notre algorithme, en stockant les valeurs pour éviter de les recalculer.</p>
-<h3 id="algorithme-recursif-memoise">Algorithme récursif memoïsé<a class="headerlink" href="#algorithme-recursif-memoise" title="Permanent link">&num;</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Exercice 6</p>
-<p>Compléter la fonction <code>rendu_recursif_memoise()</code> qui prend en paramètres une liste de pièces <code>pieces</code> et la somme à <code>rendre_somme</code> et qui renvoie le nombre minimal de pièces qu'il faut rendre.</p>
-<p>On utilisera le dictionnaire <code>memo_rendu</code> dans lequel on associera à chaque somme <code>somme</code> son nombre de pièces minimal.</p>
-<p>On procèdera de manière classique :</p>
-<ul>
-<li>Soit la somme est disponible dans le dictionnaire, et on se contente de renvoyer la valeur associée.</li>
-<li>Soit on la calcule (comme dans l'algorithme classique), puis on stocke le résultat dans le dictionnaire avant de le renvoyer.</li>
-</ul>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -1464,36 +1420,79 @@ y-a-t-il un autre problème ?
 <span class="normal"><a href="#__codelineno-4-11">11</a></span>
 <span class="normal"><a href="#__codelineno-4-12">12</a></span>
 <span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span>
-<span class="normal"><a href="#__codelineno-4-17">17</a></span>
-<span class="normal"><a href="#__codelineno-4-18">18</a></span>
-<span class="normal"><a href="#__codelineno-4-19">19</a></span>
-<span class="normal"><a href="#__codelineno-4-20">20</a></span>
-<span class="normal"><a href="#__codelineno-4-21">21</a></span>
-<span class="normal"><a href="#__codelineno-4-22">22</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">rendu_monnaie_top_down</span><span class="p">(</span><span class="n">pieces</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">somme</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">memo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">if</span> <span class="n">memo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="n">memo</span> <span class="o">=</span> <span class="p">{}</span>  
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="k">if</span> <span class="o">....</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>        <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">somme</span><span class="p">]</span>  
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="k">if</span> <span class="o">....</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a>        <span class="k">return</span> <span class="mi">0</span>  
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="k">if</span> <span class="o">....</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>  <span class="c1"># Impossible de rendre un montant négatif</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a>    <span class="n">min_pieces</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a>    <span class="k">for</span> <span class="n">piece</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a>        <span class="n">nb_pieces</span> <span class="o">=</span> <span class="o">...</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a>        <span class="k">if</span> <span class="n">nb_pieces</span> <span class="o">!=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">):</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a>            <span class="n">min_pieces</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">min_pieces</span><span class="p">,</span> <span class="n">nb_pieces</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a>    <span class="n">memo</span><span class="p">[</span><span class="n">somme</span><span class="p">]</span> <span class="o">=</span> <span class="n">min_pieces</span>  
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a>    <span class="k">return</span> <span class="o">....</span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">rendu_rec</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">if</span> <span class="n">somme</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="k">return</span> <span class="o">....</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="k">if</span> <span class="o">.....</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="n">min_pieces</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="k">for</span> <span class="n">piece</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a>        <span class="n">nb_pieces</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="n">rendu_rec</span><span class="p">(</span><span class="o">....</span><span class="p">,</span> <span class="n">somme</span><span class="o">-.....</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>        <span class="n">min_pieces</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">min_pieces</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="k">return</span> <span class="n">min_pieces</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">rendu_recursif</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">12</span><span class="p">))</span> <span class="c1"># affiche 3</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">rendu_recursif</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">12</span><span class="p">))</span> <span class="c1"># affiche 2</span>
+</span></code></pre></div>
+</td></tr></table>
+Conclusion ?
+y-a-t-il un autre problème ?    </p>
+</div>
+<p>Le temps de calcul étant trop grand pour les "grandes" valeurs de somme, on peut donc légitimement penser à mémoïser notre algorithme, en stockant les valeurs pour éviter de les recalculer.</p>
+<h3 id="algorithme-recursif-memoise">Algorithme récursif memoïsé<a class="headerlink" href="#algorithme-recursif-memoise" title="Permanent link">&num;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
+<p>Compléter la fonction <code>rendu_recursif_memoise()</code> qui prend en paramètres une liste de pièces <code>pieces</code> et la somme à <code>rendre_somme</code> et qui renvoie le nombre minimal de pièces qu'il faut rendre.</p>
+<p>On utilisera le dictionnaire <code>memo_rendu</code> dans lequel on associera à chaque somme <code>somme</code> son nombre de pièces minimal.</p>
+<p>On procèdera de manière classique :</p>
+<ul>
+<li>Soit la somme est disponible dans le dictionnaire, et on se contente de renvoyer la valeur associée.</li>
+<li>Soit on la calcule (comme dans l'algorithme classique), puis on stocke le résultat dans le dictionnaire avant de le renvoyer.</li>
+</ul>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span> <span class="nf">rendu_monnaie_top_down</span><span class="p">(</span><span class="n">pieces</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">somme</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">memo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">if</span> <span class="n">memo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>        <span class="n">memo</span> <span class="o">=</span> <span class="p">{}</span>  
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="k">if</span> <span class="o">....</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>        <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">somme</span><span class="p">]</span>  
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>    <span class="k">if</span> <span class="o">....</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>        <span class="k">return</span> <span class="mi">0</span>  
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a>    <span class="k">if</span> <span class="o">....</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12"></a>        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>  <span class="c1"># Impossible de rendre un montant négatif</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13"></a>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14"></a>    <span class="n">min_pieces</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15"></a>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16"></a>    <span class="k">for</span> <span class="n">piece</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17"></a>        <span class="n">nb_pieces</span> <span class="o">=</span> <span class="o">...</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18"></a>        <span class="k">if</span> <span class="n">nb_pieces</span> <span class="o">!=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">):</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19"></a>            <span class="n">min_pieces</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">min_pieces</span><span class="p">,</span> <span class="n">nb_pieces</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20"></a>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21"></a>    <span class="n">memo</span><span class="p">[</span><span class="n">somme</span><span class="p">]</span> <span class="o">=</span> <span class="n">min_pieces</span>  
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22"></a>    <span class="k">return</span> <span class="o">....</span>
 </span></code></pre></div>
 </td></tr></table>
 <p>Tester l'algorithme sur une somme égale à 107 et sur des systèmes non canoniques.</p>
@@ -1504,25 +1503,25 @@ y-a-t-il un autre problème ?
 <p class="admonition-title">exercice 7</p>
 <p>Compléter la fonction <code>rendu_bottom_up</code> qui prend en paramètres une liste de pièces pieces et la somme à rendre somme et qui renvoie le nombre minimal de pièces qu'il faut rendre.</p>
 <p>Nous stockerons chaque rendu dans un dictionnaire rendu, initialisé à la valeur 0 pour la clé 0.</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span> <span class="nf">rendu_bottom_up</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="n">rendu</span> <span class="o">=</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span> <span class="c1"># </span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>        <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>            <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="p">:</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>                <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>    <span class="k">return</span> <span class="o">...</span>   
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">rendu_bottom_up</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">))</span> <span class="c1"># 12</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span> <span class="nf">rendu_bottom_up</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="n">rendu</span> <span class="o">=</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span> <span class="c1"># </span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>        <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a>        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a>            <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="p">:</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a>                <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a>    <span class="k">return</span> <span class="o">...</span>   
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">rendu_bottom_up</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">))</span> <span class="c1"># 12</span>
 </span></code></pre></div>
 </td></tr></table>
 </div>
