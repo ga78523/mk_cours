@@ -1302,7 +1302,7 @@
 <h3 id="problematique">Problématique<a class="headerlink" href="#problematique" title="Permanent link">&num;</a></h3>
 <p>Un voyageur se fixe un certain nombre de villes à visiter impérativement : Paris, Reims, Troyes, Nancy, Metz.</p>
 <p>Il devra élaborer un trajet en partant d'une des villes de la liste (ville de départ), devra organiser son trajet pour visiter une seule fois toutes les autres villes de la liste et revenir en fin de parcours à la ville de départ. Pour des raisons budgétaires, il souhaite optimiser la longueur de son trajet</p>
-<p>A l'aide du site <a href="https://geoportail.gouv.fr">géoportail</a>, il détermine les distances minimales entres ces différentes villes :</p>
+<p>A l'aide du site <a href="géoportail">https://geoportail.gouv.fr</a>, il détermine les distances minimales entres ces différentes villes :</p>
 <table>
 <thead>
 <tr>
@@ -1375,7 +1375,7 @@
 <p>Au final, déterminer le nombre de trajets possibles pour 5 villes puis pour <span class="arithmatex">\(n\)</span> villes.</p>
 </li>
 <li>
-<p>Parmi les différents trajets possibles, y en aura-t-il qui auront systématiquement la même distance ? En déduire le nombre de distances possibles pour <span class="arithmatex">\(n\)</span> villes. Calculer ce nombre pour 10 villes, 20 villes ...</p>
+<p>Parmi les différents trajets possibles, y en aura-t-il qui auront systématiquement la même distance ? En déduire le nombre de trajets possibles pour <span class="arithmatex">\(n\)</span> villes. Calculer ce nombre pour 10 villes, 20 villes ...</p>
 </li>
 </ol>
 </div>
@@ -1394,40 +1394,50 @@
 <ul>
 <li>Créer également le tableau des distances ci-dessous (liste de listes d'entiers) :</li>
 </ul>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">distance</span> <span class="o">=</span><span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">303</span><span class="p">,</span><span class="mi">188</span><span class="p">,</span><span class="mi">183</span><span class="p">],</span>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">distance</span> <span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">303</span><span class="p">,</span><span class="mi">188</span><span class="p">,</span><span class="mi">183</span><span class="p">],</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>          <span class="p">[</span><span class="mi">55</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">306</span><span class="p">,</span><span class="mi">176</span><span class="p">,</span><span class="mi">203</span><span class="p">],</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>          <span class="p">[</span><span class="mi">303</span><span class="p">,</span><span class="mi">306</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">142</span><span class="p">,</span><span class="mi">153</span><span class="p">],</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>          <span class="p">[</span><span class="mi">188</span><span class="p">,</span><span class="mi">176</span><span class="p">,</span><span class="mi">142</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">123</span><span class="p">],</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>          <span class="p">[</span><span class="mi">183</span><span class="p">,</span><span class="mi">203</span><span class="p">,</span><span class="mi">153</span><span class="p">,</span><span class="mi">123</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>          <span class="p">[</span><span class="mi">183</span><span class="p">,</span><span class="mi">203</span><span class="p">,</span><span class="mi">153</span><span class="p">,</span><span class="mi">123</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
 </span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<p>Dans votre IDE, après avoir copier/coller les listes précédentes, écrire l'instruction qui permet d'afficher  :</p>
 <ul>
-<li>
-<p>Lancer le programme puis depuis la console python, écrire l'instruction qui permet d'afficher à partir des 2 listes ci-dessus : 
-•   "Paris"                                              instruction :<br />
-•   "Nancy"                                            instruction :
-•   La distance Paris-Nancy                instruction : 
-•   La distance Paris-Metz                  instruction :</p>
-</li>
-<li>
-<p>Existe-t-il un lien entre la liste villes et la liste de listes distance (dans la liste villes, peut on inverser 2 éléments sans retoucher la liste distance ?)</p>
-</li>
-<li>
-<p>Créer un tableau de booléen nommé visitees qui indiquera si la ville a été visitée (True) ou non (False). Au départ, comment faut-il initialiser les éléments de la liste ?</p>
-</li>
-<li>
-<p>Écrire une fonction nommée plusProche, qui prend en arguments l'indice de la ville, la liste visitees et le tableau distance et qui va retourner l'indice de la ville la plus proche. Attention à bien initialiser le tableau visitees pour tester la fonction, la ville choisie est supposée avoir été visitée. On utilisera une variable locale nommée pp, initialement initialisée avec la valeur None, et à qui l'on assignera ensuite l'indice de la ville la plus proche. </p>
-</li>
-<li>
-<p>Écrire maintenant une fonction nommée voyage, qui prend en arguments l'indice de la ville de départ, le tableau distance et la liste villes), affiche les distances parcourues entre chaque ville et retourne la distance totale parcourue. On utilisera 2 variables locales courante et suivante à qui l'on assignera l'indice de la ville en cours de visite et de la ville suivante. </p>
-</li>
-<li>
-<p>Tester maintenant la globalité du programme en prenant comme ville de départ Nancy.</p>
-</li>
+<li>la ville de "Paris" ; </li>
+<li>la ville de "Nancy" ;</li>
+<li>La distance Paris-Nancy ;</li>
+<li>La distance Paris-Metz.</li>
 </ul>
-<p>Le tableau ci-dessous donne l'ensemble des trajets avec comme ville de départ Nancy. Vérifier que votre algorithme glouton n'a pas donné la solution optimale mais malgré toute une solution très satisfaisante. </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>Existe-t-il un lien entre la liste <code>villes</code> et la liste <code>distance</code> .Dans la liste <code>villes</code>, peut on inverser 2 éléments sans retoucher la liste <code>distance</code> ?</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 4</p>
+<p>Créer un tableau de booléen nommé <code>visitees</code> qui indiquera si la ville a été visitée (True) ou non (False). Au départ, comment faut-il initialiser les éléments de la liste ?</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5</p>
+<p>Écrire une fonction nommée <code>plus_proche()</code>, qui prend en arguments l'indice de la ville, la liste <code>visitees</code> et le tableau <code>distance</code> et qui va retourner l'indice de la ville la plus proche non déjà visitée et la distance entre la ville en question et la ville la plus proche.</p>
+<p>Attention à bien initialiser le tableau visitees pour tester la fonction, la ville choisie est supposée avoir été visitée. On utilisera une variable locale nommée <code>pp</code>, initialement initialisée avec la valeur <code>None</code>, et à qui l'on assignera ensuite l'indice de la ville la plus proche. </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
+<p>Écrire maintenant une fonction nommée <code>voyage()</code>, qui prend en arguments l'indice de la ville de départ, le tableau <code>distance</code> et la liste <code>villes</code> retourne la distance totale parcourue ainsi que la liste des villes parcourues. On utilisera 2 variables locales courante et suivante à qui l'on assignera l'indice de la ville en cours de visite et de la ville suivante.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 7</p>
+<p>Tester maintenant la globalité du programme en prenant comme ville de départ Nancy.
+Le tableau ci-dessous donne l'ensemble des trajets avec comme ville de départ Nancy. Vérifier que votre algorithme glouton n'a pas donné la solution optimale mais malgré toute une solution très satisfaisante.</p>
+<p><figure markdown>
+<img alt="tab" src="../img_gloutons/glout_tab.png" width="400px" />
+</figure></p>
+</div>
 <h2 id="le-probleme-du-sac-a-dos">Le problème du sac à dos<a class="headerlink" href="#le-probleme-du-sac-a-dos" title="Permanent link">&num;</a></h2>
 <h3 id="problematique_1">Problématique<a class="headerlink" href="#problematique_1" title="Permanent link">&num;</a></h3>
-<p>Un voleur souhaite emporter des objets d'une valeur totale maximale dans son sac à dos qui ne peut supporter plus d'une certaine masse, à définir. </p>
+<p>Un voleur souhaite emporter des objets d'une valeur totale maximale dans son sac à dos qui ne peut supporter plus d'une certaine masse, à définir.</p>
 <table>
 <thead>
 <tr>
@@ -1471,31 +1481,31 @@
 </table>
 <h3 id="strategies-gloutonnes">Stratégies gloutonnes<a class="headerlink" href="#strategies-gloutonnes" title="Permanent link">&num;</a></h3>
 <div class="admonition example">
-<p class="admonition-title">Exercice 2</p>
+<p class="admonition-title">Exercice 8</p>
 <p>Proposer 3 stratégies gloutonnes pour résoudre cette problématique.</p>
 </div>
 <h3 id="algorithme-glouton">Algorithme glouton<a class="headerlink" href="#algorithme-glouton" title="Permanent link">&num;</a></h3>
 <p>Suivant la stratégie gloutonne adoptée, il sera sans doute nécessaire de rajouter une colonne au tableau et de trier le tableau suivant un ordre croissant ou décroissant d'une des colonnes. Afin de trier le tableau, on utilisera la fonction <code>sorted()</code> déjà utilisée dans le chapitre précédent.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 3</p>
+<p class="admonition-title">Exercice 9</p>
 <p>Écrire une fonction nommée <code>sac_dos()</code> qui prend en argument le tableau d'objets, la masse maximale supportée par le sac à dos, l'indice de la colonne à trier, un booléen qui prend la valeur <code>True</code> pour un tri décroissant sinon la valeur False pour un tri croissant, et qui retourne un tableau dont le 1 éléments et le tableau des objets choisis, le 2nd élément la masse totale des objets emportés et le 3ème élément la valeur totale des objets emportés.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 4</p>
-<p>Appliquer vos différentes stratégies et vérifier la cohérence des réponses. </p>
+<p class="admonition-title">Exercice 10</p>
+<p>Appliquer vos différentes stratégies et vérifier la cohérence des réponses.</p>
 </div>
 <h2 id="le-probleme-du-rendu-de-monnaie">Le problème du rendu de monnaie<a class="headerlink" href="#le-probleme-du-rendu-de-monnaie" title="Permanent link">&num;</a></h2>
 <h3 id="algorithme-glouton_1">Algorithme glouton<a class="headerlink" href="#algorithme-glouton_1" title="Permanent link">&num;</a></h3>
 <p>Considérons le problème d'un commerçant devant rendre de la monnaie à l'un de ses clients. Il souhaite le faire en utilisant le moins de pièces et de billets possibles. On suppose que l'on manipule les pièces et coupures habituelles des euros (1€, 2€, 5€, 10 €, 20€, 50€, 100€ et 200€, oublions les centimes) et que le commerçant dispose d'une réserve suffisamment importante de chaque espèce. </p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 5</p>
+<p class="admonition-title">Exercice 11</p>
 <ol>
 <li>Donner les combinaisons possibles de rendu de monnaie sur 9 €. Établir un tableau.</li>
 <li>A l'aide du tableau précédent, proposer une stratégie gloutonne pour rendre la monnaie. </li>
 </ol>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 6</p>
+<p class="admonition-title">Exercice 12</p>
 <p>Écrire une fonction qui prend en argument la somme à rendre (nombre entier) et retourne le tableau des pièces ou coupures.</p>
 </div>
 <h3 id="systemes-canoniques">Systèmes canoniques<a class="headerlink" href="#systemes-canoniques" title="Permanent link">&num;</a></h3>
