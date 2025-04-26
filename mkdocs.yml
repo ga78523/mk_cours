@@ -66,6 +66,9 @@ nav:
     - Home: index.md
     - About: about.md
     - 'Première':
+      - Données :
+        - Représentation des entiers : Premiere/Donnees/representation_entier.md
+        - Données en table : Premiere/Donnees/donnees_table.md
       - Langage Python:
         - Les bases : Premiere/Langage/Bases_Python.md
         - Contrôle du flux d'exécution : Premiere/Langage/ControleFlux_Python.md
@@ -92,6 +95,7 @@ nav:
         - Graphes algos : Terminale/Programmation/graphes.md
         - Recherche textuelle : Terminale/Programmation/recherche_textuelle.md
         - Diviser pour régner : Terminale/Programmation/diviser_regner.md
+        - Programmation dynamique : Terminale/Programmation/prog_dynamique.md
       - Structures de Données: 
         - Graphes : Terminale/Struct_donnees/graphe.md
       - BDD :
