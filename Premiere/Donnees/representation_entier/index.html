@@ -382,6 +382,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#vers-le-decimal-a-partir-des-autres-bases" class="md-nav__link">
+    Vers le décimal à partir des autres bases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lhexadecimal-au-secours-de-la-manipulation-des-nombres-binaires" class="md-nav__link">
+    L'hexadécimal au secours de la manipulation des nombres binaires
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1257,6 +1271,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#vers-le-decimal-a-partir-des-autres-bases" class="md-nav__link">
+    Vers le décimal à partir des autres bases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lhexadecimal-au-secours-de-la-manipulation-des-nombres-binaires" class="md-nav__link">
+    L'hexadécimal au secours de la manipulation des nombres binaires
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1463,13 +1491,149 @@
 </div>
 <h3 id="conversion-decimal-vers-binaire">Conversion décimal vers binaire<a class="headerlink" href="#conversion-decimal-vers-binaire" title="Permanent link">&num;</a></h3>
 <p>Pour effectuer cette conversion, on effectue une suite de divisions euclidiennes par 2 jusqu'à obtenir un quotient nul. Il suffit ensuite de lister les restes des diverses divisions en commençant par la dernière effectuée.</p>
-<p>Exemple : <span class="arithmatex">\((14)_{10} = (1110)_2\)</span></p>
+<p>Exemple :</p>
+<div class="arithmatex">\[
+\begin{array}{r|l}
+14 &amp; 2 \\
+\hline
+0 &amp;  \begin{array}{r|l}
+7 &amp; 2 \\
+\hline
+1 &amp; \begin{array}{r|l}
+3 &amp; 2 \\
+\hline
+1 &amp;\begin{array}{r|l}
+1 &amp; 2 \\
+\hline
+1 &amp; 0
+\end{array}
+\end{array}
+\end{array}
+\end{array}
+\]</div>
+<p><span class="arithmatex">\((14)_{10} = (1110)_2\)</span></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 4</p>
 <ol>
 <li>Convertir (4)10 en base 2 ;</li>
 <li>Convertir (35)10 en base 2 ;</li>
 <li>Convertir (255)10 en base 2.</li>
+</ol>
+</div>
+<h3 id="vers-le-decimal-a-partir-des-autres-bases">Vers le décimal à partir des autres bases<a class="headerlink" href="#vers-le-decimal-a-partir-des-autres-bases" title="Permanent link">&num;</a></h3>
+<p>Pour convertir un nombre <span class="arithmatex">\(N\)</span> d’une base <span class="arithmatex">\(b\)</span> dans la base <span class="arithmatex">\(10\)</span>, on décompose ce nombre dans l’ordre des puissances décroissantes de la base. Le nombre <span class="arithmatex">\(N\)</span> s’écrit de façon unique sous la forme :</p>
+<div class="arithmatex">\[
+N = a_n\times b^{n} + ....+ a_2\times b_2 + a_1\times b_1 + a_0 \times b_0\ avec 
+    \begin{cases}
+     n  : \text{ un entier naturel ;}  \\
+     b : \text{la base de numération ;}\\
+     a_i : \text{les chiffres associés à  }\\ \text{la base tels que } 0 \le a_i &lt; b.
+    \end{cases}
+\]</div>
+<p>Exemple : <span class="arithmatex">\((1101)_2 = 1 \times 2^3 + 1 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = 1 \times 8 + 1 \times 4 + 0 \times 2 + 1 \times 1\)</span>
+            <span class="arithmatex">\((1101)_2 = 13\)</span></p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5</p>
+<ol>
+<li>Convertir (1111)2 en base 10 ;</li>
+<li>Convertir (10110)2 en base 10 ;</li>
+</ol>
+</div>
+<p><strong>Remarque :</strong> afin d'effectuer des conversions binaires vers décimal ou décimal vers binaire, il est également possible d'utiliser le tableau ci-dessous : </p>
+<figure>
+<table>
+<thead>
+<tr>
+<th align="center">1 octet</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(2^8=256\)</span></td>
+<td align="center"><span class="arithmatex">\(2^7=128\)</span></td>
+<td align="center"><span class="arithmatex">\(2^6=64\)</span></td>
+<td align="center"><span class="arithmatex">\(2^5=32\)</span></td>
+<td align="center"><span class="arithmatex">\(2^4=16\)</span></td>
+<td align="center"><span class="arithmatex">\(2^3=8\)</span></td>
+<td align="center"><span class="arithmatex">\(2^2=4\)</span></td>
+<td align="center"><span class="arithmatex">\(2^1=2\)</span></td>
+<td align="center"><span class="arithmatex">\(2^0=1\)</span></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
+<p>Coder en utilisant le tableau <span class="arithmatex">\((1010100)_2\)</span> en décimal</p>
+</div>
+<h3 id="lhexadecimal-au-secours-de-la-manipulation-des-nombres-binaires">L'hexadécimal au secours de la manipulation des nombres binaires<a class="headerlink" href="#lhexadecimal-au-secours-de-la-manipulation-des-nombres-binaires" title="Permanent link">&num;</a></h3>
+<p>La manipulation de nombres binaire est très laborieuse. Pour cette raison, les informaticiens travaillent en hexadécimal (base 16). Dans cette base, 16 caractères sont nécessaires : 0, 1, 2, 3…9, A, B, C,..., F.</p>
+<div class="admonition example">
+<p class="admonition-title"> Exercice 7</p>
+<p>Compléter le tableau du paragraphe II. 1.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title"> Exercice 8</p>
+<p>Sur combien de bits peut-on coder un chiffre hexadécimal ?</p>
+</div>
+<p>Afin de convertir un nombre binaire en nombre hexadécimal, il suffit de "découper" ce nombre en paquets de 4 bits en partant du bit de poids faible (bit le plus à droite), puis d'attribuer le chiffre hexadécimal correspondant à chaque paquet de 4 bits. La conversion hexadécimale vers binaire est intuitive et encore plus simple.</p>
+<div class="admonition example">
+<p class="admonition-title"> Exercice 9</p>
+<ol>
+<li>Coder <span class="arithmatex">\((11111111)_2\)</span>, <span class="arithmatex">\((1000101)_2\)</span> et (<span class="arithmatex">\(1110100011)_2\)</span> en hexadécimal</li>
+<li>Coder <span class="arithmatex">\((12)_{16}\)</span> et <span class="arithmatex">\((1AF)_{16}\)</span> en binaire. </li>
 </ol>
 </div>
 
