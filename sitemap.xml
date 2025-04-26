@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Premiere/Donnees/representation_entier/</loc>
+         <lastmod>2025-04-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Premiere/IHM/formulaires/</loc>
          <lastmod>2025-04-26</lastmod>
          <changefreq>daily</changefreq>
