@@ -645,6 +645,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/ArchitectureMaterielle/OS/" class="md-nav__link">
+        OS
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1416,6 +1430,10 @@
 <p class="admonition-title">Exercice 1</p>
 <p>Donner une représentation sous forme de graphe de la situation présentée ci-dessus.</p>
 </div>
+<details class="success"><summary>Correction</summary><p><figure markdown>
+<img alt="graphe" src="../img_dijkstra/mermaid-diagram-2025-05-01-204849.png" width="350px" />
+</figure>&gt;</p>
+</details>
 <div class="admonition example">
 <p class="admonition-title">Exercice 2</p>
 <p>Ayant terminé sa semaine de travail à Bourg-en-Bresse, le technicien souhaite retourner chez lui à Aurillac en faisant le moins de kilomètres possibles. Déterminer, en utilisant l'algorithme de Dijkstra, le plus court chemin entre les villes de Bourg-en-Bresse et Aurillac en empruntant le réseau routier, en s'aidant du tableau ci-dessous :</p>
@@ -1424,10 +1442,131 @@
 </figure></p>
 <p>Quelle est alors la route à emprunter ?</p>
 </div>
+<details class="success"><summary>Correction</summary><figure markdown>
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">C</th>
+<th align="center">E</th>
+<th align="center">G</th>
+<th align="center">L</th>
+<th align="center">P</th>
+<th align="center">V</th>
+<th align="center">Sommet choisi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center">0</td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center">B(0)</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center">/</td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center">180 (B)</td>
+<td align="center">80 (B)</td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center">L(80)</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center">/</td>
+<td align="center">260 (L)</td>
+<td align="center">150 (L)</td>
+<td align="center">180 (B)</td>
+<td align="center">/</td>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center">180 (L)</td>
+<td align="center">E(150)</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center">/</td>
+<td align="center">260 (L)</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">230 E</td>
+<td align="center">180 (L)</td>
+<td align="center">G (180)</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\infty\)</span></td>
+<td align="center">/</td>
+<td align="center">260(L)</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">230 E</td>
+<td align="center">100 (L)</td>
+<td align="center">V(180)</td>
+</tr>
+<tr>
+<td align="center">410 (P)</td>
+<td align="center">/</td>
+<td align="center">260 (L)</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">230 E</td>
+<td align="center">/</td>
+<td align="center">P(230)</td>
+</tr>
+<tr>
+<td align="center">410 (P)</td>
+<td align="center">/</td>
+<td align="center">260(L)</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">C(260)</td>
+</tr>
+<tr>
+<td align="center">410 (C)</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">A(410)</td>
+</tr>
+<tr>
+<td align="center"><figure></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>B-&gt; L -&gt;  E-&gt; P -&gt; A</p>
+</details>
 <div class="admonition example">
 <p class="admonition-title">Exercice 3</p>
 <p>La route entre Le Puy-en-Velay et Aurillac est fermée à la circulation. Quel chemin doit-il alors emprunter?</p>
 </div>
+<details class="success"><summary>Correction</summary><p>B-&gt; L -&gt;  E-&gt; C -&gt; A</p>
+</details>
 <h3 id="code-python-de-lalgorithme">Code Python de l'algorithme<a class="headerlink" href="#code-python-de-lalgorithme" title="Permanent link">&num;</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Exercice 4</p>
