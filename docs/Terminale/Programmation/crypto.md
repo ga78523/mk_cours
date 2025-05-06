@@ -30,7 +30,7 @@ Le codage de César avec une clé de 13. En ne considérant que les lettres en m
 
 Par exemple le message "BONJOUR, COMMENT ALLEZ-VOUS" se code par : "OBAWBHE, PBZZRAG NYYRMIBHF" (seules les lettres ont été codées...) et le déchiffrement nous redonne bien le message d’origine.
 
-!!! example "Exercice 1:"
+!!! example "Exercice 1"
     Écrire un programme qui réalise ce chiffrement de César avec une clé passée en paramètre. Ce programme utilisera les dictionnaires. ce programme pourra réaliser le codage et le décodage.
 
 ### exemple 2 : le codage XOR

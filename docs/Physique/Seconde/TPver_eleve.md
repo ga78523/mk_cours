@@ -1,3 +1,6 @@
+# TP verrerie
+
+``` py linenums="1"
 # importation de la bibliothèque matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
@@ -34,3 +37,4 @@ print("Fiole : écart-type = ", round(ecart_typeF, 3))
 
 # affichage du graphique
 plt.show()
+```

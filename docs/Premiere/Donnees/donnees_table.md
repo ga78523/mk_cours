@@ -39,7 +39,7 @@ séparer les chiffres décimaux). Cela peut engendrer quelques problèmes, il fa
 Ouvrir maintenant le fichier avec le tableur "Calc" (libre Office) ou "Excel" (Windows) et vérifier que les données y sont bien rangées sous forme tabulaire :
 
 <figure markdown>
-![](data_donnee_table/img2.png){width=450px}
+![open_office](data_donnee_table/img2.png){width=450px}
 </figure>
 
 ## Importation des données
@@ -66,7 +66,6 @@ for i in valeurs:
 fichier.close()
 ```
 
-
 * la variable `descripteurs` est de type `str` et sa valeur correspond à la première ligne de la table. La méthode `readline()` à la ligne 3 extrait donc la première ligne de la table sous forme de chaîne de caractères ;
 * la variable `valeurs` est de type `list` et ses éléments sont de type `str`. Leurs valeurs correspondent aux autres lignes de la table : la méthode `readlines()` extrait donc les autres lignes de la table sous forme d'une chaîne de caractères ;
 * la méthode `rstrip()` supprime ici les caractères de fin de ligne '`\n`' situés à droite ;
@@ -80,10 +79,10 @@ La  recherche  dans  une  table  consiste  à  obtenir  les  valeurs  de  certai
 
      A partir du fichier radon.csv, extraire les informations suivantes :
 
-    * Liste des communes de France présentant un potentiel radon de 3. La liste nommée recherche1 comportera tous les champs du fichier csv.
-    * Liste  des  communes  de l'Aude  présentant  un  potentiel  radon de 2 et  dont  le  nom  commence  par  "A".  La liste nommée recherche2 comportera uniquement le champ correspondant au nom de la commune. 
-    * Liste des communes de métropole à risque faible ou moyen (présentant un potentiel radon de 1 ou 2). La liste nommée recherche3 sera une liste de tuples comprenant respectivement le nom du département, de la commune et du potentiel radon.
-    * Liste des départements de France dont au moins 1 des communes présente un potentiel radon de 2 ou 3. La liste nommée recheche4 sera une liste de tuples comprenant le nom du département et le potentiel radon.
+    * Liste des communes de France présentant un potentiel radon de 3. La liste nommée `recherche1` comportera tous les champs du fichier csv.
+    * Liste  des  communes  de l'Aude  présentant  un  potentiel  radon de 2 et  dont  le  nom  commence  par  "A".  La liste nommée `recherche2` comportera uniquement le champ correspondant au nom de la commune. 
+    * Liste des communes de métropole à risque faible ou moyen (présentant un potentiel radon de 1 ou 2). La liste nommée `recherche3` sera une liste de tuples comprenant respectivement le nom du département, de la commune et du potentiel radon.
+    * Liste des départements de France dont au moins 1 des communes présente un potentiel radon de 2 ou 3. La liste nommée `recheche4` sera une liste de tuples comprenant le nom du département et le potentiel radon.
   
 Remarque : la méthode index("nomDescripteur") retourne l'indice du descripteur dans la table. Par exemple :
 
@@ -91,7 +90,7 @@ Remarque : la méthode index("nomDescripteur") retourne l'indice du descripteur 
 index_com = list_descripteur.index("nom_comm")
 ```
 
-!!! example"Exercice 2"
+!!! example "Exercice 2"
      Parmi les listes précédentes, y-en-a-t-il qui présentent des doublons. Si oui, lesquelles ? Écrire une fonction nommée `sansDoublon(list)`, qui prendra en argument une liste et retournera une nouvelle liste sans doublon. Appliquer cette fonction aux listes concernées par les problèmes de doublons.
 
 ## Tri d'une table suivant une colonne
