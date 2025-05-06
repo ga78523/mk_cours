@@ -803,6 +803,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1074,6 +1101,20 @@
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/dijkstra/" class="md-nav__link">
         Plus court chemin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/API/" class="md-nav__link">
+        Modularité
       </a>
     </li>
   
@@ -1493,6 +1534,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1634,6 +1702,38 @@ En général, il permet aussi de créer des fichiers script que l’on nomme scr
 <figure>
 <p><img alt="exercice" src="../img_OS/tab2.png" /></p>
 </figure>
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
+<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">&num;</a></h3>
+<p>Soit l'arborescence ci-dessous :</p>
+<figure>
+<p><img alt="arbo" src="../img_OS/arbo_exo2.png" width="300px" /></p>
+</figure>
+<ol>
+<li>Pour connaitre le répertoire dans lequel je me trouve, quelle commande dois-je utiliser ?</li>
+<li>La commande précédente renvoie <code>/home/Zoé</code> et je suis Zoé. Pour créer un fichier <code>chat.txt</code>, quelle commande dois-je utiliser ?</li>
+<li>Pour créer un répertoire <code>Photos</code> puis un fichier <code>listePhotos</code> dans ce répertoire, quelles commandes dois-je utiliser ?</li>
+<li>Zoé a voulu faire cela, mais voici ce qu'elle à fait :
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir Films
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cd Films
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>touch listePhotos
+</span></code></pre></div></li>
+</ol>
+<p>Comme vous le voyez, elle s'est trompée, et veut maintenant déplacer le fichier <code>listePhotos</code> dans le répertoire <code>Photos</code>.</p>
+<p>Pour déplacer ce fichier sans le renommer, quelle commande Zoé doit-elle utiliser ?
+5. Zoé est donc toujours dans le répertoire <code>Film</code> et elle saisit <code>mkdir 2020</code></p>
+<p>Elle veut maintenant copier le fichier <code>listePhotos</code> dans ce nouveau répertoire mais sous un nouveau nom : <code>listeFilms2020</code>. Quelle commande Zoé doit-elle utiliser ?
+6. Malheureusement Zoé s'est trompée et elle a tapé : <code>cp ../Photos/listePhotos ~</code>. Ou a-t-elle copié le fichier ? Donner le chemin absolu
+7. Comment peut elle effacer ce fichier maintenant (elle est toujours dans le répertoire Film) ? Donner le chemin relatif.</p>
+<h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">&num;</a></h3>
+<p>Hubert travaille et le prompt indique : ~$. il tape <code>ls -l</code> et obtient cette réponse :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>-rw-rw-r-- 1 user 0 Apr 15 09:35 toto
+</span></code></pre></div>
+<ol>
+<li>Peut-il lire ce fichier ? le modifier ? l'exécuter ?</li>
+<li>Son amie Zoé qui n'est pas dans son groupe d'utilisateurs peut elle lire ce fichier ? modifier son contenu ?</li>
+<li>Hubert veux exécuter toto, il tape ./toto et obtient ce message -sh: ./toto: Permission denied. Que s'est-il passé ?</li>
+<li>Pour que toto devienne exécutable pour lui même, quelle commande Hubert doit-il utiliser ?</li>
+</ol>
 
               
             </article>
