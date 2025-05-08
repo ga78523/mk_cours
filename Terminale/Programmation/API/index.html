@@ -1502,17 +1502,29 @@
 <li>découper un ensemble en composants indépendants afin de rendre les gros projets réalisables .</li>
 <li>donner de la structure à l'ensemble dans le but de rendre les gros projets compréhensibles ;</li>
 <li>spécifier les liens entre les différents composants pour rendre les gros projets maintenables.</li>
-<li>Identifier des sous composants indépendants avec l'objectif de rendre des bouts de projets réutilisables.</li>
+<li>identifier des sous composants indépendants avec l'objectif de rendre des bouts de projets réutilisables.</li>
 </ul>
-<p><strong>Remarques :</strong> on pourra aisément remplacer le terme projet par programme.</p>
 <h2 id="rappels-sur-les-notions-de-modules-bibliotheque">Rappels sur les notions de modules, bibliothèque<a class="headerlink" href="#rappels-sur-les-notions-de-modules-bibliotheque" title="Permanent link">&num;</a></h2>
 <p>Lorsque l'on cherche à écrire un programme, on utilise des souvent des structures déjà existantes. Ces structures sont disponibles dans des modules et/ou des bibliothèques. En python, il existe une bibliothèque native qui contient de nombreux outils . Il existe de nombreuses bibliothèques disponibles en langage python.</p>
-<p>Un point sur le vocabulaire utilisé :</p>
-<ul>
-<li>Un module est un fichier qui contient des variables, fonctions, objets, méthodes... En python, il est importé par l'instruction import nom_module.</li>
-<li>Un package est un ensemble de dossiers (et sous dossiers). En général un package contient plusieurs modules.</li>
-<li>Une bibliothèque est constituée de plusieurs packages. On utilise également le mot library pour désigner une bibliothèque.</li>
-</ul>
+<p>Différences entre package, module et bibliothèque</p>
+<div class="admonition success">
+<p class="admonition-title">Définition : Module</p>
+</div>
+<p>Un module est un simple fichier contenant du code Python, généralement avec l’extension .py.
+  Il regroupe des fonctions, des classes, des variables, etc., qui peuvent être importées et utilisées dans d’autres programmes pour organiser et réutiliser le code.</p>
+<div class="admonition success">
+<p class="admonition-title">Définition : Package</p>
+</div>
+<p>Un package est un dossier contenant plusieurs modules (et éventuellement d’autres sous-packages).
+  Il doit contenir un fichier spécial <strong>init</strong>.py pour être reconnu comme package par Python.
+  Le package permet de structurer et d’organiser des ensembles de modules de façon hiérarchique.</p>
+<div class="admonition success">
+<p class="admonition-title">Définition : Bibliothèque</p>
+</div>
+<p>Une bibliothèque (ou librairie) est un ensemble de modules et/ou de packages qui apportent des fonctionnalités réutilisables pour différents programmes.
+  Elle peut contenir un ou plusieurs packages, voire des modules seuls.</p>
+<p>Par exemple, la bibliothèque standard de Python regroupe de nombreux modules et packages pour diverses tâches (mathématiques, manipulation de fichiers, etc.).</p>
+<p>Dans certains contextes, le terme « bibliothèque » désigne aussi des ensembles de codes précompilés dans d’autres langages, utilisables via des liaisons Python.</p>
 <h2 id="api-application-programming-interface">API (Application Programming Interface)<a class="headerlink" href="#api-application-programming-interface" title="Permanent link">&num;</a></h2>
 <h3 id="principe">Principe<a class="headerlink" href="#principe" title="Permanent link">&num;</a></h3>
 <h4 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&num;</a></h4>
