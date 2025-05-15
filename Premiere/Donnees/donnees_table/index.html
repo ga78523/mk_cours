@@ -1497,48 +1497,71 @@ séparer les chiffres décimaux). Cela peut engendrer quelques problèmes, il fa
 </figure>
 <h2 id="importation-des-donnees">Importation des données<a class="headerlink" href="#importation-des-donnees" title="Permanent link">&num;</a></h2>
 <p>L'objectif est d'extraire les données puis de les enregistrer dans une liste de listes ou éventuellement dans une liste de tuples (p-uplets), c’est-à-dire dans une table.</p>
-<p>Pour obtenir une liste de listes, on utilise le script suivant :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;radon.csv&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1</p>
+<p>Télécharger <code>radon.csv</code> puis exécuter le code <code>extraction csv</code> sous Spyder.</p>
+<ol>
+<li>Que font les fonctions <code>readlines()</code> et <code>readline()</code>? </li>
+<li>Que fait la méthode <code>rstrip()</code> ?</li>
+<li>Que fait la méthode <code>split()</code>?</li>
+</ol>
+</div>
+<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">extraction csv</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;radon.csv&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">descripteurs</span> <span class="o">=</span> <span class="n">fichier</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">liste_descripteurs</span><span class="o">=</span><span class="n">descripteurs</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">valeurs</span> <span class="o">=</span> <span class="n">fichier</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">table</span><span class="o">=</span><span class="p">[]</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">valeurs</span><span class="p">:</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>     <span class="n">liste</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>     <span class="n">liste</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">liste</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>     <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="n">fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></code></pre></div>
 </td></tr></table>
-<ul>
-<li>la variable <code>descripteurs</code> est de type <code>str</code> et sa valeur correspond à la première ligne de la table. La méthode <code>readline()</code> à la ligne 3 extrait donc la première ligne de la table sous forme de chaîne de caractères ;</li>
-<li>la variable <code>valeurs</code> est de type <code>list</code> et ses éléments sont de type <code>str</code>. Leurs valeurs correspondent aux autres lignes de la table : la méthode <code>readlines()</code> extrait donc les autres lignes de la table sous forme d'une chaîne de caractères ;</li>
-<li>la méthode <code>rstrip()</code> supprime ici les caractères de fin de ligne '<code>\n</code>' situés à droite ;</li>
-<li>la méthode <code>split(';')</code> convertit une chaîne de caractères en liste en prenant ';' comme séparateur.</li>
-</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<ol>
+<li>Que fait le code <code>radon.py</code> suivant ?</li>
+<li>Que représente la variable <code>i</code> dans la boucle `for i in valeur' ?</li>
+<li>Commenter chacune des lignes du programme. </li>
+</ol>
+</div>
+<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">radon.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;radon.csv&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">descripteurs</span> <span class="o">=</span> <span class="n">fichier</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">liste_descripteurs</span><span class="o">=</span><span class="n">descripteurs</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">valeurs</span> <span class="o">=</span> <span class="n">fichier</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">valeurs</span><span class="p">:</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>     <span class="n">liste</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>     <span class="n">liste</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">liste</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>     <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="n">fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></code></pre></div>
+</td></tr></table>
 <h2 id="recherche-dans-une-table">Recherche dans une table<a class="headerlink" href="#recherche-dans-une-table" title="Permanent link">&num;</a></h2>
 <p>La  recherche  dans  une  table  consiste  à  obtenir  les  valeurs  de  certains  descripteurs  (champs)  avec  éventuellement  des critères les concernant.</p>
 <div class="admonition exemple">
-<p class="admonition-title">Exercice 1</p>
+<p class="admonition-title">Exercice 3</p>
 <p>A partir du fichier radon.csv, extraire les informations suivantes :</p>
 <ul>
 <li>Liste des communes de France présentant un potentiel radon de 3. La liste nommée <code>recherche1</code> comportera tous les champs du fichier csv.</li>
@@ -1548,16 +1571,16 @@ séparer les chiffres décimaux). Cela peut engendrer quelques problèmes, il fa
 </ul>
 </div>
 <p>Remarque : la méthode index("nomDescripteur") retourne l'indice du descripteur dans la table. Par exemple :</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">index_com</span> <span class="o">=</span> <span class="n">list_descripteur</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;nom_comm&quot;</span><span class="p">)</span>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">index_com</span> <span class="o">=</span> <span class="n">list_descripteur</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;nom_comm&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 2</p>
+<p class="admonition-title">Exercice 4</p>
 <p>Parmi les listes précédentes, y-en-a-t-il qui présentent des doublons. Si oui, lesquelles ? Écrire une fonction nommée <code>sansDoublon(list)</code>, qui prendra en argument une liste et retournera une nouvelle liste sans doublon. Appliquer cette fonction aux listes concernées par les problèmes de doublons.</p>
 </div>
 <h2 id="tri-dune-table-suivant-une-colonne">Tri d'une table suivant une colonne<a class="headerlink" href="#tri-dune-table-suivant-une-colonne" title="Permanent link">&num;</a></h2>
 <p>Le tri dans une table consiste à modifier l’ordre des données pour qu'elles soient présentées dans un ordre croissant ou décroissant selon le choix d’un ou plusieurs critères.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 3</p>
+<p class="admonition-title">Exercice 5</p>
 <p>Nous avons établi précédemment une liste des communes à risque faible ou moyen nommée <code>recherche3</code> (liste de tuples comprenant le nom du département, de la communeet le potentiel radon).
  Trier la liste <code>recherche3</code> par ordre alphabétique croissant des communes. Pour effectuer un tri, il est possible de programmer nous même une fonction de tri. Il est aussi possible d'utiliser la fonction <code>sorted()</code>
  ```</p>
@@ -1570,49 +1593,50 @@ séparer les chiffres décimaux). Cela peut engendrer quelques problèmes, il fa
 </ul>
 <p><strong>Remarque :</strong> Il faut bien évidement faire attention à ce que les données soient compatibles entres elles.</p>
 <h3 id="concatenation">Concaténation<a class="headerlink" href="#concatenation" title="Permanent link">&num;</a></h3>
-<p>Si les 2 tables possèdent exactement les mêmes descripteurs, dans le même ordre, et que les valeurs sont de même type, la fusion est facile car il suffit de concaténer les 2 tables. Il peut être nécessaire de supprimer ensuite d'éventuels doublons (on peut utiliser notre fonction <code>sansDoublons()</code> écrite au paragraphe IV). On peut aussi rajouter les éléments de la table 2 à la table 1, un par un, en vérifiant systématiquement qu'ils ne sont pas déjà présents dans la table 1. S'il manque un champ à une table, il suffit de le créer dans la table en insérant les valeurs <code>None</code> dans le champ. On peut également décider de ne pas prendre les champs qui n'existent pas dans les 2  tables (s'ils ne sont pas utiles). Dans ce cas il faut les supprimer avant de concaténer.</p>
+<p>Si les 2 tables possèdent exactement les mêmes descripteurs (nom de la colonne), dans le même ordre, et que les valeurs sont de même type, la fusion est facile car il suffit de concaténer les 2 tables c'est-à-dire ajouter les enregistrements (lignes) de la tables 2 sous les enregistrements de la tables 1. Il peut être nécessaire de supprimer ensuite d'éventuels doublons. On peut aussi rajouter les éléments de la table 2 à la table 1, un par un, en vérifiant systématiquement qu'ils ne sont pas déjà présents dans la table 1. </p>
+<p>S'il manque un champ à une table, il suffit de le créer dans la table en insérant les valeurs <code>None</code> dans le champ. On peut également décider de ne pas prendre les champs qui n'existent pas dans les 2  tables (s'ils ne sont pas utiles). Dans ce cas il faut les supprimer avant de concaténer.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 4</p>
+<p class="admonition-title">Exercice 6</p>
 <ul>
-<li>Établir la liste des communes de France à risque moyen (présentant un potentiel radon de 2). La liste nommée recherche5 comportera tous les champs du fichier csv.</li>
-<li>Fusionner cette liste avec la liste recherche1 des communes de France à fort risque (présentant un potentiel radon de 3) afin de générer une liste des communes de France à risque (moyen ou fort) nommée recherche6.</li>
+<li>Établir la liste des communes de France à risque moyen (présentant un potentiel radon de 2). La liste nommée <code>recherche5</code> comportera tous les champs du fichier csv.</li>
+<li>Fusionner cette liste avec la liste <code>recherche1</code> des communes de France à risque fort (présentant un potentiel radon de 3) afin de générer une liste des communes de France à risque (moyen ou fort) nommée <code>recherche6</code>.</li>
 </ul>
 </div>
 <h3 id="jointure">Jointure<a class="headerlink" href="#jointure" title="Permanent link">&num;</a></h3>
 <div class="admonition example">
-<p class="admonition-title">Exercice 5</p>
+<p class="admonition-title">Exercice 7</p>
 <ul>
-<li>Établir une liste de   tuples nommée recherche7 de toutes   les communes   de Métropole comprenant respectivement le nom de la commune, le nom du département et le numéro d'insee.</li>
-<li>Établir une jointure avec la liste Recherche3 de toutes les communes de métropole à risque faible ou moyen afin d'obtenir une liste de tuples nommée recherche8 comprenant le nom du département, de la commune, le numéro d'insee et le potentiel radon. Cette liste ne sera plus sous la forme d'une liste de tuples mais d'une liste de listes.</li>
+<li>Établir une liste de tuples nommée <code>recherche7</code> de toutes les communes de Métropole comprenant respectivement le nom de la commune, le nom du département et le numéro d'insee.</li>
+<li>Établir une jointure avec la liste <code>recherche3</code> de toutes les communes de métropole à risque faible ou moyen afin d'obtenir une liste de tuples nommée recherche8 comprenant le nom du département, de la commune, le numéro d'insee et le potentiel radon. Cette liste ne sera plus sous la forme d'une liste de tuples mais d'une liste de listes.</li>
 </ul>
 </div>
-<p><strong>Remarque :</strong> Vérifier bien que votre liste recherche8 ne comporte pas plus d'éléments que la liste recherche3 ! Si c'est le cas, est-ce possible ? Quelle est la cause de ce problème ? y remédier. </p>
+<p><strong>Remarque :</strong> Vérifier bien que votre liste <code>recherche8</code> ne comporte pas plus d'éléments que la liste recherche3 ! Si c'est le cas, est-ce possible ? Quelle est la cause de ce problème ? y remédier. </p>
 <h2 id="exportation-des-donnees-de-la-table-traitee-au-format-csv">Exportation des données de la table traitée au format csv<a class="headerlink" href="#exportation-des-donnees-de-la-table-traitee-au-format-csv" title="Permanent link">&num;</a></h2>
 <p>Afin d'exporter le fichier au format csv, il faut convertir toutes les valeurs qui ne sont pas déjà au format str.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 6</p>
+<p class="admonition-title">Exercice 8</p>
 <p>Écrire le script python permettant cette conversion (2 lignes de code devraient suffire).</p>
 </div>
 <p>Le code suivant permet ensuite l'exportation des données de la table recherche8 dans le fichier csv nommé <code>fichierE.csv</code> :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">descripteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;com&quot;</span><span class="p">,</span><span class="s2">&quot;dep&quot;</span><span class="p">,</span><span class="s2">&quot;insee&quot;</span><span class="p">,</span><span class="s2">&quot;potRadon&quot;</span><span class="p">]</span> <span class="c1">#liste des descripteurs</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">fichierE</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;fichierE.csv&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="c1">#ouverture du fichier en écriture</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">liste_descripteurs</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">descripteurs</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="c1"># création de la chaine de caractère </span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1">#des descripteurs sépararés par des &quot;;&quot;</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">fichierE</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">listeDescripteurs</span><span class="p">)</span> <span class="c1">#écriture dans le fichier</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">recherche8</span> <span class="p">:</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="n">valeurs</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="c1">#création de la chaine de caractère d&#39;une ligne de valeurs</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="c1">#séparées par &quot;;&quot;    </span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="n">fichierE</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span> <span class="c1">#écriture dans le fichier</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">fichierE</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>   <span class="c1">#fermeture du fichier</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">descripteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;com&quot;</span><span class="p">,</span><span class="s2">&quot;dep&quot;</span><span class="p">,</span><span class="s2">&quot;insee&quot;</span><span class="p">,</span><span class="s2">&quot;potRadon&quot;</span><span class="p">]</span> <span class="c1">#liste des descripteurs</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">fichierE</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;fichierE.csv&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="c1">#ouverture du fichier en écriture</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">liste_descripteurs</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">descripteurs</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="c1"># création de la chaine de caractère </span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">#des descripteurs sépararés par des &quot;;&quot;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">fichierE</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">listeDescripteurs</span><span class="p">)</span> <span class="c1">#écriture dans le fichier</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">recherche8</span> <span class="p">:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="n">valeurs</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="c1">#création de la chaine de caractère d&#39;une ligne de valeurs</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1">#séparées par &quot;;&quot;    </span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="n">fichierE</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span> <span class="c1">#écriture dans le fichier</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">fichierE</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>   <span class="c1">#fermeture du fichier</span>
 </span></code></pre></div>
 </td></tr></table>
 
